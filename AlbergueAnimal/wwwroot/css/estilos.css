@@ -1,0 +1,21 @@
+﻿#RedMenu {
+    background-color: #d8703a; /*cor da barra de menu*/
+    border-color: #d8703a;
+}
+
+    #RedMenu ul li a {
+        color: #ffffff;
+    }
+
+    #RedMenu ul li:hover {
+        background-color: #F5D0A9; /*cor dos botoes*/
+    }
+
+
+#ajuda {
+    position: relative;
+    float: right;
+    margin-top: -50px;
+    margin-right: -90px;
+    cursor: pointer; /* mouse hover */
+}

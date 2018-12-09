@@ -1,0 +1,95 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Registar";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<head>
+    <link rel="stylesheet" href="~/css/estilos.css" />
+</head>
+
+<img id="ajuda" class='glyphicon glyphicon-question-sign btn-icon' data-toggle='modal' data-target='#helpModal' title="Clique para obter ajuda" src="~/images/ajudaIcon.png" height="30" width="40" />
+
+<div class="modal fade" id="helpModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#FFE4C4">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">
+                    <img class="glyphicon glyphicon-question-sign" src="~/images/ajudaIcon.png" height="20" width="40" />
+                    Página de Registo
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p>Nesta página pode registar uma conta que lhe permitirá entrar na aplicação.</p><p>Deve preencher todos os campos necessários. No final irá receber um email a confirmar o seu registo.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-green btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Nome"></label>
+                <input asp-for="Input.Nome" class="form-control" placeholder="Nome Completo" />
+                <span asp-validation-for="Input.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.DBO"></label>
+                <input asp-for="Input.DBO" class="form-control" />
+                <span asp-validation-for="Input.DBO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Morada"></label>
+                <input asp-for="Input.Morada" class="form-control" placeholder="Morada: Rua/Lote->Cidade->País->Código Postal" />
+                <span asp-validation-for="Input.Morada" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="Input.Genero"></label>
+                    <input asp-for="Input.Genero" class="form-control" />
+                    <span asp-validation-for="Input.Genero" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="Input.Genero"></label><br />
+                <input type="radio" asp-for="Input.Genero" value="Masculino" checked>  Masculino<br>
+                <input type="radio" asp-for="Input.Genero" value="Feminino"> Feminino<br>
+            </div>
+            @* <div class="form-group">
+                    <label asp-for="Input.FicheiroFoto"></label>
+                    <input asp-for="Input.FicheiroFoto" class="form-control" />
+                    <span asp-validation-for="Input.FicheiroFoto" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" placeholder="user@emailservice.com" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <div class="input-group">
+                    <input asp-for="Input.Password" class="form-control" placeholder="xxxxxxxxxxx" />
+                    <span asp-validation-for="Input.Password" class="input-group-addon" title="A password deve conter pelo menos um carater não alfanumérico, uma letra maiúscula e um digito entre 0-9."><span class="glyphicon glyphicon-question-sign"></span></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="xxxxxxxxxxx" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-default">Registar</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
