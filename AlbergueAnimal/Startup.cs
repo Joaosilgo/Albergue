@@ -123,14 +123,18 @@ namespace AlbergueAnimal
             string adminPwd = "Jo@og0mes";
             string adminUserEmail2 = "150221016@estudantes.ips.pt";
             string adminPwd2 = "Bruno150221016!";
-            string adminUserEmail3 = "inesessofias @gmail.com";
-            string adminPwd3 = "Esw1234. - pass";
-           
+            string adminUserEmail3 = "inesessofias@gmail.com";
+            string adminPwd3 = "Esw1234!";
+            string adminUserEmail4 = "nesn97@gmail.com";
+            string adminPwd4 = "Esw1234!";
+            
+
             //  string adminUserEmail = "joaosilgo96@gmail.com";
             //  string adminPwd = "Jo@og0mes";
             AddUserToRole(serviceProvider, adminUserEmail, adminPwd, adminRoleName);
             AddUserToRole(serviceProvider, adminUserEmail2, adminPwd2, adminRoleName);
             AddUserToRole(serviceProvider, adminUserEmail3, adminPwd3, adminRoleName);
+            AddUserToRole(serviceProvider, adminUserEmail4, adminPwd4, adminRoleName);
             //  Utilizador user = await UserManager.FindByEmailAsync("joaosilgo96@gmail.com");
         }
 
