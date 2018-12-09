@@ -123,8 +123,8 @@ namespace AlbergueAnimal
             string adminPwd = "Jo@og0mes";
             string adminUserEmail2 = "150221016@estudantes.ips.pt";
             string adminPwd2 = "Bruno150221016!";
-            string adminUserEmail3 = "inesessofias @gmail.com";
-            string adminPwd3 = "Esw1234. - pass";
+            string adminUserEmail3 = "inesessofias@gmail.com";
+            string adminPwd3 = "Esw1234.-pass";
            
             //  string adminUserEmail = "joaosilgo96@gmail.com";
             //  string adminPwd = "Jo@og0mes";
