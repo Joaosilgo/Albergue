@@ -1,20 +1,22 @@
 ﻿@model IEnumerable<AlbergueAnimal.Models.Animal>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Animais";
 }
 
-<h2>Index</h2>
+<h2>Animais</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-    @* string linkText, string actionName, string controllerName*@
+@if (User.IsInRole("Administrator"))
+{
+    <p>
+        <a asp-action="Create">Inserir Animal</a>
+        @* string linkText, string actionName, string controllerName*@
+    </p>
+}
 
-
-</p>
-<p>
-    @Html.ActionLink("Print", "AnimaisPDF", "Animals")
-</p>
+    <p>
+        @Html.ActionLink("Imprimir", "AnimaisPDF", "Animals")
+    </p>
     <table class="table">
         <thead>
             <tr>
@@ -73,11 +75,20 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Raca.Designacao)
                     </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.AnimalId">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.AnimalId">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.AnimalId">Delete</a>
-                    </td>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
+                            <a asp-action="Delete" asp-route-id="@item.AnimalId">Remover</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a>
+                        </td>
+                    }
                 </tr>
             }
         </tbody>
