@@ -18,7 +18,7 @@ using Rotativa.AspNetCore;
 
 namespace AlbergueAnimal
 {
-    public class Startup
+    public class Startup//teste
     {
         public Startup(IConfiguration configuration)
         {
