@@ -12,7 +12,8 @@ namespace AlbergueAnimal.Models
 
         public int RacaId { get; set; }
 
-        [Required(ErrorMessage = "A designacao da Raça é obrigatória"), StringLength(20)]
+        [Display(Name = "Raça")]
+        [Required(ErrorMessage = "A designação da Raça é obrigatória"), StringLength(20)]
         public String Designacao { get; set; }
 
         public virtual List<Animal> Animais { get; set; }

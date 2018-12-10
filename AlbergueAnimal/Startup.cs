@@ -18,7 +18,7 @@ using Rotativa.AspNetCore;
 
 namespace AlbergueAnimal
 {
-    public class Startup//
+    public class Startup//teste
     {
         public Startup(IConfiguration configuration)
         {
@@ -123,10 +123,11 @@ namespace AlbergueAnimal
             string adminPwd = "Jo@og0mes";
             string adminUserEmail2 = "150221016@estudantes.ips.pt";
             string adminPwd2 = "Bruno150221016!";
-            string adminUserEmail3 = "inesessofias@gmail.com";
+            string adminUserEmail3 = "inesreis97@gmail.com";
             string adminPwd3 = "Esw1234!";
             string adminUserEmail4 = "nesn97@gmail.com";
             string adminPwd4 = "Esw1234!";
+
             
 
             //  string adminUserEmail = "joaosilgo96@gmail.com";
@@ -137,7 +138,7 @@ namespace AlbergueAnimal
             AddUserToRole(serviceProvider, adminUserEmail4, adminPwd4, adminRoleName);
             //  Utilizador user = await UserManager.FindByEmailAsync("joaosilgo96@gmail.com");
         }
-
+        
         /// <summary>
         /// Create a role if not exists.
         /// </summary>
