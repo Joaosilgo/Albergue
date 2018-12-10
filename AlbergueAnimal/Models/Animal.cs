@@ -13,32 +13,32 @@ namespace AlbergueAnimal.Models
         public int AnimalId { get; set; }
 
         // vai ser chave estrangeira
-        [Display(Name = "Raca")]
+        [Display(Name = "Raça")]
         public int RacaId { get; set; }
 
-        [Required(ErrorMessage = "O modelo é obrigatório"), StringLength(15)]
+        [Required(ErrorMessage = "O Nome é obrigatório"), StringLength(15)]
         public String Nome { get; set; }
 
-        [Display(Name = "Genero")]
+        [Display(Name = "Género")]
         [Required(ErrorMessage = "O Genero é obrigatório")]
         public String Genero { get; set; }
 
         [Display(Name = "Cor")]
-        [Required(ErrorMessage = "A Cor é obrigatório")]
+        [Required(ErrorMessage = "A Cor é obrigatória")]
         public String Cor { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A data de nasciment é obrigatória")]
         [Display(Name = "Data De Nascimento")]
         [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A data de entrada é obrigatória")]
         [Display(Name = "Data De Entrada")]
         [DataType(DataType.Date)]
         public DateTime DataEntrada { get; set; }
 
-        [Required]
-        [Display(Name = "Data De Vacina")]
+        [Required(ErrorMessage = "A data da última vacina é obrigatória")]
+        [Display(Name = "Data Última Vacina")]
         [DataType(DataType.Date)]
         public DateTime DataVacina { get; set; }
 
@@ -48,8 +48,9 @@ namespace AlbergueAnimal.Models
         public string FicheiroFoto { get; set; }
 
 
-        // propriedade navigacional
-        public virtual Raca Raca { get; set; }
+        //propriedade navigacional
+        [Display(Name = "Raça")]
+        public virtual Raca Raca { get; set; } //o que aparece na página
 
     }
 }
