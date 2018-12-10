@@ -1,0 +1,73 @@
+﻿@model IEnumerable<AlbergueAnimal.Models.Animal>
+
+    @{
+    ViewData["Title"] = "Lista de Animais";
+    }
+    <br />
+
+    <h2>@ViewData["Title"]</h2>
+    <br />
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Genero)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataNascimento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataEntrada)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataVacina)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FicheiroFoto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Raca)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Genero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataNascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataEntrada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataVacina)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FicheiroFoto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Raca.Designacao)
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
