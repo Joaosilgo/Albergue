@@ -10,24 +10,98 @@ using AlbergueAnimal.Data;
 using AlbergueAnimal.Models;
 using Microsoft.AspNetCore.Authorization;
 using Rotativa.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace AlbergueAnimal.Controllers
 {
     public class AnimalsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHostingEnvironment he;
 
-        public AnimalsController(ApplicationDbContext context)
+        public AnimalsController(ApplicationDbContext context, IHostingEnvironment e)
         {
             _context = context;
+            he = e;
+        }
+
+        public IActionResult ShowFields(string fullName, IFormFile pic)
+        {
+            ViewData["fname"] = fullName;
+            if (pic != null)
+            {
+                var fileName = Path.Combine(he.WebRootPath, Path.GetFileName(pic.FileName));
+                pic.CopyTo(new FileStream(fileName, FileMode.Create));
+                ViewData["fileLocation"] = "/" + Path.GetFileName(pic.FileName);
+            }
+            return View();
+        }
+
+        public IActionResult ListarNome()
+        {
+            return View(_context.Animal);
+        }
+
+        [HttpPost]
+        public IActionResult ListarNome(string filtroNome)
+        {
+            var nomesAnimaisFiltrados = from a in _context.Animal select a;
+
+            if (!String.IsNullOrEmpty(filtroNome))
+            {
+                nomesAnimaisFiltrados = nomesAnimaisFiltrados.Where(a => a.Nome.Contains(filtroNome));
+            }
+
+            return View(nomesAnimaisFiltrados.ToList());
+        }
+
+        [HttpPost]
+        public IActionResult ListarRaca(string filtroRaca)
+        {
+            var racasAnimaisFiltrados = from b in _context.Animal select b;
+
+            if (!String.IsNullOrEmpty(filtroRaca))
+            {
+                racasAnimaisFiltrados = racasAnimaisFiltrados.Where(b => b.Raca.Designacao.Contains(filtroRaca));
+            }
+
+            return View(racasAnimaisFiltrados.ToList());
+        }
+
+        [HttpPost]
+        public IActionResult ListarGenero(string filtroGenero)
+        {
+            var generoAnimaisFiltrados = from c in _context.Animal select c;
+
+            if (!String.IsNullOrEmpty(filtroGenero))
+            {
+                generoAnimaisFiltrados = generoAnimaisFiltrados.Where(c => c.Genero.Contains(filtroGenero));
+            }
+
+            return View(generoAnimaisFiltrados.ToList());
+        }
+
+        [HttpPost]
+        public IActionResult ListarCor(string filtroCor)
+        {
+            var corAnimaisFiltrados = from d in _context.Animal select d;
+
+            if (!String.IsNullOrEmpty(filtroCor))
+            {
+                corAnimaisFiltrados = corAnimaisFiltrados.Where(d => d.Cor.Contains(filtroCor));
+            }
+
+            return View(corAnimaisFiltrados.ToList());
         }
 
         // GET: Animals
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Animal.Include(a => a.Raca);
-             return View(await applicationDbContext.ToListAsync());
-          //  return new ViewAsPdf(await applicationDbContext.ToListAsync());
+            return View(await applicationDbContext.ToListAsync());
+            //  return new ViewAsPdf(await applicationDbContext.ToListAsync());
         }
 
         // GET: Animals/Details/5
@@ -168,11 +242,11 @@ namespace AlbergueAnimal.Controllers
 
         public IActionResult AnimaisPDF()
         {
-          
+
             return new ViewAsPdf("Index", _context.Animal.ToList());
         }
 
-      
+
 
 
     }

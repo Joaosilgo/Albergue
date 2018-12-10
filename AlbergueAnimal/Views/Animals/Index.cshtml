@@ -14,82 +14,123 @@
     </p>
 }
 
-    <p>
-        @Html.ActionLink("Imprimir", "AnimaisPDF", "Animals")
-    </p>
-    <table class="table">
-        <thead>
+<p>
+    @Html.ActionLink("Imprimir", "AnimaisPDF", "Animals")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataVacina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FicheiroFoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Raca)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nome)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Genero)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cor)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DataNascimento)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DataEntrada)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DataVacina)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FicheiroFoto)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Raca)
-                </th>
-                <th></th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataEntrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataVacina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FicheiroFoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Raca.Designacao)
+                </td>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.AnimalId">Remover</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a>
+                    </td>
+                }
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genero)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Cor)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataNascimento)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataEntrada)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataVacina)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FicheiroFoto)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Raca.Designacao)
-                    </td>
-                    @if (User.IsInRole("Administrator"))
-                    {
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
-                            <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
-                            <a asp-action="Delete" asp-route-id="@item.AnimalId">Remover</a>
-                        </td>
-                    }
-                    else
-                    {
-                        <td>
-                            <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a>
-                        </td>
-                    }
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
+
+<br />
+<h4>Filtrar Animais:</h4>
+
+<br />
+
+<div>
+    <div class="col-md-3">
+        <form asp-controller="Animals" asp-action="ListarNome" method="post">
+            <p>
+                <label>Nome</label>
+                <input type="text" name="filtroNome" id="inputNome" placeholder="Insira o Nome do Animal" class="form-control"><br />
+                <input type="submit" value="Filtrar por Nome" class="btn btn-default" /><br />
+            </p>
+        </form>
+
+        <form asp-controller="Animals" asp-action="ListarRaca" method="post">
+            <p>
+                <label>Raça</label>
+                <input type="text" name="filtroRaca" id="inputRaca" placeholder="Insira a Raça do Animal" class="form-control"><br />
+                <input type="submit" value="Filtrar por Raça" class="btn btn-default" /><br />
+            </p>
+        </form>
+
+        <form asp-controller="Animals" asp-action="ListarGenero" method="post">
+            <p>
+                <label>Género</label>
+                <input type="text" name="filtroGenero" id="inputGenero" placeholder="Insira o Género do Animal" class="form-control"><br />
+                <input type="submit" value="Filtrar por Género" class="btn btn-default" /><br />
+            </p>
+        </form>
+
+        <form asp-controller="Animals" asp-action="ListarCor" method="post">
+            <p>
+                <label>Cor</label>
+                <input type="text" name="filtroCor" id="inputCor" placeholder="Insira a Cor do Animal" class="form-control"><br />
+                <input type="submit" value="Filtrar por Cor" class="btn btn-default" /><br />
+            </p>
+        </form>
+    </div>
+</div>
