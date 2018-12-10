@@ -17,14 +17,14 @@ namespace AlbergueAnimal.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            //ViewData["Message"] = "Adote um amigo!";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            //ViewData["Message"] = "Pode nos contactar através das seguintes formas";
 
             return View();
         }
