@@ -47,7 +47,7 @@ namespace AlbergueAnimal.Controllers
         [HttpPost]
         public IActionResult ListarNome(string filtroNome)
         {
-            var nomesAnimaisFiltrados = from a in _context.Animal select a;
+            var nomesAnimaisFiltrados = from a in _context.Animal.Include(a => a.Raca) select a;
 
             if (!String.IsNullOrEmpty(filtroNome))
             {
@@ -60,7 +60,7 @@ namespace AlbergueAnimal.Controllers
         [HttpPost]
         public IActionResult ListarRaca(string filtroRaca)
         {
-            var racasAnimaisFiltrados = from b in _context.Animal select b;
+            var racasAnimaisFiltrados = from b in _context.Animal.Include(a => a.Raca) select b;
 
             if (!String.IsNullOrEmpty(filtroRaca))
             {
@@ -73,7 +73,7 @@ namespace AlbergueAnimal.Controllers
         [HttpPost]
         public IActionResult ListarGenero(string filtroGenero)
         {
-            var generoAnimaisFiltrados = from c in _context.Animal select c;
+            var generoAnimaisFiltrados = from c in _context.Animal.Include(a => a.Raca) select c;
 
             if (!String.IsNullOrEmpty(filtroGenero))
             {
@@ -86,7 +86,7 @@ namespace AlbergueAnimal.Controllers
         [HttpPost]
         public IActionResult ListarCor(string filtroCor)
         {
-            var corAnimaisFiltrados = from d in _context.Animal select d;
+            var corAnimaisFiltrados = from d in _context.Animal.Include(a => a.Raca) select d;
 
             if (!String.IsNullOrEmpty(filtroCor))
             {
@@ -115,7 +115,7 @@ namespace AlbergueAnimal.Controllers
         [Authorize(Roles = "Administrator")]
         public IActionResult IndexArquivo()
         {
-            var AnimaisArquivados = from d in _context.Animal select d;
+            var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
 
             AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == true);
 
