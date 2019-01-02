@@ -12,11 +12,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 
-
-
-
-
-
 namespace AlbergueAnimal.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -46,41 +41,53 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-
+            /// <summary>Propriedade Nome representa o nome do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
             [Required(ErrorMessage = "O Nome não está preenchido.")]
             [DataType(DataType.Text)]
             [Display(Name = "Nome Completo")]
             public string Nome { get; set; }
 
+            /// <summary>Propriedade DBO representa a data de nascimento do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
             [Required(ErrorMessage = "A Data de Nascimento não está preenchida")]
             [Display(Name = "Data Nascimento")]
             [DataType(DataType.Date)]
             public DateTime DBO { get; set; }
 
+            /// <summary>Propriedade Morada representa a morada do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
             [Required(ErrorMessage = "A Morada não está preenchida")]
             [DataType(DataType.Text)]
             [Display(Name = "Morada")]
             [PersonalData]
             public string Morada { get; set; }
 
+            /// <summary>Propriedade Genero representa o género do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
             [Required(ErrorMessage = "O género não está selecionado")]
             [DataType(DataType.Text)]
             [Display(Name = "Genero")]
             [PersonalData]
             public string Genero { get; set; }
 
+            /// <summary>Propriedade FicheiroFoto representa a imagem a do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade.</value>
             [StringLength(255)]
             [DataType(DataType.Text)]
             [Display(Name = "Fotografia")]
             [PersonalData]
             public string FicheiroFoto { get; set; }
 
-
+            /// <summary>Propriedade Email representao email a do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade.</value>
             [Required(ErrorMessage = "O email não está preenchido")]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            /// <summary>Propriedade Password representa a palavra chave da conta do utilizador.</summary>
+            /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados e deverá conter no minimo 6 e no máximo 100 caracteres.</value>
             [Required(ErrorMessage = "A password não está preenchida")]
             [StringLength(100, ErrorMessage = "A {0} tem de ter no mínimo {2} e no máximo {1} Caracteres .", MinimumLength = 6)]
             [DataType(DataType.Password)]

@@ -140,7 +140,7 @@ namespace AlbergueAnimal
         }
         
         /// <summary>
-        /// Create a role if not exists.
+        /// Criar um role se não existir.
         /// </summary>
         /// <param name="serviceProvider">Service Provider</param>
         /// <param name="roleName">Role Name</param>
@@ -159,7 +159,7 @@ namespace AlbergueAnimal
         }
 
         /// <summary>
-        /// Add user to a role if the user exists, otherwise, create the user and adds him to the role.
+        /// Adiciona uma utilizador a um role se este existir, caso contrario, cria um utilizador e adiciona-o ao role.
         /// </summary>
         /// <param name="serviceProvider">Service Provider</param>
         /// <param name="userEmail">User Email</param>
