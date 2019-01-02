@@ -18,10 +18,16 @@ namespace AlbergueAnimal.Models
 
             if (!context.Raca.Any())
             {
-                context.Raca.Add(new Raca { Designacao = "Labradore" });
+                context.Raca.Add(new Raca { Designacao = "Labrador" });
                 context.Raca.Add(new Raca { Designacao = "PitBull" });
                 context.Raca.Add(new Raca { Designacao = "Salsicha" });
-                context.Raca.Add(new Raca { Designacao = "Dalmata" });
+                context.Raca.Add(new Raca { Designacao = "Dálmata" });
+                context.Raca.Add(new Raca { Designacao = "Beagle" });
+                context.Raca.Add(new Raca { Designacao = "Basset Hound" });
+                context.Raca.Add(new Raca { Designacao = "Pug" });
+                context.Raca.Add(new Raca { Designacao = "Chihuahua" });
+                context.Raca.Add(new Raca { Designacao = "Husky" });
+                context.Raca.Add(new Raca { Designacao = "Pastor-Alemão" });
 
                 context.SaveChanges();
             }
