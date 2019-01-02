@@ -103,7 +103,8 @@ namespace AlbergueAnimal.Controllers
             return View(await applicationDbContext.ToListAsync());*/
             //  return new ViewAsPdf(await applicationDbContext.ToListAsync());
 
-            var AnimaisArquivados = from d in _context.Animal select d;
+
+            var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
 
             AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
 
