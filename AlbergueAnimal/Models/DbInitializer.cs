@@ -30,7 +30,7 @@ namespace AlbergueAnimal.Models
             if (!context.Animal.Any())
             {
 
-                context.Animal.Add(new Animal { RacaId = 1, Nome = "Cao1", Genero = "M", Cor = "Preto", DataEntrada = new DateTime(1998, 04, 30), DataVacina = new DateTime(1998, 04, 30), DataNascimento = new DateTime(1998, 04, 30), FicheiroFoto = "pic1", Arquivado = false });
+                context.Animal.Add(new Animal { RacaId = 1, Nome = "Cao1", Genero = "Macho", Cor = "Preto", DataEntrada = new DateTime(1998, 04, 30), DataVacina = new DateTime(1998, 04, 30), DataNascimento = new DateTime(1998, 04, 30), FicheiroFoto = "pic1", Arquivado = false });
                 //context.ArquivoAnimal.Add(new Animal { RacaId = 1, Nome = "Cao1", Genero = "M", Cor = "Preto", DataEntrada = new DateTime(1998, 04, 30), DataVacina = new DateTime(1998, 04, 30), DataNascimento = new DateTime(1998, 04, 30), FicheiroFoto = "pic1" });
 
                 context.SaveChanges();
