@@ -62,11 +62,16 @@ namespace AlbergueAnimal.Models
         [Display(Name = "Fotografia")]
         public string FicheiroFoto { get; set; }
 
+        [Display(Name = "Arquivado")]
+        public bool Arquivado { get; set; }
+
         //propriedade navigacional
         /// <summary>Propriedade Raca representa a raça do animal para adoção.</summary>
         /// <value>Permite o get e o set desta propriedade. Vai buscar o nome da raça ao model Raca.</value>
         [Display(Name = "Raça")]
         public virtual Raca Raca { get; set; } //o que aparece na página
+
+
 
     }
 }

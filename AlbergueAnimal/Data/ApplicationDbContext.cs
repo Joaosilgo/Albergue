@@ -15,6 +15,9 @@ namespace AlbergueAnimal.Data
         {
         }
         public DbSet<AlbergueAnimal.Models.Animal> Animal { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
         public DbSet<AlbergueAnimal.Models.Raca> Raca { get; set; }
     }
 }

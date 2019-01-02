@@ -184,7 +184,8 @@ namespace AlbergueAnimal.Migrations
                     DataNascimento = table.Column<DateTime>(nullable: false),
                     DataEntrada = table.Column<DateTime>(nullable: false),
                     DataVacina = table.Column<DateTime>(nullable: false),
-                    FicheiroFoto = table.Column<string>(maxLength: 255, nullable: true)
+                    FicheiroFoto = table.Column<string>(maxLength: 255, nullable: true),
+                    Arquivado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

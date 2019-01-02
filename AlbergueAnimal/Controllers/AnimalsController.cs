@@ -97,11 +97,28 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Animals
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var applicationDbContext = _context.Animal.Include(a => a.Raca);
-            return View(await applicationDbContext.ToListAsync());
+            /*var applicationDbContext = _context.Animal.Include(a => a.Raca);
+            return View(await applicationDbContext.ToListAsync());*/
             //  return new ViewAsPdf(await applicationDbContext.ToListAsync());
+
+            var AnimaisArquivados = from d in _context.Animal select d;
+
+            AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
+
+            return View(AnimaisArquivados.ToList());
+
+        }
+
+        [Authorize(Roles = "Administrator")]
+        public IActionResult IndexArquivo()
+        {
+            var AnimaisArquivados = from d in _context.Animal select d;
+
+            AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == true);
+
+            return View(AnimaisArquivados.ToList());
         }
 
         // GET: Animals/Details/5
@@ -140,6 +157,7 @@ namespace AlbergueAnimal.Controllers
         {
             if (ModelState.IsValid)
             {
+                animal.Arquivado = false;
                 _context.Add(animal);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -228,7 +246,8 @@ namespace AlbergueAnimal.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var animal = await _context.Animal.FindAsync(id);
-            _context.Animal.Remove(animal);
+            //_context.Animal.Remove(animal);
+            animal.Arquivado = true;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

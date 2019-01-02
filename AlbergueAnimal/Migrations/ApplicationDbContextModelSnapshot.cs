@@ -25,6 +25,8 @@ namespace AlbergueAnimal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Arquivado");
+
                     b.Property<string>("Cor")
                         .IsRequired();
 
