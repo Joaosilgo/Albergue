@@ -95,12 +95,33 @@
 
 <br />
 
+<style>
+    .center {
+        padding-left: 1050px;
+    }
+</style>
+
 @using (Html.BeginForm())
 {
 <p>
     Procurar: @Html.TextBox("SearchString")
     <!--<input type="submit" value="Procurar" />-->
     <button type="submit" class="btn btn-default">Procurar</button>
+
+        @if (ViewBag.Page > 0)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })"
+               class="btn btn-default">
+                Seguinte &raquo;
+            </a>
+        }
+        @if (ViewBag.Page < ViewBag.MaxPage)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })"
+               class="btn btn-default">
+                &laquo; Anterior
+            </a>
+        }
 
 </p>
 }

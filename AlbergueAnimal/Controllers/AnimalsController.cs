@@ -31,7 +31,7 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Animals
-        public IActionResult Index(string sortOrder, string searchString)
+        public IActionResult Index(string sortOrder, string searchString, int page = 0)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
@@ -65,7 +65,22 @@ namespace AlbergueAnimal.Controllers
 
             //AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
 
-            return View(AnimaisArquivados.ToList());
+            const int PageSize = 3; // you can always do something more elegant to set this
+
+            var count = AnimaisArquivados.Count();
+
+            var data = AnimaisArquivados.Skip(page * PageSize).Take(PageSize).ToList();
+
+            this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
+
+            this.ViewBag.Page = page;
+
+            return this.View(data);
+
+            //
+
+
+            //return View(AnimaisArquivados.ToList());
 
         }
 
