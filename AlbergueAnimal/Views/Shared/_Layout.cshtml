@@ -37,6 +37,10 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contactos</a></li>
                     <li><a asp-area="" asp-controller="Animals" asp-action="Index">Animais</a></li>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
+                    }
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
