@@ -100,13 +100,19 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Animals
-        public IActionResult Index(string sortOrder)
+        public IActionResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             ViewBag.DateSortParm = sortOrder == "date_desc" ? "Date" : "date_desc";
 
             var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                AnimaisArquivados = AnimaisArquivados.Where(s => s.Nome.Contains(searchString) || s.Cor.Contains(searchString)
+                || s.Genero.Contains(searchString) || s.Raca.Designacao.Contains(searchString));
+            }
 
             switch (sortOrder) //OrderBy para ascendente OU OrderByDescending para descendente
             {

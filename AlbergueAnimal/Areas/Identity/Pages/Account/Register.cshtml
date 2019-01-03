@@ -70,7 +70,7 @@
                 </div>*@
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
-                <input asp-for="Input.Email" class="form-control" placeholder="user@emailservice.com" />
+                <input asp-for="Input.Email" class="form-control" data-val-email="O Email inserido não é um email válido." placeholder="user@emailservice.com" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
