@@ -18,7 +18,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.ActionLink("Nome", "Index", new { sortOrder = ViewBag.NameSortParm })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Genero)
@@ -27,7 +27,7 @@
                 @Html.DisplayNameFor(model => model.Cor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
+                @Html.ActionLink("Data De Nascimento", "Index", new { sortOrder = ViewBag.DateSortParm })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DataEntrada)

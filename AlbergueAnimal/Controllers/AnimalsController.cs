@@ -16,6 +16,9 @@ using System.IO;
 
 namespace AlbergueAnimal.Controllers
 {
+    /// <summary>
+    /// Classe responsável pela definição das ações associadas a um animal.
+    /// </summary>
     public class AnimalsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -97,16 +100,33 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Animals
-        public IActionResult Index()
+        public IActionResult Index(string sortOrder)
         {
-            /*var applicationDbContext = _context.Animal.Include(a => a.Raca);
-            return View(await applicationDbContext.ToListAsync());*/
-            //  return new ViewAsPdf(await applicationDbContext.ToListAsync());
-
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.DateSortParm = sortOrder == "date_desc" ? "Date" : "date_desc";
 
             var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
 
-            AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
+            switch (sortOrder) //OrderBy para ascendente OU OrderByDescending para descendente
+            {
+                case "name_desc":
+                    AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false).OrderByDescending(s => s.Nome);
+                    //AnimaisArquivados = AnimaisArquivados.OrderByDescending(s => s.Nome);
+                    break;
+                case "Date":
+                    AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false).OrderBy(s => s.DataNascimento);
+                    break;
+                case "date_desc":
+                    AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false).OrderByDescending(s => s.DataNascimento);
+                    break;
+                default: //data de entrada descendente
+                    AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false).OrderByDescending(s => s.DataEntrada);
+                    break;
+            }
+
+
+            //AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
 
             return View(AnimaisArquivados.ToList());
 
@@ -142,6 +162,12 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Animals/Create
+        /// <summary>
+        /// Método chamado aquando da operação GET para a criação de um Animal
+        /// </summary>
+        /// <returns>
+        /// Retorna uma resposta HTTP 302 para o browser chamando a ação Index do controller Manager
+        /// </returns>
         [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
@@ -150,8 +176,15 @@ namespace AlbergueAnimal.Controllers
         }
 
         // POST: Animals/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// Método chamado aquando da operação POST para a criação de um animal. Recebe como
+        /// parametros o modelo relativo a um animal, um inteiro que representa o id do animal,
+        /// um inteiro que representa o id da raça, uma string que representa o genero,
+        /// uma string que representa uma cor, datas de nascimento, entrada e ultima vacina e uma string que representa a fotografia do animal.
+        /// </summary>
+        /// <returns>
+        /// Retorna a view correspondente passando como parametro o model de um Animal.
+        /// </returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina,FicheiroFoto")] Animal animal)
