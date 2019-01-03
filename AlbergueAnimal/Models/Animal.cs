@@ -58,9 +58,21 @@ namespace AlbergueAnimal.Models
 
         /// <summary>Propriedade FicheiroFoto representa a imagem a do animal para adoção.</summary>
         /// <value>Permite o get e o set desta propriedade.</value>
-        [StringLength(255)]
+        /*[StringLength(255)]
         [Display(Name = "Fotografia")]
-        public string FicheiroFoto { get; set; }
+        public string FicheiroFoto { get; set; }*/
+
+        [ScaffoldColumn(false)]
+        public byte[] imageContent { get; set; }
+
+        [StringLength(256)]
+        [ScaffoldColumn(false)]
+        public String imageMimeType { get; set; }
+
+        [StringLength(100, ErrorMessage = "O nome do ficheiro não pode ser mostrado")]
+        [Display(Name = "Nome do Ficheiro")]
+        [ScaffoldColumn(false)]
+        public String imageFileName { get; set; }
 
         [Display(Name = "Arquivado")]
         public bool Arquivado { get; set; }
