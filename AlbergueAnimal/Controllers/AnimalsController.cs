@@ -122,17 +122,37 @@ namespace AlbergueAnimal.Controllers
         /// Método chamado aquando da operação POST para a criação de um animal. Recebe como
         /// parametros o modelo relativo a um animal, um inteiro que representa o id do animal,
         /// um inteiro que representa o id da raça, uma string que representa o genero,
-        /// uma string que representa uma cor, datas de nascimento, entrada e ultima vacina e uma string que representa a fotografia do animal.
+        /// uma string que representa uma cor, datas de nascimento, entrada e ultima vacina e um IFormFile que representa a fotografia do animal.
         /// </summary>
         /// <returns>
         /// Retorna a view correspondente passando como parametro o model de um Animal.
         /// </returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina")] Animal animal)
+        public async Task<IActionResult> Create([Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina")] Animal animal, IFormFile thePicture)
         {
             if (ModelState.IsValid)
             {
+                if (thePicture != null)
+                {
+                    string mimeType = thePicture.ContentType;
+                    long fileLength = thePicture.Length;
+                    if (!(mimeType == "" || fileLength == 0))
+                    {
+                        if (mimeType.Contains("image"))
+                        {
+                            using (var memoryStream = new MemoryStream())
+                            {
+                                await thePicture.CopyToAsync(memoryStream);
+                                animal.imageContent = memoryStream.ToArray();
+
+                            }
+                            animal.imageMimeType = mimeType;
+                            animal.imageFileName = thePicture.FileName;
+                        }
+                    }
+                }
+
                 animal.Arquivado = false;
                 _context.Add(animal);
                 await _context.SaveChangesAsync();
@@ -233,16 +253,10 @@ namespace AlbergueAnimal.Controllers
             return _context.Animal.Any(e => e.AnimalId == id);
         }
 
-
-
         public IActionResult AnimaisPDF()
         {
-
             return new ViewAsPdf("Index", _context.Animal.ToList());
         }
-
-
-
 
     }
 }

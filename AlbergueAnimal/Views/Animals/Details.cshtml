@@ -5,7 +5,18 @@
 }
 
 <br/>
-<h2>@Html.DisplayNameFor(model => model.Nome)</h2>
+<h2>@Html.DisplayFor(model => model.Nome)</h2>
+
+<div>
+    @{
+        if (Model.imageContent != null && Model.imageMimeType.Contains("image"))
+        {
+            string imageBase64 = Convert.ToBase64String(Model.imageContent);
+            string imageSrc = string.Format("data:" + Model.imageMimeType + ";base64,{0}", imageBase64);
+            <img src="@imageSrc" alt="Profile picture of @Model.Nome" style="max-height:100px; max-width:120px" class="img-responsive img-rounded" />
+        }
+    }
+</div>
 
 <div>
     <hr />
