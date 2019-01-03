@@ -133,6 +133,25 @@ namespace AlbergueAnimal.Controllers
         {
             if (ModelState.IsValid)
             {
+                if(animal.DataEntrada <= animal.DataNascimento)
+                {
+                    ViewBag.Message = string.Format("Verifique campo relativo a datas!");
+                    ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
+                    return View(animal);
+                }
+                if (animal.DataVacina <= animal.DataNascimento)
+                {
+                    ViewBag.Message = string.Format("Verifique campo relativo a datas!");
+                    ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
+                    return View(animal);
+                }
+                if(animal.DataEntrada < DateTime.Now || animal.DataNascimento < DateTime.Now || animal.DataVacina < DateTime.Now)
+                {
+                    ViewBag.Message = string.Format("As datas nao podem ser superiores ao dia de hoje");
+                    ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
+                    return View(animal);
+                }
+
                 if (thePicture != null)
                 {
                     string mimeType = thePicture.ContentType;
@@ -255,7 +274,12 @@ namespace AlbergueAnimal.Controllers
 
         public IActionResult AnimaisPDF()
         {
-            return new ViewAsPdf("Index", _context.Animal.ToList());
+
+            var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
+
+            AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
+
+            return new ViewAsPdf("Index", AnimaisArquivados.ToList());
         }
 
     }

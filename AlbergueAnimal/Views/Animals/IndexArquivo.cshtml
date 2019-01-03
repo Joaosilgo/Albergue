@@ -13,6 +13,9 @@
         <thead>
             <tr>
                 <th>
+                    Fotografia
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Nome)
                 </th>
                 <th>
@@ -38,29 +41,39 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genero)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Cor)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataNascimento)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataEntrada)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataVacina)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Raca.Designacao)
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @{
+                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.imageContent);
+                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                            <img src="@imageSrc" alt="Profile picture of @item.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataEntrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataVacina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Raca.Designacao)
+                </td>
+            </tr>
             }
         </tbody>
     </table>
