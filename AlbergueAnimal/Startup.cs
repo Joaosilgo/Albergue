@@ -111,7 +111,7 @@ namespace AlbergueAnimal
         private static void CreateRolesAndAdminUser(IServiceProvider serviceProvider)
         {
             const string adminRoleName = "Administrator";
-            string[] roleNames = { adminRoleName, "Manager", "Member" };
+            string[] roleNames = { adminRoleName, "Utilizador", "Funcionario" };
 
             foreach (string roleName in roleNames)
             {
