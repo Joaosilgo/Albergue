@@ -31,9 +31,9 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Animals
-        public IActionResult Index(string sortOrder, string searchString, int page = 0)
+        public IActionResult Index(string sortOrder, string searchString/*, int page = 0*/)
         {
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_asc" : "";
             //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             ViewBag.DateSortParm = sortOrder == "date_desc" ? "Date" : "date_desc";
 
@@ -47,8 +47,8 @@ namespace AlbergueAnimal.Controllers
 
             switch (sortOrder) //OrderBy para ascendente OU OrderByDescending para descendente
             {
-                case "name_desc":
-                    AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false).OrderByDescending(s => s.Nome);
+                case "name_asc":
+                    AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false).OrderBy(s => s.Nome);
                     //AnimaisArquivados = AnimaisArquivados.OrderByDescending(s => s.Nome);
                     break;
                 case "Date":
@@ -63,24 +63,14 @@ namespace AlbergueAnimal.Controllers
             }
 
 
-            //AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
-
-            const int PageSize = 3; // you can always do something more elegant to set this
-
+            /*const int PageSize = 3; // you can always do something more elegant to set this
             var count = AnimaisArquivados.Count();
-
             var data = AnimaisArquivados.Skip(page * PageSize).Take(PageSize).ToList();
-
             this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
-
             this.ViewBag.Page = page;
+            return this.View(data);*/
 
-            return this.View(data);
-
-            //
-
-
-            //return View(AnimaisArquivados.ToList());
+            return View(AnimaisArquivados.ToList());
 
         }
 
