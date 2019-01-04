@@ -117,7 +117,7 @@
     <!--<input type="submit" value="Procurar" />-->
     <button type="submit" class="btn btn-default">Procurar</button>
 
-        @if (ViewBag.Page > 0)
+        <!--@if (ViewBag.Page > 0)
         {
             <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })"
                class="btn btn-default">
@@ -130,47 +130,8 @@
                class="btn btn-default">
                 Seguinte &raquo;
             </a>
-        }
-
+        }-->
 </p>
 }
 
-<!--<h4>Filtrar Animais:</h4>
 
-<br />
-
-<div>
-    <div class="col-md-3">
-        <form asp-controller="Animals" asp-action="ListarNome" method="post">
-            <p>
-                <label>Nome</label>
-                <input type="text" name="filtroNome" id="inputNome" placeholder="Insira o Nome do Animal" class="form-control"><br />
-                <input type="submit" value="Filtrar por Nome" class="btn btn-default" /><br />
-            </p>
-        </form>
-
-        <form asp-controller="Animals" asp-action="ListarRaca" method="post">
-            <p>
-                <label>Raça</label>
-                <input type="text" name="filtroRaca" id="inputRaca" placeholder="Insira a Raça do Animal" class="form-control"><br />
-                <input type="submit" value="Filtrar por Raça" class="btn btn-default" /><br />
-            </p>
-        </form>
-
-        <form asp-controller="Animals" asp-action="ListarGenero" method="post">
-            <p>
-                <label>Género</label>
-                <input type="text" name="filtroGenero" id="inputGenero" placeholder="Insira o Género do Animal" class="form-control"><br />
-                <input type="submit" value="Filtrar por Género" class="btn btn-default" /><br />
-            </p>
-        </form>
-
-        <form asp-controller="Animals" asp-action="ListarCor" method="post">
-            <p>
-                <label>Cor</label>
-                <input type="text" name="filtroCor" id="inputCor" placeholder="Insira a Cor do Animal" class="form-control"><br />
-                <input type="submit" value="Filtrar por Cor" class="btn btn-default" /><br />
-            </p>
-        </form>
-    </div>
-</div>-->

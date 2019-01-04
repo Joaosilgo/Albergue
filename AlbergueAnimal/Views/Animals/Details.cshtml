@@ -66,7 +66,15 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.AnimalId">Editar</a> |
-    <a asp-action="Index">Voltar á Lista</a> 
-    
+    @if (User.IsInRole("Administrator"))
+    {
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.AnimalId">Editar</a> |
+            <a asp-action="Index">Voltar á Lista</a>
+        </div>
+    }
+    else
+    {
+        <a asp-action="Index">Voltar á Lista</a>
+    }
 </div>
