@@ -9,7 +9,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div>
                 @{
@@ -18,6 +18,7 @@
                         string imageBase64 = Convert.ToBase64String(Model.imageContent);
                         string imageSrc = string.Format("data:" + Model.imageMimeType + ";base64,{0}", imageBase64);
                         <img src="@imageSrc" alt="Profile picture of @Model.Nome" style="max-height:500px; max-width:600px" class="img-responsive img-rounded" />
+                       // <input type="checkbox" id="chkRemoveImage" name="chkRemoveImage" />
                     }
                 }
             </div>
@@ -34,8 +35,8 @@
             </div>
             <div class="form-group">
                 <!--<label asp-for="Genero" class="control-label"></label>
-             <input asp-for="Genero" class="form-control" />
-             <span asp-validation-for="Genero" class="text-danger"></span>-->
+        <input asp-for="Genero" class="form-control" />
+        <span asp-validation-for="Genero" class="text-danger"></span>-->
                 <label asp-for="Genero"></label><br />
                 <input type="radio" asp-for="Genero" value="Macho" checked>Macho<br>
                 <input type="radio" asp-for="Genero" value="Fêmea">Fêmea<br>
@@ -60,6 +61,12 @@
                 <input asp-for="DataVacina" class="form-control" />
                 <span asp-validation-for="DataVacina" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label class="control-label">Fotografia</label>
+                <input type="file" class="form-control" name="ThePicture" />
+            </div>
+
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

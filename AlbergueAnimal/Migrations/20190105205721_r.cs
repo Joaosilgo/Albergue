@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbergueAnimal.Migrations
 {
-    public partial class NovaMigration : Migration
+    public partial class r : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,6 +50,19 @@ namespace AlbergueAnimal.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EstadoAdocao",
+                columns: table => new
+                {
+                    EstadoAdocaoId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    estado = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EstadoAdocao", x => x.EstadoAdocaoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -200,6 +213,57 @@ namespace AlbergueAnimal.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Adocao",
+                columns: table => new
+                {
+                    AdocaoId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AnimalId = table.Column<int>(nullable: false),
+                    UserName = table.Column<string>(nullable: true),
+                    EstadoAdocaoId = table.Column<int>(nullable: false),
+                    CreationDate = table.Column<DateTime>(nullable: false),
+                    LastUpdated = table.Column<DateTime>(nullable: false),
+                    EndDate = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Adocao", x => x.AdocaoId);
+                    table.ForeignKey(
+                        name: "FK_Adocao_Animal_AnimalId",
+                        column: x => x.AnimalId,
+                        principalTable: "Animal",
+                        principalColumn: "AnimalId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Adocao_EstadoAdocao_EstadoAdocaoId",
+                        column: x => x.EstadoAdocaoId,
+                        principalTable: "EstadoAdocao",
+                        principalColumn: "EstadoAdocaoId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Adocao_AspNetUsers_UserName",
+                        column: x => x.UserName,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Adocao_AnimalId",
+                table: "Adocao",
+                column: "AnimalId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Adocao_EstadoAdocaoId",
+                table: "Adocao",
+                column: "EstadoAdocaoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Adocao_UserName",
+                table: "Adocao",
+                column: "UserName");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Animal_RacaId",
                 table: "Animal",
@@ -248,7 +312,7 @@ namespace AlbergueAnimal.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Animal");
+                name: "Adocao");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
@@ -266,13 +330,19 @@ namespace AlbergueAnimal.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Raca");
+                name: "Animal");
+
+            migrationBuilder.DropTable(
+                name: "EstadoAdocao");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Raca");
         }
     }
 }

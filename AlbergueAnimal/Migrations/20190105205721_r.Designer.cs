@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbergueAnimal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190103184240_NovaMigration")]
-    partial class NovaMigration
+    [Migration("20190105205721_r")]
+    partial class r
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,35 @@ namespace AlbergueAnimal.Migrations
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("AlbergueAnimal.Models.Adocao", b =>
+                {
+                    b.Property<int>("AdocaoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AnimalId");
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<int>("EstadoAdocaoId");
+
+                    b.Property<DateTime>("LastUpdated");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("AdocaoId");
+
+                    b.HasIndex("AnimalId");
+
+                    b.HasIndex("EstadoAdocaoId");
+
+                    b.HasIndex("UserName");
+
+                    b.ToTable("Adocao");
+                });
 
             modelBuilder.Entity("AlbergueAnimal.Models.Animal", b =>
                 {
@@ -60,6 +89,19 @@ namespace AlbergueAnimal.Migrations
                     b.HasIndex("RacaId");
 
                     b.ToTable("Animal");
+                });
+
+            modelBuilder.Entity("AlbergueAnimal.Models.EstadoAdocao", b =>
+                {
+                    b.Property<int>("EstadoAdocaoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("estado");
+
+                    b.HasKey("EstadoAdocaoId");
+
+                    b.ToTable("EstadoAdocao");
                 });
 
             modelBuilder.Entity("AlbergueAnimal.Models.Raca", b =>
@@ -250,6 +292,23 @@ namespace AlbergueAnimal.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AlbergueAnimal.Models.Adocao", b =>
+                {
+                    b.HasOne("AlbergueAnimal.Models.Animal", "Animal")
+                        .WithMany("Adocao")
+                        .HasForeignKey("AnimalId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AlbergueAnimal.Models.EstadoAdocao", "EstadoAdocao")
+                        .WithMany("Adocao")
+                        .HasForeignKey("EstadoAdocaoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AlbergueAnimal.Models.Utilizador", "Utilizador")
+                        .WithMany("Adocao")
+                        .HasForeignKey("UserName");
                 });
 
             modelBuilder.Entity("AlbergueAnimal.Models.Animal", b =>

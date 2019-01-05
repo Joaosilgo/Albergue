@@ -202,8 +202,11 @@ namespace AlbergueAnimal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina")] Animal animal)
+        public async Task<IActionResult> Edit(int id, [Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina,imageContent,imageFileName,imageMimeType")] Animal animal,  IFormFile thePicture)
         {
+            //var animalToUpdate = await _context.Animal
+            //    .Include(p=> p.) 
+
             if (id != animal.AnimalId)
             {
                 return NotFound();
@@ -213,6 +216,40 @@ namespace AlbergueAnimal.Controllers
             {
                 try
                 {
+
+                    //começa aqui
+                    if (thePicture == null)
+                    {
+                        animal.imageContent = animal.imageContent;
+                        animal.imageFileName = animal.imageFileName;
+
+                        animal.imageMimeType = animal.imageMimeType;
+                    }
+                    else
+                    {
+                        if (thePicture != null)
+                        {
+                            string mimeType = thePicture.ContentType;
+                            long fileLength = thePicture.Length;
+                            if(!(mimeType=="" || fileLength==0))
+                            {
+                                if(mimeType.Contains("image"))
+                                {
+                                    using (var memoryStream = new MemoryStream())
+                                    {
+                                        await thePicture.CopyToAsync(memoryStream);
+                                        animal.imageContent = memoryStream.ToArray();
+
+                                    }
+                                    animal.imageMimeType = mimeType;
+                                    animal.imageFileName = thePicture.FileName;
+                                }
+                                   
+                            }
+                        }
+                    
+                   }
+                    
                     _context.Update(animal);
                     await _context.SaveChangesAsync();
                 }

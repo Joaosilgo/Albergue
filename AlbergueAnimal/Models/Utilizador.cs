@@ -38,5 +38,7 @@ namespace AlbergueAnimal.Models
         [StringLength(255)]
         [PersonalData]
         public string FicheiroFoto { get; set; }
+
+        public virtual List<Adocao> Adocao { get; set; }
     }
 }

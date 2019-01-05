@@ -1,0 +1,54 @@
+﻿@model AlbergueAnimal.Models.Adocao
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Adocao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Animal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Animal.Cor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Utilizador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Utilizador.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoAdocao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoAdocao.EstadoAdocaoId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AdocaoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

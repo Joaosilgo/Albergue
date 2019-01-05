@@ -19,5 +19,104 @@ namespace AlbergueAnimal.Data
         //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
 
         public DbSet<AlbergueAnimal.Models.Raca> Raca { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+        public DbSet<AlbergueAnimal.Models.EstadoAdocao> EstadoAdocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+        public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+      //  public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+      //  public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+        // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+     //   public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+      
     }
 }

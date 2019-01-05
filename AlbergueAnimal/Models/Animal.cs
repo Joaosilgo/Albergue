@@ -84,6 +84,8 @@ namespace AlbergueAnimal.Models
         public virtual Raca Raca { get; set; } //o que aparece na página
 
 
+        public virtual List<Adocao> Adocao { get; set; }
+
 
     }
 }

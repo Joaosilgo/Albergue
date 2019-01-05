@@ -31,6 +31,12 @@ namespace AlbergueAnimal.Models
 
                 context.SaveChanges();
             }
+            if (!context.EstadoAdocao.Any())
+            {
+                context.EstadoAdocao.Add(new EstadoAdocao { estado="Disponivel"});
+                context.EstadoAdocao.Add(new EstadoAdocao { estado = "Pendente" });
+                context.SaveChanges();
+            }
 
             /*if (!context.Animal.Any()) //RacaId começa no 1
             {          
