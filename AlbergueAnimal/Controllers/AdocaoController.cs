@@ -200,6 +200,7 @@ namespace AlbergueAnimal.Controllers
             {
                 try
                 {
+                    adocao.LastUpdated = DateTime.Now;
                     _context.Update(adocao);
                     await _context.SaveChangesAsync();
                 }
@@ -271,64 +272,6 @@ namespace AlbergueAnimal.Controllers
             return _context.Adocao.Any(e => e.AdocaoId == id);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public ActionResult IndexById(int id)
         {
             var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
@@ -340,11 +283,6 @@ namespace AlbergueAnimal.Controllers
             var report = new Rotativa.AspNetCore.ViewAsPdf("Details", emp);
             return report;
         }
-        
-
-
-
-
 
     }
 }
