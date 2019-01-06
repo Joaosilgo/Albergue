@@ -41,7 +41,10 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contactos</a></li>
                     <li><a asp-area="" asp-controller="Animals" asp-action="Index">Animais</a></li>
                     <!--  <li><a asp-area="" asp-controller="Adocaos" asp-action="Index">Adocao</a></li>-->
-                   
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <li><a asp-area="" asp-controller="Adocao" asp-action="Index">Adocao</a></li>
+                    }
                     @if (User.IsInRole("Administrator"))
                     {
                         <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
