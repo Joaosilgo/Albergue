@@ -314,7 +314,14 @@ namespace AlbergueAnimal.Controllers
 
             AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
 
-            return new ViewAsPdf("Index", AnimaisArquivados.ToList());
+            return new ViewAsPdf("viewAnimaisPdf", AnimaisArquivados.ToList());
+        }
+        public IActionResult viewAnimaisPdf()
+        {
+            var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
+
+            AnimaisArquivados = AnimaisArquivados.Where(d => d.Arquivado == false);
+            return PartialView(AnimaisArquivados.ToList());
         }
 
     }
