@@ -35,7 +35,7 @@ namespace AlbergueAnimal.Models
             {
                 context.EstadoAdocao.Add(new EstadoAdocao { estado="Disponivel"});
                 context.EstadoAdocao.Add(new EstadoAdocao { estado = "Pendente" });
-                context.EstadoAdocao.Add(new EstadoAdocao { estado = "Em Processamento" });
+                context.EstadoAdocao.Add(new EstadoAdocao { estado = "EmProcessamento" });
                 context.EstadoAdocao.Add(new EstadoAdocao { estado = "Adotado" });
                
                 context.SaveChanges();
