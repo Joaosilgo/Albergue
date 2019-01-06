@@ -90,6 +90,9 @@ namespace AlbergueAnimal.Controllers
                     //var x = User.Identity.Name;
                     //User.Identity.Name;
                     //adocao.UserName = x.ToString();
+                    adocao.CreationDate = DateTime.Now;
+                    adocao.LastUpdated = DateTime.Now;
+                    adocao.EndDate = null;
                     adocao.Arquivado = false;//*******
                     adocao.EstadoAdocaoId = 2;
                     _context.Add(adocao);

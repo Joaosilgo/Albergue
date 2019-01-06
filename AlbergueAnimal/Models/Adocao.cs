@@ -132,7 +132,7 @@ namespace AlbergueAnimal.Models
 
         [Display(Name = "Data Fim")]
         [DataType(DataType.Date)]
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         [Display(Name = "Arquivado")]
         public bool Arquivado { get; set; }

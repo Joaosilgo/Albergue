@@ -31,7 +31,7 @@ namespace AlbergueAnimal.Migrations
 
                     b.Property<DateTime>("CreationDate");
 
-                    b.Property<DateTime>("EndDate");
+                    b.Property<DateTime?>("EndDate");
 
                     b.Property<int>("EstadoAdocaoId");
 

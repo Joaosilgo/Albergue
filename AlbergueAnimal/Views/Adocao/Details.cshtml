@@ -7,7 +7,7 @@
 <h2>Detalhes</h2>
 
 <div>
-    <h4>Adocao</h4>
+    <h4>Adoção</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -38,13 +38,13 @@
             @Html.DisplayNameFor(model => model.Utilizador)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Utilizador.Id)
+            @Html.DisplayFor(model => model.Utilizador.Nome)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.EstadoAdocao)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.EstadoAdocao.EstadoAdocaoId)
+            @Html.DisplayFor(model => model.EstadoAdocao.estado)
         </dd>
     </dl>
 </div>
