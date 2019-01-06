@@ -29,49 +29,17 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Adocao
-        //   IActionResult
-        //  public async Task<IActionResult> Index(string sortOrder, string searchString/*, int page = 0*/)
-        public async Task<IActionResult> Index(/*string sortOrder, string searchString/*, int page = 0*/)
+        public IActionResult Index(string searchString)
         {
+            var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
 
-            //   ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_asc" : "";
-            //   //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
-            //   ViewBag.DateSortParm = sortOrder == "date_desc" ? "Date" : "date_desc";
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                AdocoesArquivadas = AdocoesArquivadas.Where(s => s.Animal.Nome.Contains(searchString) || s.UserName.Contains(searchString)
+                || s.EstadoAdocao.estado.Contains(searchString));
+            }
 
-            ////   var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
-            //   var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
-
-            //   AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == true);
-
-            //   if (!String.IsNullOrEmpty(searchString))
-            //   {
-            //       AdocoesArquivadas = AdocoesArquivadas.Where(s => s.UserName.Contains(searchString) || s.EstadoAdocao.estado.Contains(searchString)
-            //     /*  || s.Genero.Contains(searchString) || s.Raca.Designacao.Contains(searchString)*/);
-            //   }
-
-            //   switch (sortOrder) //OrderBy para ascendente OU OrderByDescending para descendente
-            //   {
-            //       case "name_asc":
-            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderBy(s => s.UserName);
-            //           //AnimaisArquivados = AnimaisArquivados.OrderByDescending(s => s.Nome);
-            //           break;
-            //       case "Date":
-            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderBy(s => s.CreationDate);
-            //           break;
-            //       case "date_desc":
-            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderByDescending(s => s.CreationDate);
-            //           break;
-            //       default: //data de entrada descendente
-            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderByDescending(s => s.LastUpdated);
-            //           break;
-            //   }
-
-
-
-            var applicationDbContext = _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador).Where(d => d.Arquivado == false);
-            return View(await applicationDbContext.ToListAsync());
-
-            //   return View(AdocoesArquivadas.ToList());
+            return View(AdocoesArquivadas.ToList());
         }
 
         [Authorize(Roles = "Administrator")]
@@ -221,7 +189,7 @@ namespace AlbergueAnimal.Controllers
                     //adocao.Arquivado = true;
                     //adocao.Animal.Arquivado = true;
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
-                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualque altura do nosso horário de atendimento.");
+                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
                 }
                
                     return RedirectToAction(nameof(Index));
