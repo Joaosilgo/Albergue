@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbergueAnimal.Migrations
 {
-    public partial class r : Migration
+    public partial class NovaMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
