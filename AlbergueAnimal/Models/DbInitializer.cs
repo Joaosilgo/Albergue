@@ -20,7 +20,7 @@ namespace AlbergueAnimal.Models
             {
                 context.Raca.Add(new Raca { Designacao = "Labrador" });
                 context.Raca.Add(new Raca { Designacao = "PitBull" });
-                context.Raca.Add(new Raca { Designacao = "Salsicha" });
+                context.Raca.Add(new Raca { Designacao = "Dachshund" });
                 context.Raca.Add(new Raca { Designacao = "Dálmata" });
                 context.Raca.Add(new Raca { Designacao = "Beagle" });
                 context.Raca.Add(new Raca { Designacao = "Basset Hound" });

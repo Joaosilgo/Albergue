@@ -10,9 +10,7 @@ using AlbergueAnimal.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using AlbergueAnimal.Areas.Identity.Services;
 using Microsoft.AspNetCore.Identity;
-
-
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace AlbergueAnimal.Controllers
 {
@@ -34,6 +32,16 @@ namespace AlbergueAnimal.Controllers
         {
             var applicationDbContext = _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador);
             return View(await applicationDbContext.ToListAsync());
+        }
+
+        [Authorize(Roles = "Administrator")]
+        public IActionResult IndexArquivo()
+        {
+            var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
+
+            AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == true);
+
+            return View(AdocoesArquivadas.ToList());
         }
 
         // GET: Adocao/Details/5
@@ -84,6 +92,8 @@ namespace AlbergueAnimal.Controllers
                     //adocao.UserName = x.ToString();
                     adocao.CreationDate = DateTime.Now;
                     adocao.LastUpdated = DateTime.Now;
+                    adocao.EndDate = null;
+                    adocao.Arquivado = false;//*******
                     adocao.EstadoAdocaoId = 2;
                     _context.Add(adocao);
                     //adocao.UserName = UserManager.GetUserId(User);
@@ -150,7 +160,6 @@ namespace AlbergueAnimal.Controllers
             {
                 try
                 {
-                    adocao.LastUpdated = DateTime.Now;
                     _context.Update(adocao);
                     await _context.SaveChangesAsync();
                 }
@@ -165,10 +174,8 @@ namespace AlbergueAnimal.Controllers
                         throw;
                     }
                 }
-                if (adocao.EstadoAdocaoId.Equals(4))//se for alterado para adotado ele manda mail e a data do processo termina
+                if (adocao.EstadoAdocaoId.Equals(1))
                 {
-                    adocao.LastUpdated = DateTime.Now;
-                    adocao.EndDate = DateTime.Now;
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
                     _emailSender.SendEmailAdoption(x.First().ToString(), "Adoption", "cao");
                 }
@@ -186,6 +193,7 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Adocao/Delete/5
+        //[Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -212,7 +220,8 @@ namespace AlbergueAnimal.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var adocao = await _context.Adocao.FindAsync(id);
-            _context.Adocao.Remove(adocao);
+            adocao.Arquivado = true;
+            //_context.Adocao.Remove(adocao);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

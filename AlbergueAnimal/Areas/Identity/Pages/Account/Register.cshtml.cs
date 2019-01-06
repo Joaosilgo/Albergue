@@ -51,7 +51,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
             /// <summary>Propriedade DBO representa a data de nascimento do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
             /// 
-          //  [Range(typeof(DateTime), "1/1/1966","1/1/2000")]
+            //[Range(typeof(DateTime), "1/1/1966","1/1/2000")]
             [Required(ErrorMessage = "A Data de Nascimento não está preenchida")]
             [Display(Name = "Data Nascimento")]
             [DataType(DataType.Date)]
@@ -144,8 +144,8 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                         values: new { userId = user.Id, code = code },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _emailSender.SendEmailAsync(Input.Email, "Confirme o seu email",
+                        $"Bem vindo ao nosso site. Por favor confirme a sua inscrição <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>.");
 
                     //  await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);

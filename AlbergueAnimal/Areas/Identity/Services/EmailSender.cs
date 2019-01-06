@@ -16,7 +16,7 @@ namespace AlbergueAnimais.Areas.Identity.Services
             var msg = new MimeMessage();
             msg.From.Add(new MailboxAddress("Email Confirmação", "m7.gpr.1718@gmail.com"));
             msg.To.Add(new MailboxAddress("User", email));
-            msg.Subject = subject + "GROUP NOTIFICATIONS";
+            msg.Subject = subject + ", Albergue Animais";
             msg.Body = new TextPart("html")
             {
                 

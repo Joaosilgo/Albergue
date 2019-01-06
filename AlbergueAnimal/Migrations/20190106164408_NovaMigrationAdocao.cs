@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbergueAnimal.Migrations
 {
-    public partial class r : Migration
+    public partial class NovaMigrationAdocao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -224,7 +224,8 @@ namespace AlbergueAnimal.Migrations
                     EstadoAdocaoId = table.Column<int>(nullable: false),
                     CreationDate = table.Column<DateTime>(nullable: false),
                     LastUpdated = table.Column<DateTime>(nullable: false),
-                    EndDate = table.Column<DateTime>(nullable: false)
+                    EndDate = table.Column<DateTime>(nullable: true),
+                    Arquivado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

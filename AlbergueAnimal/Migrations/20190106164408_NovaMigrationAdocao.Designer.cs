@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbergueAnimal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190106032236_v")]
-    partial class v
+    [Migration("20190106164408_NovaMigrationAdocao")]
+    partial class NovaMigrationAdocao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,9 +29,11 @@ namespace AlbergueAnimal.Migrations
 
                     b.Property<int>("AnimalId");
 
+                    b.Property<bool>("Arquivado");
+
                     b.Property<DateTime>("CreationDate");
 
-                    b.Property<DateTime>("EndDate");
+                    b.Property<DateTime?>("EndDate");
 
                     b.Property<int>("EstadoAdocaoId");
 
