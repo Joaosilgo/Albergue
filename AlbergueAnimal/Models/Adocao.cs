@@ -113,23 +113,24 @@ namespace AlbergueAnimal.Models
 
         public int AdocaoId { get; set; }
 
-
+        [Display(Name = "Animal")]
         public int AnimalId { get; set; }
 
+        [Display(Name = "Utilizador")]
         [ForeignKey("Utilizador")]
         public string UserName { get; set; }
 
         public int EstadoAdocaoId { get; set; }
 
-        [Display(Name = "Iniciado em")]
+        [Display(Name = "Data Inicio")]
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
       
-        [Display(Name = "Atualizado em")]
+        [Display(Name = "Ultima Atualização")]
         [DataType(DataType.Date)]
         public DateTime LastUpdated { get; set; }
 
-        [Display(Name = "Terminado em")]
+        [Display(Name = "Data Fim")]
         [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
 
