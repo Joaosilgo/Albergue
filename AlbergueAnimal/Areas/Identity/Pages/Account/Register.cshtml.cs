@@ -50,6 +50,8 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
 
             /// <summary>Propriedade DBO representa a data de nascimento do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
+            /// 
+            [Range(typeof(DateTime), "1/1/1966","1/1/2000")]
             [Required(ErrorMessage = "A Data de Nascimento não está preenchida")]
             [Display(Name = "Data Nascimento")]
             [DataType(DataType.Date)]
@@ -121,7 +123,13 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                     Genero = Input.Genero,
                     FicheiroFoto = Input.FicheiroFoto
                 };
+                //if (user.DBO > DateTime.Now)
+                //{
+                    
+
+                //}
                 var result = await _userManager.CreateAsync(user, Input.Password);
+               
                 if (result.Succeeded)
                 {
                     if (User.IsInRole("Administrator")) await _userManager.AddToRoleAsync(user, "Funcionario");
