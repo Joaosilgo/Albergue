@@ -121,6 +121,7 @@ namespace AlbergueAnimal.Models
 
         public int EstadoAdocaoId { get; set; }
 
+        [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
 
       
