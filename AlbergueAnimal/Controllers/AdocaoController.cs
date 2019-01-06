@@ -31,7 +31,7 @@ namespace AlbergueAnimal.Controllers
         // GET: Adocao
         public IActionResult Index(string searchString)
         {
-            var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
+            var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador).Where(a => a.Arquivado == false) select d;
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -101,7 +101,7 @@ namespace AlbergueAnimal.Controllers
                     adocao.CreationDate = DateTime.Now;
                     adocao.LastUpdated = DateTime.Now;
                     adocao.EndDate = null;
-                    adocao.Arquivado = false;//*******
+                    adocao.Arquivado = false;
                     adocao.EstadoAdocaoId = 2;
                     _context.Add(adocao);
                     //adocao.UserName = UserManager.GetUserId(User);
@@ -186,8 +186,9 @@ namespace AlbergueAnimal.Controllers
                 if (adocao.EstadoAdocaoId.Equals(4))
                 {
                     adocao.EndDate = DateTime.Now;
-                    //adocao.Arquivado = true;
+                    adocao.Arquivado = true;
                     //adocao.Animal.Arquivado = true;
+                    await _context.SaveChangesAsync();
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
                     _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
                 }
