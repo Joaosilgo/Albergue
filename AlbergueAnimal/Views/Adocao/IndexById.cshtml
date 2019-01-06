@@ -1,0 +1,71 @@
+﻿@model IEnumerable<AlbergueAnimal.Models.Adocao>
+
+@{
+    ViewData["Title"] = "IndexById";
+}
+
+<h2>IndexById</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arquivado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Utilizador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoAdocao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arquivado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Animal.Cor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Utilizador.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoAdocao.EstadoAdocaoId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AdocaoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AdocaoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AdocaoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbergueAnimal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190106164408_NovaMigrationAdocao")]
-    partial class NovaMigrationAdocao
+    [Migration("20190106173805_q")]
+    partial class q
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

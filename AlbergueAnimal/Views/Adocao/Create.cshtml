@@ -22,47 +22,48 @@
             </div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
-                 <input  class="form-control" value=" @UserManager.GetUserName(User)" disabled  />
+                <input class="form-control" value="@UserManager.GetUserName(User)" disabled />
                 @* <input asp-for="UserName" class="form-control" value=" @UserManager.GetUserId(User)" >*@
                 @* <select asp-for="UserName" class="form-control" asp-items="ViewBag.UserName"></select>*@
                 @*<input asp-for="UserName" class="form-control" value=" @UserManager.GetUserId(User)">*@
-               @* <input asp-for="UserName" type="number" class="form-control" value=" @UserManager.GetUserId(User)">*@
-               @* <input asp-for="UserName" type="number" class="form-control" value=" @UserManager.GetUserId(User)">*@
-                <input asp-for="UserName" class="form-control" value="@UserManager.GetUserId(User)" type="hidden" >
+                @* <input asp-for="UserName" type="number" class="form-control" value=" @UserManager.GetUserId(User)">*@
+                @* <input asp-for="UserName" type="number" class="form-control" value=" @UserManager.GetUserId(User)">*@
+                @* <input asp-for="UserName" class="form-control" value="@UserManager.GetUserId(User)" type="hidden">*@
+                <input asp-for="UserName" class="form-control" value="@UserManager.GetUserId(User)" type="hidden">
             </div>
-            @if (User.IsInRole("Administrator"))
-            {
-                <div class="form-group">
-                    <label asp-for="EstadoAdocaoId" class="control-label"></label>
-                    <select asp-for="EstadoAdocaoId" class="form-control" asp-items="ViewBag.EstadoAdocaoId"></select>
-                </div>
-            }
-            <!--<div class="form-group">
-                <label asp-for="CreationDate" class="control-label"></label>
-                <input asp-for="CreationDate" class="form-control" />
-                <span asp-validation-for="CreationDate" class="text-danger"></span>
-            </div>-->
-            <!--<div class="form-group">
-                <label asp-for="LastUpdated" class="control-label"></label>
-                <input asp-for="LastUpdated" class="form-control" />
-                <span asp-validation-for="LastUpdated" class="text-danger"></span>
-            </div>-->
-            <!--<div class="form-group">
-                <label asp-for="EndDate" class="control-label"></label>
-                <input asp-for="EndDate" class="form-control" />
-                <span asp-validation-for="EndDate" class="text-danger"></span>
-            </div>-->
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <div class="form-group">
+                            <label asp-for="EstadoAdocaoId" class="control-label"></label>
+                            <select asp-for="EstadoAdocaoId" class="form-control" asp-items="ViewBag.EstadoAdocaoId"></select>
+                        </div>
+                    }
+                    <!--<div class="form-group">
+                        <label asp-for="CreationDate" class="control-label"></label>
+                        <input asp-for="CreationDate" class="form-control" />
+                        <span asp-validation-for="CreationDate" class="text-danger"></span>
+                    </div>-->
+                    <!--<div class="form-group">
+                        <label asp-for="LastUpdated" class="control-label"></label>
+                        <input asp-for="LastUpdated" class="form-control" />
+                        <span asp-validation-for="LastUpdated" class="text-danger"></span>
+                    </div>-->
+                    <!--<div class="form-group">
+                        <label asp-for="EndDate" class="control-label"></label>
+                        <input asp-for="EndDate" class="form-control" />
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                    </div>-->
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
+        </div>
 
-<div>
-    <a asp-action="Index">Voltar á Lista</a>
-</div>
+        <div>
+            <a asp-action="Index">Voltar á Lista</a>
+        </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

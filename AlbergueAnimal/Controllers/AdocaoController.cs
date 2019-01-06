@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using AlbergueAnimal.Areas.Identity.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Rotativa.AspNetCore;
 
 namespace AlbergueAnimal.Controllers
 {
@@ -28,10 +29,49 @@ namespace AlbergueAnimal.Controllers
         }
 
         // GET: Adocao
-        public async Task<IActionResult> Index()
+        //   IActionResult
+        //  public async Task<IActionResult> Index(string sortOrder, string searchString/*, int page = 0*/)
+        public async Task<IActionResult> Index(/*string sortOrder, string searchString/*, int page = 0*/)
         {
+
+            //   ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_asc" : "";
+            //   //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            //   ViewBag.DateSortParm = sortOrder == "date_desc" ? "Date" : "date_desc";
+
+            ////   var AnimaisArquivados = from d in _context.Animal.Include(a => a.Raca) select d;
+            //   var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
+
+            //   AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == true);
+
+            //   if (!String.IsNullOrEmpty(searchString))
+            //   {
+            //       AdocoesArquivadas = AdocoesArquivadas.Where(s => s.UserName.Contains(searchString) || s.EstadoAdocao.estado.Contains(searchString)
+            //     /*  || s.Genero.Contains(searchString) || s.Raca.Designacao.Contains(searchString)*/);
+            //   }
+
+            //   switch (sortOrder) //OrderBy para ascendente OU OrderByDescending para descendente
+            //   {
+            //       case "name_asc":
+            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderBy(s => s.UserName);
+            //           //AnimaisArquivados = AnimaisArquivados.OrderByDescending(s => s.Nome);
+            //           break;
+            //       case "Date":
+            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderBy(s => s.CreationDate);
+            //           break;
+            //       case "date_desc":
+            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderByDescending(s => s.CreationDate);
+            //           break;
+            //       default: //data de entrada descendente
+            //           AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == false).OrderByDescending(s => s.LastUpdated);
+            //           break;
+            //   }
+
+
+
             var applicationDbContext = _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador);
             return View(await applicationDbContext.ToListAsync());
+
+            //   return View(AdocoesArquivadas.ToList());
         }
 
         [Authorize(Roles = "Administrator")]
@@ -174,7 +214,7 @@ namespace AlbergueAnimal.Controllers
                         throw;
                     }
                 }
-                if (adocao.EstadoAdocaoId.Equals(1))
+                if (adocao.EstadoAdocaoId.Equals(4))
                 {
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
                     _emailSender.SendEmailAdoption(x.First().ToString(), "Adoption", "cao");
@@ -230,5 +270,81 @@ namespace AlbergueAnimal.Controllers
         {
             return _context.Adocao.Any(e => e.AdocaoId == id);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public ActionResult IndexById(int id)
+        {
+            var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
+            return View(emp);
+        }
+        public ActionResult PrintAdoptionSlip(int id)
+        {
+            var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
+            var report = new Rotativa.AspNetCore.ViewAsPdf("Details", emp);
+            return report;
+        }
+        
+
+
+
+
+
     }
 }
