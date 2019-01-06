@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AlbergueAnimal.Models.Adocao>
+
+@{
+    ViewData["Title"] = "Adoções Arquivadas";
+}
+<br />
+
+<h2>@ViewData["Title"]</h2>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Utilizador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoAdocao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastUpdated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Animal.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Utilizador.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoAdocao.estado)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

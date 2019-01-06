@@ -51,7 +51,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
             /// <summary>Propriedade DBO representa a data de nascimento do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
             /// 
-            [Range(typeof(DateTime), "1/1/1966","1/1/2000")]
+            //[Range(typeof(DateTime), "1/1/1966","1/1/2000")]
             [Required(ErrorMessage = "A Data de Nascimento não está preenchida")]
             [Display(Name = "Data Nascimento")]
             [DataType(DataType.Date)]

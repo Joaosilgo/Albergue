@@ -121,6 +121,8 @@ namespace AlbergueAnimal.Models
 
         public int EstadoAdocaoId { get; set; }
 
+        [Display(Name = "Iniciado em")]
+        [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
 
       
@@ -132,6 +134,8 @@ namespace AlbergueAnimal.Models
         [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
 
+        [Display(Name = "Arquivado")]
+        public bool Arquivado { get; set; }
 
         public virtual Animal Animal { get; set; }
         public virtual Utilizador Utilizador { get; set; }

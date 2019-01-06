@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbergueAnimal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190106142944_NovaMigration")]
+    [Migration("20190106150158_NovaMigration")]
     partial class NovaMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,8 @@ namespace AlbergueAnimal.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("AnimalId");
+
+                    b.Property<bool>("Arquivado");
 
                     b.Property<DateTime>("CreationDate");
 

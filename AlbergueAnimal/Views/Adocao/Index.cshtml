@@ -4,11 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Adoções</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@if (User.IsInRole("Administrator"))
+{
+    <p>
+        <a asp-action="Create">Registar Adoção</a> | <a asp-action="IndexArquivo">Arquivo</a>
+    </p>
+}
+else
+{
+    <a asp-action="Create">Adotar Animal</a>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -34,7 +42,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CreationDate)
@@ -54,12 +63,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EstadoAdocao.estado)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AdocaoId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AdocaoId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AdocaoId">Delete</a>
-            </td>
+            @if (User.IsInRole("Administrator"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AdocaoId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.AdocaoId">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AdocaoId">Remover</a>
+                </td>
+            }
         </tr>
-}
+        }
     </tbody>
 </table>

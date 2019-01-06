@@ -224,7 +224,8 @@ namespace AlbergueAnimal.Migrations
                     EstadoAdocaoId = table.Column<int>(nullable: false),
                     CreationDate = table.Column<DateTime>(nullable: false),
                     LastUpdated = table.Column<DateTime>(nullable: false),
-                    EndDate = table.Column<DateTime>(nullable: false)
+                    EndDate = table.Column<DateTime>(nullable: false),
+                    Arquivado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
