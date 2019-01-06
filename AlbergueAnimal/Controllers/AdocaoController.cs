@@ -68,7 +68,7 @@ namespace AlbergueAnimal.Controllers
 
 
 
-            var applicationDbContext = _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador);
+            var applicationDbContext = _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador).Where(d => d.Arquivado == false);
             return View(await applicationDbContext.ToListAsync());
 
             //   return View(AdocoesArquivadas.ToList());
@@ -200,6 +200,7 @@ namespace AlbergueAnimal.Controllers
             {
                 try
                 {
+                    adocao.LastUpdated = DateTime.Now;
                     _context.Update(adocao);
                     await _context.SaveChangesAsync();
                 }
@@ -216,8 +217,11 @@ namespace AlbergueAnimal.Controllers
                 }
                 if (adocao.EstadoAdocaoId.Equals(4))
                 {
+                    adocao.EndDate = DateTime.Now;
+                    //adocao.Arquivado = true;
+                    //adocao.Animal.Arquivado = true;
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
-                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoption", "cao");
+                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualque altura do nosso horário de atendimento.");
                 }
                
                     return RedirectToAction(nameof(Index));
@@ -329,30 +333,10 @@ namespace AlbergueAnimal.Controllers
 
 
 
-        //public ActionResult IndexById(int id)
-        //{
-        //    var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
-        //    return View(emp);
-        //}
-
-        public async Task<IActionResult> IndexById(int? id)
+        public ActionResult IndexById(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var adocao = await _context.Adocao
-                .Include(a => a.Animal)
-                .Include(a => a.EstadoAdocao)
-                .Include(a => a.Utilizador)
-                .FirstOrDefaultAsync(m => m.AdocaoId == id);
-            if (adocao == null)
-            {
-                return NotFound();
-            }
-
-            return View(adocao);
+            var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
+            return View(emp);
         }
         public ActionResult PrintAdoptionSlip(int id)
         {
@@ -365,11 +349,6 @@ namespace AlbergueAnimal.Controllers
             var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
             return report;
         }
-        
-
-
-
-
 
     }
 }

@@ -120,6 +120,7 @@ namespace AlbergueAnimal.Models
         [ForeignKey("Utilizador")]
         public string UserName { get; set; }
 
+        [Display(Name = "Estado da Adoção")]
         public int EstadoAdocaoId { get; set; }
 
         /// <summary>Propriedade CreationDate representa a data de inicio do processo de adoção.</summary>
