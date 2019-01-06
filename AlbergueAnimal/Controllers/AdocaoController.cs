@@ -331,17 +331,29 @@ namespace AlbergueAnimal.Controllers
 
 
 
-
-
-        public ActionResult IndexById(int id)
+        public async Task<IActionResult> IndexById(int? id)
         {
-            var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
-            return View(emp);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var adocao = await _context.Adocao
+                .Include(a => a.Animal)
+                .Include(a => a.EstadoAdocao)
+                .Include(a => a.Utilizador)
+                .FirstOrDefaultAsync(m => m.AdocaoId == id);
+            if (adocao == null)
+            {
+                return NotFound();
+            }
+
+            return View(adocao);
         }
         public ActionResult PrintAdoptionSlip(int id)
         {
             //  var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
-            var adocao =  _context.Adocao
+            var adocao = _context.Adocao
                   .Include(a => a.Animal)
                   .Include(a => a.EstadoAdocao)
                   .Include(a => a.Utilizador)
@@ -349,6 +361,23 @@ namespace AlbergueAnimal.Controllers
             var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
             return report;
         }
+
+        //public ActionResult IndexById(int id)
+        //{
+        //    var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
+        //    return View(emp);
+        //}
+        //public ActionResult PrintAdoptionSlip(int id)
+        //{
+        //    //  var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
+        //    var adocao =  _context.Adocao
+        //          .Include(a => a.Animal)
+        //          .Include(a => a.EstadoAdocao)
+        //          .Include(a => a.Utilizador)
+        //          .Where(m => m.AdocaoId == id).First();
+        //    var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
+        //    return report;
+        //}
 
     }
 }

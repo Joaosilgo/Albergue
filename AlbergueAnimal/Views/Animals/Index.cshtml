@@ -50,54 +50,54 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @{
-                    if (item.imageContent != null && item.imageMimeType.Contains("image"))
-                    {
-                        string imageBase64 = Convert.ToBase64String(item.imageContent);
-                        string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
-                        <img src="@imageSrc" alt="Profile picture of @item.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+            <tr>
+                <td>
+                    @{
+                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.imageContent);
+                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                            <img src="@imageSrc" alt="Profile picture of @item.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+                        }
                     }
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataEntrada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataVacina)
-            </td>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataEntrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataVacina)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Raca.Designacao)
-            </td>
-            @if (User.IsInRole("Administrator"))
-            {
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.AnimalId">Arquivar</a>
+                    @Html.DisplayFor(modelItem => item.Raca.Designacao)
                 </td>
-            }
-            else
-            {
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a>
-                </td>
-            }
-        </tr>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.AnimalId">Arquivar</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a>
+                    </td>
+                }
+            </tr>
         }
     </tbody>
 </table>
@@ -112,16 +112,16 @@
 
 @using (Html.BeginForm())
 {
-<p>
-    Procurar: @Html.TextBox("SearchString")
-    <!--<input type="submit" value="Procurar" />-->
-    <button type="submit" class="btn btn-default">Procurar</button>
+    <p>
+        Procurar: @Html.TextBox("SearchString")
+        <!--<input type="submit" value="Procurar" />-->
+        <button type="submit" class="btn btn-default">Procurar</button>
 
         <!--@if (ViewBag.Page > 0)
         {
             <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })"
                class="btn btn-default">
-                &laquo; Anterior 
+                &laquo; Anterior
             </a>
         }
         @if (ViewBag.Page < ViewBag.MaxPage)
@@ -131,7 +131,7 @@
                 Seguinte &raquo;
             </a>
         }-->
-</p>
+    </p>
 }
 
 
