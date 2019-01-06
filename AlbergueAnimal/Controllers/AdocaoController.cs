@@ -84,7 +84,7 @@ namespace AlbergueAnimal.Controllers
             if (ModelState.IsValid)
             {
                 //  list.Any(cus => cus.FirstName == "John");
-                var result =_context.Adocao.ToList().Where(z => z.EstadoAdocaoId.Equals(4)).Any(a => a.AnimalId==adocao.AnimalId);
+                var result =_context.Adocao.ToList().Where(z => z.EstadoAdocaoId.Equals(1)).Any(a => a.AnimalId==adocao.AnimalId);
                 if(result==false)
                 {
                     //var x = User.Identity.Name;
