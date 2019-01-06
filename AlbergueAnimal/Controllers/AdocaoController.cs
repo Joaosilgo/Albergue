@@ -9,11 +9,17 @@ using AlbergueAnimal.Data;
 using AlbergueAnimal.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using AlbergueAnimal.Areas.Identity.Services;
+using Microsoft.AspNetCore.Identity;
+
+
+
 
 namespace AlbergueAnimal.Controllers
 {
     public class AdocaoController : Controller
     {
+        private SignInManager<Utilizador> SignInManager;
+        private UserManager<Utilizador> UserManager;
         private readonly ApplicationDbContext _context;
         private readonly EmailSenderAdoption _emailSender;
        
@@ -69,9 +75,16 @@ namespace AlbergueAnimal.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                //var x = User.Identity.Name;
+                //User.Identity.Name;
+                //adocao.UserName = x.ToString();
+                adocao.EstadoAdocaoId = 2;
                 _context.Add(adocao);
+                //adocao.UserName = UserManager.GetUserId(User);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+                
             }
             ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
             ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado",adocao.EstadoAdocaoId);

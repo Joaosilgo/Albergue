@@ -1,8 +1,12 @@
 ﻿@model AlbergueAnimal.Models.Adocao
+@using Microsoft.AspNetCore.Identity
 
 @{
     ViewData["Title"] = "Create";
 }
+
+@inject SignInManager<Utilizador> SignInManager
+@inject UserManager<Utilizador> UserManager
 
 <h2>Create</h2>
 
@@ -14,16 +18,25 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="AnimalId" class="control-label"></label>
-                <select asp-for="AnimalId" class ="form-control" asp-items="ViewBag.AnimalId"></select>
+                <select asp-for="AnimalId" class="form-control" asp-items="ViewBag.AnimalId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
-                <select asp-for="UserName" class ="form-control" asp-items="ViewBag.UserName"></select>
+                 <input  class="form-control" value=" @UserManager.GetUserName(User)" disabled  />
+                @* <input asp-for="UserName" class="form-control" value=" @UserManager.GetUserId(User)" >*@
+                @* <select asp-for="UserName" class="form-control" asp-items="ViewBag.UserName"></select>*@
+                @*<input asp-for="UserName" class="form-control" value=" @UserManager.GetUserId(User)">*@
+               @* <input asp-for="UserName" type="number" class="form-control" value=" @UserManager.GetUserId(User)">*@
+               @* <input asp-for="UserName" type="number" class="form-control" value=" @UserManager.GetUserId(User)">*@
+                <input asp-for="UserName" class="form-control" value="@UserManager.GetUserId(User)" type="hidden" >
             </div>
-            <div class="form-group">
-                <label asp-for="EstadoAdocaoId" class="control-label"></label>
-                <select asp-for="EstadoAdocaoId" class ="form-control" asp-items="ViewBag.EstadoAdocaoId"></select>
-            </div>
+            @if (User.IsInRole("Administrator"))
+            {
+                <div class="form-group">
+                    <label asp-for="EstadoAdocaoId" class="control-label"></label>
+                    <select asp-for="EstadoAdocaoId" class="form-control" asp-items="ViewBag.EstadoAdocaoId"></select>
+                </div>
+            }
             <div class="form-group">
                 <label asp-for="CreationDate" class="control-label"></label>
                 <input asp-for="CreationDate" class="form-control" />
