@@ -124,7 +124,6 @@ namespace AlbergueAnimal.Models
         [Display(Name = "Iniciado em")]
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
-
       
         [Display(Name = "Atualizado em")]
         [DataType(DataType.Date)]
