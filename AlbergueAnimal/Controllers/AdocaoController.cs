@@ -82,6 +82,8 @@ namespace AlbergueAnimal.Controllers
                     //var x = User.Identity.Name;
                     //User.Identity.Name;
                     //adocao.UserName = x.ToString();
+                    adocao.CreationDate = DateTime.Now;
+                    adocao.LastUpdated = DateTime.Now;
                     adocao.EstadoAdocaoId = 2;
                     _context.Add(adocao);
                     //adocao.UserName = UserManager.GetUserId(User);
@@ -148,6 +150,7 @@ namespace AlbergueAnimal.Controllers
             {
                 try
                 {
+                    adocao.LastUpdated = DateTime.Now;
                     _context.Update(adocao);
                     await _context.SaveChangesAsync();
                 }
@@ -162,8 +165,10 @@ namespace AlbergueAnimal.Controllers
                         throw;
                     }
                 }
-                if (adocao.EstadoAdocaoId.Equals(1))
+                if (adocao.EstadoAdocaoId.Equals(4))//se for alterado para adotado ele manda mail e a data do processo termina
                 {
+                    adocao.LastUpdated = DateTime.Now;
+                    adocao.EndDate = DateTime.Now;
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
                     _emailSender.SendEmailAdoption(x.First().ToString(), "Adoption", "cao");
                 }
