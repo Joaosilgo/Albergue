@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-
+using static AlbergueAnimal.Models.Validacoes;
 
 namespace AlbergueAnimal.Areas.Identity.Pages.Account
 {
@@ -43,7 +43,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
         {
             /// <summary>Propriedade Nome representa o nome do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
-            [Required(ErrorMessage = "O Nome não está preenchido.")]
+            [Required(ErrorMessage = "O Nome não está preenchido5555555.")]
             [DataType(DataType.Text)]
             [Display(Name = "Nome Completo")]
             public string Nome { get; set; }
@@ -53,8 +53,11 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
             /// 
             //[Range(typeof(DateTime), "1/1/1966","1/1/2000")]
             [Required(ErrorMessage = "A Data de Nascimento não está preenchida")]
-            [Display(Name = "Data Nascimento")]
             [DataType(DataType.Date)]
+            [ValidacoesData]
+            [ValidacoesIdade]
+            [Display(Name = "Data Nascimento")]
+            //[DataType(DataType.Date)]
             public DateTime DBO { get; set; }
 
             /// <summary>Propriedade Morada representa a morada do utilizador.</summary>
