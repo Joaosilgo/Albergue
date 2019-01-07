@@ -76,7 +76,7 @@ namespace AlbergueAnimal.Controllers
         // GET: Adocao/Create
         public IActionResult Create()
         {
-            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome");
+            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>().Where(a=>a.Arquivado==false), "AnimalId", "Nome");
             ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado");
             ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName");
             return View();
