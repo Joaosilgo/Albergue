@@ -21,7 +21,7 @@ namespace AlbergueAnimal.Controllers
         private UserManager<Utilizador> UserManager;
         private readonly ApplicationDbContext _context;
         private readonly EmailSenderAdoption _emailSender;
-       
+
         public AdocaoController(ApplicationDbContext context)
         {
             _context = context;
@@ -92,11 +92,11 @@ namespace AlbergueAnimal.Controllers
             if (ModelState.IsValid)
             {
                 //  list.Any(cus => cus.FirstName == "John");
-                var result =_context.Adocao.ToList().Where(z => z.EstadoAdocaoId.Equals(1)).Any(a => a.AnimalId==adocao.AnimalId);
-                if(result==false)
+                var result = _context.Adocao.ToList().Where(z => z.EstadoAdocaoId.Equals(1)).Any(a => a.AnimalId == adocao.AnimalId);
+                if (result == false)
                 {
 
-                
+
                     //var x = User.Identity.Name;
                     //User.Identity.Name;
                     //adocao.UserName = x.ToString();
@@ -120,11 +120,11 @@ namespace AlbergueAnimal.Controllers
                     //ViewData["UserName"] = new SelectList(_context.Users, "Id", "Id", adocao.UserName);
                     return View(adocao);
                 }
-                
-                
+
+
             }
             ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
-            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado",adocao.EstadoAdocaoId);
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
             ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName", adocao.UserName);
             //ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Cor", adocao.AnimalId);
             //ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "EstadoAdocaoId", adocao.EstadoAdocaoId);
@@ -148,9 +148,9 @@ namespace AlbergueAnimal.Controllers
             //ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Cor", adocao.AnimalId);
             //ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "EstadoAdocaoId", adocao.EstadoAdocaoId);
             //ViewData["UserName"] = new SelectList(_context.Users, "Id", "Id", adocao.UserName);
-            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome",adocao.AnimalId);
-            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado",adocao.EstadoAdocaoId);
-            ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName",adocao.UserName);
+            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
+            ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName", adocao.UserName);
             return View(adocao);
         }
 
@@ -189,14 +189,19 @@ namespace AlbergueAnimal.Controllers
                 {
                     adocao.EndDate = DateTime.Now;
                     adocao.Arquivado = true;
+
+
+
                     //adocao.Animal.Arquivado = true;
+                    var d = _context.Animal.Where(a => a.AnimalId == adocao.AnimalId).First();
+                    d.Arquivado = true;
                     await _context.SaveChangesAsync();
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
                     _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
                 }
-               
-                    return RedirectToAction(nameof(Index));
-                
+
+                return RedirectToAction(nameof(Index));
+
             }
             ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
             ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
@@ -331,8 +336,8 @@ namespace AlbergueAnimal.Controllers
                   .Where(m => m.AdocaoId == id).First();
 
 
-           
-            
+
+
 
 
 
