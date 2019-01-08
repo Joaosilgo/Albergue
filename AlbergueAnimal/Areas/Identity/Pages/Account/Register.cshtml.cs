@@ -43,7 +43,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
         {
             /// <summary>Propriedade Nome representa o nome do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
-            [Required(ErrorMessage = "O Nome não está preenchido5555555.")]
+            [Required(ErrorMessage = "O Nome não está preenchido.")]
             [DataType(DataType.Text)]
             [Display(Name = "Nome Completo")]
             public string Nome { get; set; }
@@ -147,8 +147,10 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                         values: new { userId = user.Id, code = code },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirme o seu email",
-                        $"Bem vindo ao nosso site. Por favor confirme a sua inscrição <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>.");
+                    await _emailSender.SendEmailAsync(
+                        Input.Email, 
+                        "Confirmação de Registo",
+                        $"Bem vindo ao nosso site!<br/>Por favor confirme a sua inscrição clicando no seguinte link <a href='{callbackUrl}'> Confirmar Registo </a>.<br/><br/><i>Quinta do Mião, Albergue Animais</i>");
 
                     //  await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);

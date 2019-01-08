@@ -197,7 +197,7 @@ namespace AlbergueAnimal.Controllers
                     d.Arquivado = true;
                     await _context.SaveChangesAsync();
                     var x = _context.Users.Where(a => a.Id == adocao.UserName);
-                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
+                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção Aceite", $"Olá, " + adocao.Utilizador.Nome + $"<br/>A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.<br/><br/><i>Quinta do Mião, Albergue Animais</i>");
                 }
 
                 return RedirectToAction(nameof(Index));
