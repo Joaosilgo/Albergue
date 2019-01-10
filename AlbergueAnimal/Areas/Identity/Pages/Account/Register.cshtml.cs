@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-
+using static AlbergueAnimal.Models.Validacoes;
 
 namespace AlbergueAnimal.Areas.Identity.Pages.Account
 {
@@ -53,8 +53,11 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
             /// 
             //[Range(typeof(DateTime), "1/1/1966","1/1/2000")]
             [Required(ErrorMessage = "A Data de Nascimento não está preenchida")]
-            [Display(Name = "Data Nascimento")]
             [DataType(DataType.Date)]
+            [ValidacoesData]
+            [ValidacoesIdade]
+            [Display(Name = "Data Nascimento")]
+            //[DataType(DataType.Date)]
             public DateTime DBO { get; set; }
 
             /// <summary>Propriedade Morada representa a morada do utilizador.</summary>
@@ -144,8 +147,10 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                         values: new { userId = user.Id, code = code },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirme o seu email",
-                        $"Bem vindo ao nosso site. Por favor confirme a sua inscrição <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>.");
+                    await _emailSender.SendEmailAsync(
+                        Input.Email, 
+                        "Confirmação de Registo",
+                        $"Bem vindo ao nosso site!<br/>Por favor confirme a sua inscrição clicando no seguinte link <a href='{callbackUrl}'> Confirmar Registo </a>.<br/><br/><i>Quinta do Mião, Albergue Animais</i>");
 
                     //  await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);

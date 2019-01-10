@@ -57,8 +57,10 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                 await _emailSender.SendEmailAsync(
                     Input.Email,
                     "Redefinir Password",
-                    $"Por favor redefina a sua password <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>.");
-
+                    $"Olá, " + user.UserName + "!" +
+                    $"<br/>Houve uma tentativa de mudar a sua Password, caso não tenha solicitado esta atividade" +
+                    $" ignore este email. Caso contrário carregue no link <a href='{callbackUrl}'> Mudar Palavra-Chave </a>.<br/><br/><i>Quinta do Mião, Albergue Animais</i>");
+                   //*$"Por favor redefina a sua password <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>."*/
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
 

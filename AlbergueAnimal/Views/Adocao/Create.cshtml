@@ -8,7 +8,7 @@
 @inject SignInManager<Utilizador> SignInManager
 @inject UserManager<Utilizador> UserManager
 
-<h2>Create</h2>
+<h2>Adotar um Animal</h2>
 
 <h4>A minha adoção</h4>
 <hr />
@@ -31,13 +31,13 @@
                 @* <input asp-for="UserName" class="form-control" value="@UserManager.GetUserId(User)" type="hidden">*@
                 <input asp-for="UserName" class="form-control" value="@UserManager.GetUserId(User)" type="hidden">
             </div>
-                    @if (User.IsInRole("Administrator"))
+                    <!--@if (User.IsInRole("Administrator"))
                     {
                         <div class="form-group">
                             <label asp-for="EstadoAdocaoId" class="control-label"></label>
                             <select asp-for="EstadoAdocaoId" class="form-control" asp-items="ViewBag.EstadoAdocaoId"></select>
                         </div>
-                    }
+                    }-->
                     <!--<div class="form-group">
                         <label asp-for="CreationDate" class="control-label"></label>
                         <input asp-for="CreationDate" class="form-control" />
