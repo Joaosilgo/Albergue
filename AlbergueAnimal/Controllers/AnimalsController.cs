@@ -131,7 +131,7 @@ namespace AlbergueAnimal.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(animal.DataEntrada < animal.DataNascimento)
+                if (animal.DataEntrada < animal.DataNascimento)
                 {
                     ViewBag.Message = string.Format("Verifique campo relativo a datas");
                     ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
@@ -143,7 +143,7 @@ namespace AlbergueAnimal.Controllers
                     ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
                     return View(animal);
                 }
-                if(animal.DataEntrada > DateTime.Now || animal.DataNascimento > DateTime.Now || animal.DataVacina > DateTime.Now)
+                if (animal.DataEntrada > DateTime.Now || animal.DataNascimento > DateTime.Now || animal.DataVacina > DateTime.Now)
                 {
                     ViewBag.Message = string.Format("As datas nao podem ser superiores ao dia de hoje");
                     ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
@@ -202,7 +202,7 @@ namespace AlbergueAnimal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina,imageContent,imageFileName,imageMimeType")] Animal animal,  IFormFile thePicture)
+        public async Task<IActionResult> Edit(int id, [Bind("AnimalId,RacaId,Nome,Genero,Cor,DataNascimento,DataEntrada,DataVacina,imageContent,imageFileName,imageMimeType")] Animal animal, IFormFile thePicture)
         {
             //var animalToUpdate = await _context.Animal
             //    .Include(p=> p.) 
@@ -231,9 +231,9 @@ namespace AlbergueAnimal.Controllers
                         {
                             string mimeType = thePicture.ContentType;
                             long fileLength = thePicture.Length;
-                            if(!(mimeType=="" || fileLength==0))
+                            if (!(mimeType == "" || fileLength == 0))
                             {
-                                if(mimeType.Contains("image"))
+                                if (mimeType.Contains("image"))
                                 {
                                     using (var memoryStream = new MemoryStream())
                                     {
@@ -244,12 +244,12 @@ namespace AlbergueAnimal.Controllers
                                     animal.imageMimeType = mimeType;
                                     animal.imageFileName = thePicture.FileName;
                                 }
-                                   
+
                             }
                         }
-                    
-                   }
-                    
+
+                    }
+
                     _context.Update(animal);
                     await _context.SaveChangesAsync();
                 }

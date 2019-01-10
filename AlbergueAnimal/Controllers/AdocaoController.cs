@@ -196,7 +196,7 @@ namespace AlbergueAnimal.Controllers
                     var d = _context.Animal.Where(a => a.AnimalId == adocao.AnimalId).First();
                     d.Arquivado = true;
                     await _context.SaveChangesAsync();
-                    var x = _context.Users.Where(a => a.Id == adocao.UserName);
+                    var x = _context.Users.Where(a => a.Id == adocao.Utilizador.Email);
                     _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
                 }
 
@@ -303,10 +303,6 @@ namespace AlbergueAnimal.Controllers
 
 
 
-
-
-
-
         public async Task<IActionResult> IndexById(int? id)
         {
             if (id == null)
@@ -334,12 +330,6 @@ namespace AlbergueAnimal.Controllers
                   .Include(a => a.EstadoAdocao)
                   .Include(a => a.Utilizador)
                   .Where(m => m.AdocaoId == id).First();
-
-
-
-
-
-
 
             var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
             return report;
