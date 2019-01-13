@@ -59,27 +59,28 @@ namespace AlbergueAnimal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductID,ProductTypeID,Nome,Referencia,Preco,Quantidade,QuantidadeLimite,imageContent,imageFileName,imageMimeType")] Product product, IFormFile productPicture)
+        public async Task<IActionResult> Create([Bind("ProductID,ProductTypeID,Nome,Referencia,Preco,Quantidade,QuantidadeLimite,imageContent,imageFileName,imageMimeType")] Product product, IFormFile thePicture)
         {
             if (ModelState.IsValid)
             {
-                if (productPicture != null)
+                if (thePicture != null)
                 {
-                    string mimeType = productPicture.ContentType;
-                    long fileLength = productPicture.Length;
+                    string mimeType = thePicture.ContentType;
+                    long fileLength = thePicture.Length;
                     if (!(mimeType == "" || fileLength == 0))
                     {
                         if (mimeType.Contains("image"))
                         {
                             using (var memoryStream = new MemoryStream())
                             {
-                                await productPicture.CopyToAsync(memoryStream);
+                                await thePicture.CopyToAsync(memoryStream);
                                 product.imageContent = memoryStream.ToArray();
 
                             }
                             product.imageMimeType = mimeType;
-                            product.imageFileName = productPicture.FileName;
+                            product.imageFileName = thePicture.FileName;
                         }
+
                     }
                 }
 
@@ -113,7 +114,7 @@ namespace AlbergueAnimal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductID,ProductTypeID,Nome,Referencia,Preco,Quantidade,QuantidadeLimite")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductID,ProductTypeID,Nome,Referencia,Preco,Quantidade,QuantidadeLimite")] Product product, IFormFile thePicture)
         {
             if (id != product.ProductID)
             {
@@ -124,6 +125,39 @@ namespace AlbergueAnimal.Controllers
             {
                 try
                 {
+
+                    //começa aqui
+                    if (thePicture == null)
+                    {
+                        product.imageContent = product.imageContent;
+                        product.imageFileName = product.imageFileName;
+
+                        product.imageMimeType = product.imageMimeType;
+                    }
+                    else
+                    {
+                        if (thePicture != null)
+                        {
+                            string mimeType = thePicture.ContentType;
+                            long fileLength = thePicture.Length;
+                            if (!(mimeType == "" || fileLength == 0))
+                            {
+                                if (mimeType.Contains("image"))
+                                {
+                                    using (var memoryStream = new MemoryStream())
+                                    {
+                                        await thePicture.CopyToAsync(memoryStream);
+                                        product.imageContent = memoryStream.ToArray();
+
+                                    }
+                                    product.imageMimeType = mimeType;
+                                    product.imageFileName = thePicture.FileName;
+                                }
+
+                            }
+                        }
+
+                    }
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
@@ -178,5 +212,10 @@ namespace AlbergueAnimal.Controllers
         {
             return _context.Product.Any(e => e.ProductID == id);
         }
+
+
+
+
+       
     }
 }
