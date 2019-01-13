@@ -4,10 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <div>
-    <h4>Product</h4>
+    <h4>Produto</h4>
     <div>
         @{
             if (Model.imageContent != null && Model.imageMimeType.Contains("image"))
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ProductID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.ProductID">Editar</a> |
+    <a asp-action="Index">Voltar à Lista</a>
 </div>

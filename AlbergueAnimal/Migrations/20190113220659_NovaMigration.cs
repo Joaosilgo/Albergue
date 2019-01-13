@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbergueAnimal.Migrations
 {
-    public partial class x : Migration
+    public partial class NovaMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -66,6 +66,19 @@ namespace AlbergueAnimal.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_EstadoAdocao", x => x.EstadoAdocaoId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductType",
+                columns: table => new
+                {
+                    ProductTypeID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(maxLength: 20, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductType", x => x.ProductTypeID);
                 });
 
             migrationBuilder.CreateTable(
@@ -184,6 +197,33 @@ namespace AlbergueAnimal.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    ProductID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ProductTypeID = table.Column<int>(nullable: false),
+                    Nome = table.Column<string>(maxLength: 15, nullable: false),
+                    Referencia = table.Column<string>(nullable: false),
+                    Preco = table.Column<double>(nullable: false),
+                    Quantidade = table.Column<int>(nullable: false),
+                    QuantidadeLimite = table.Column<int>(nullable: false),
+                    imageContent = table.Column<byte[]>(nullable: true),
+                    imageMimeType = table.Column<string>(maxLength: 256, nullable: true),
+                    imageFileName = table.Column<string>(maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.ProductID);
+                    table.ForeignKey(
+                        name: "FK_Product_ProductType_ProductTypeID",
+                        column: x => x.ProductTypeID,
+                        principalTable: "ProductType",
+                        principalColumn: "ProductTypeID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -311,6 +351,11 @@ namespace AlbergueAnimal.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Product_ProductTypeID",
+                table: "Product",
+                column: "ProductTypeID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -334,6 +379,9 @@ namespace AlbergueAnimal.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Product");
+
+            migrationBuilder.DropTable(
                 name: "Animal");
 
             migrationBuilder.DropTable(
@@ -344,6 +392,9 @@ namespace AlbergueAnimal.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "ProductType");
 
             migrationBuilder.DropTable(
                 name: "Raca");

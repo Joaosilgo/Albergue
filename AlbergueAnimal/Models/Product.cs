@@ -53,9 +53,9 @@ namespace AlbergueAnimal.Models
         public String imageFileName { get; set; }
 
         //propriedade navigacional
-        /// <summary>Propriedade ProductType representa a ProductType .</summary>
+        /// <summary>Propriedade ProductType representa a o tipo de produto .</summary>
         /// <value>Permite o get e o set desta propriedade. Vai buscar o nome do Producto ao model ProductType.</value>
-        [Display(Name = "ProductType")]
+        [Display(Name = "Tipo de Producto")]
         public virtual ProductType ProductType { get; set; } //o que aparece na página
 
 

@@ -4,16 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Stock de Produtos</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Inserir Produto</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Fotografia Producto
+                Fotografia Produto
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
@@ -68,9 +68,9 @@
                 @Html.DisplayFor(modelItem => item.ProductType.Nome)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductID">Delete</a> |
+                <a asp-action="Edit" asp-route-id="@item.ProductID">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ProductID">Detailhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProductID">Remover</a> |
                 @Html.ActionLink("Requisitar", "Requisitar", "Stock")
             </td>
         </tr>
