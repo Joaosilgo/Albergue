@@ -40,6 +40,15 @@ namespace AlbergueAnimal.Models
                
                 context.SaveChanges();
             }
+            if (!context.ProductType.Any())
+            {
+                context.ProductType.Add(new ProductType { Nome= "Alimento" });
+                context.ProductType.Add(new ProductType { Nome = "Saúde" });
+                context.ProductType.Add(new ProductType { Nome = "Educação" });
+                context.ProductType.Add(new ProductType { Nome = "Bem-Estar" });
+
+                context.SaveChanges();
+            }
 
             //if (!context.Animal.Any()) //RacaId começa no 1
             //{          

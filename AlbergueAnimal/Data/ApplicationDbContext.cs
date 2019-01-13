@@ -42,6 +42,22 @@ namespace AlbergueAnimal.Data
 
         //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
 
+        public DbSet<AlbergueAnimal.Models.ProductType> ProductType { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+        public DbSet<AlbergueAnimal.Models.Product> Product { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
+       // public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
+
+        //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }
+
       //  public DbSet<AlbergueAnimal.Models.Adocao> Adocao { get; set; }
 
         //public DbSet<AlbergueAnimal.Models.Animal> ArquivoAnimal { get; set; }

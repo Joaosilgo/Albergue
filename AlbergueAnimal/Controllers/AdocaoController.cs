@@ -18,12 +18,13 @@ namespace AlbergueAnimal.Controllers
     public class AdocaoController : Controller
     {
         private SignInManager<Utilizador> SignInManager;
-        private UserManager<Utilizador> UserManager;
+        private readonly UserManager<Utilizador> _userManager;
         private readonly ApplicationDbContext _context;
         private readonly EmailSenderAdoption _emailSender;
 
-        public AdocaoController(ApplicationDbContext context)
+        public AdocaoController(ApplicationDbContext context, UserManager<Utilizador> userManager)
         {
+            _userManager = userManager;
             _context = context;
             _emailSender = new EmailSenderAdoption();
         }
@@ -189,15 +190,24 @@ namespace AlbergueAnimal.Controllers
                 {
                     adocao.EndDate = DateTime.Now;
                     adocao.Arquivado = true;
-
+                
 
 
                     //adocao.Animal.Arquivado = true;
                     var d = _context.Animal.Where(a => a.AnimalId == adocao.AnimalId).First();
                     d.Arquivado = true;
                     await _context.SaveChangesAsync();
-                    var x = _context.Users.Where(a => a.Id == adocao.UserName);
-                    _emailSender.SendEmailAdoption(x.First().ToString(), "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
+                    var x = _context.Users.Where(a => a.UserName.Equals(adocao.UserName));
+
+
+                    //var x = from i in _context.Users
+                    //        where i.Id.Equals(adocao.Utilizador.Id)
+                    //        select i;
+                    
+
+                  //  string UserEmail = await _userManager.GetEmailAsync(x.First());
+                 //   _emailSender.SendEmailAdoption(x.First().Email, "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
+                 
                 }
 
                 return RedirectToAction(nameof(Index));

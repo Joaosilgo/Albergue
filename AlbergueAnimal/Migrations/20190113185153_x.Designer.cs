@@ -4,14 +4,16 @@ using AlbergueAnimal.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AlbergueAnimal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190113185153_x")]
+    partial class x
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,57 +104,6 @@ namespace AlbergueAnimal.Migrations
                     b.HasKey("EstadoAdocaoId");
 
                     b.ToTable("EstadoAdocao");
-                });
-
-            modelBuilder.Entity("AlbergueAnimal.Models.Product", b =>
-                {
-                    b.Property<int>("ProductID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(15);
-
-                    b.Property<double>("Preco");
-
-                    b.Property<int>("ProductTypeID");
-
-                    b.Property<int>("Quantidade");
-
-                    b.Property<int>("QuantidadeLimite");
-
-                    b.Property<string>("Referencia")
-                        .IsRequired();
-
-                    b.Property<byte[]>("imageContent");
-
-                    b.Property<string>("imageFileName")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("imageMimeType")
-                        .HasMaxLength(256);
-
-                    b.HasKey("ProductID");
-
-                    b.HasIndex("ProductTypeID");
-
-                    b.ToTable("Product");
-                });
-
-            modelBuilder.Entity("AlbergueAnimal.Models.ProductType", b =>
-                {
-                    b.Property<int>("ProductTypeID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
-                    b.HasKey("ProductTypeID");
-
-                    b.ToTable("ProductType");
                 });
 
             modelBuilder.Entity("AlbergueAnimal.Models.Raca", b =>
@@ -374,14 +325,6 @@ namespace AlbergueAnimal.Migrations
                     b.HasOne("AlbergueAnimal.Models.Raca", "Raca")
                         .WithMany("Animais")
                         .HasForeignKey("RacaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("AlbergueAnimal.Models.Product", b =>
-                {
-                    b.HasOne("AlbergueAnimal.Models.ProductType", "ProductType")
-                        .WithMany("Produtos")
-                        .HasForeignKey("ProductTypeID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
