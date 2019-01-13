@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbergueAnimal.Migrations
 {
-    public partial class x : Migration
+    public partial class i : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,7 +45,10 @@ namespace AlbergueAnimal.Migrations
                     DBO = table.Column<DateTime>(nullable: false),
                     Morada = table.Column<string>(nullable: false),
                     Genero = table.Column<string>(nullable: false),
-                    FicheiroFoto = table.Column<string>(maxLength: 255, nullable: true)
+                    imageContent = table.Column<byte[]>(nullable: true),
+                    imageMimeType = table.Column<string>(maxLength: 256, nullable: true),
+                    imageFileName = table.Column<string>(maxLength: 100, nullable: true),
+                    Cargo = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

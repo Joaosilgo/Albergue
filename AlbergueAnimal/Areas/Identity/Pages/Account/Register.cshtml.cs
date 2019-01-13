@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using static AlbergueAnimal.Models.Validacoes;
+using Microsoft.AspNetCore.Http;
 
 namespace AlbergueAnimal.Areas.Identity.Pages.Account
 {
@@ -78,11 +79,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
 
             /// <summary>Propriedade FicheiroFoto representa a imagem a do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade.</value>
-            [StringLength(255)]
-            [DataType(DataType.Text)]
-            [Display(Name = "Fotografia")]
-            [PersonalData]
-            public string FicheiroFoto { get; set; }
+            
 
             /// <summary>Propriedade Email representao email a do utilizador.</summary>
             /// <value>Permite o get e o set desta propriedade.</value>
@@ -124,7 +121,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                     DBO = Input.DBO,
                     Morada = Input.Morada,
                     Genero = Input.Genero,
-                    FicheiroFoto = Input.FicheiroFoto
+                    
                 };
                 //if (user.DBO > DateTime.Now)
                 //{

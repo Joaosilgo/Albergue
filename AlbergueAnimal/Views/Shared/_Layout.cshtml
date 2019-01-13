@@ -48,6 +48,7 @@
                     @if (User.IsInRole("Administrator"))
                     {
                         <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
+                        <li><a asp-area="" asp-controller="Utilizador" asp-action="Index">Gestão Utilizadores</a></li>
                     }
                 </ul>
                 <partial name="_LoginPartial" />

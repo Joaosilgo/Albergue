@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using AlbergueAnimal.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -73,9 +75,23 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
             [EmailAddress]
             public string Email { get; set; }
 
+            public string Cargo { get; set; }
+
             [Phone]
             [Display(Name = "Telefone")]
             public string PhoneNumber { get; set; }
+            //
+            [ScaffoldColumn(false)]
+            public byte[] imageContent { get; set; }
+
+            [StringLength(256)]
+            [ScaffoldColumn(false)]
+            public String imageMimeType { get; set; }
+
+            [StringLength(100, ErrorMessage = "O nome do ficheiro não pode ser mostrado")]
+            [Display(Name = "Nome do Ficheiro")]
+            [ScaffoldColumn(false)]
+            public String imageFileName { get; set; }
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -85,6 +101,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
+           
 
             var userName = await _userManager.GetUserNameAsync(user);
             var email = await _userManager.GetEmailAsync(user);
@@ -98,9 +115,12 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
                 DBO = user.DBO,
                 Morada = user.Morada,
                 Genero = user.Genero,
-                FicheiroFoto = user.FicheiroFoto,
                 Email = email,
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Cargo = user.Cargo,
+                imageContent=user.imageContent,
+                imageMimeType=user.imageMimeType,
+                imageFileName=user.imageFileName
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
@@ -108,7 +128,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(IFormFile p)
         {
             if (!ModelState.IsValid)
             {
@@ -137,6 +157,32 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
             if (Input.Genero != user.Genero)
             {
                 user.Genero = Input.Genero;
+            }
+            if (Input.Cargo != user.Cargo)
+            {
+                user.Cargo = Input.Cargo;
+                
+             // await _userManager.AddToRoleAsync(user, user.Cargo);//define o cargo
+            }
+            if (p != null)
+            {
+                string mimeType = p.ContentType;
+                long fileLength = p.Length;
+                if (!(mimeType == "" || fileLength == 0))
+                {
+                    if (mimeType.Contains("image"))
+                    {
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            await p.CopyToAsync(memoryStream);
+                            user.imageContent = memoryStream.ToArray();
+
+                        }
+                        user.imageMimeType = mimeType;
+                        user.imageFileName = p.FileName;
+                    }
+
+                }
             }
 
             var email = await _userManager.GetEmailAsync(user);

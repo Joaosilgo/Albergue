@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbergueAnimal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190106223217_x")]
-    partial class x
+    [Migration("20190113020943_i")]
+    partial class i
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -128,6 +128,8 @@ namespace AlbergueAnimal.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("Cargo");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -137,9 +139,6 @@ namespace AlbergueAnimal.Migrations
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
-
-                    b.Property<string>("FicheiroFoto")
-                        .HasMaxLength(255);
 
                     b.Property<string>("Genero")
                         .IsRequired();
@@ -171,6 +170,14 @@ namespace AlbergueAnimal.Migrations
                     b.Property<bool>("TwoFactorEnabled");
 
                     b.Property<string>("UserName")
+                        .HasMaxLength(256);
+
+                    b.Property<byte[]>("imageContent");
+
+                    b.Property<string>("imageFileName")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("imageMimeType")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");

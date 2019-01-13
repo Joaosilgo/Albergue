@@ -8,8 +8,39 @@
     <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
+            @{
+                if (UserManager.GetUserAsync(User).Result.imageContent != null && UserManager.GetUserAsync(User).Result.imageMimeType.Contains("image"))
+                {
+                    string imageBase64 = Convert.ToBase64String(UserManager.GetUserAsync(User).Result.imageContent);
+                    string imageSrc = string.Format("data:" + UserManager.GetUserAsync(User).Result.imageMimeType + ";base64,{0}", imageBase64);
+                    <img src="@imageSrc" alt="Profile picture of @UserManager.GetUserAsync(User).Result.Nome" class="avatar" />
+                }
+            }
+
+            <style>
+                .avatar {
+                    vertical-align: middle;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    border: 0.5px
+                }
+            </style>
+
+            </li>
+
+
+            <li>
                 <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Ola @UserManager.GetUserName(User)!</a>
             </li>
+
+
+
+
+
+
             @* @UserManager.GetUserName(User)*@
             <li>
                 <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>

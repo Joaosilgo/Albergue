@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AlbergueAnimal.Models.Utilizador>
+
+
+
+@{
+    ViewData["Title"] = "Utilizadores";
+}
+
+<h2>Utilizadores</h2>
+
+<p>
+    <a asp-action="Create">Criar Utilizador</a>
+</p>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Fotografia
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @{
+                    if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                    {
+                        string imageBase64 = Convert.ToBase64String(item.imageContent);
+                        string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                        <img src="@imageSrc" alt="Profile picture of @item.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            @if (User.IsInRole("Administrator"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Remover</a>
+                </td>
+            }
+            else
+            {
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                </td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+
