@@ -37,7 +37,7 @@ namespace AlbergueAnimal.Migrations
 
                     b.Property<DateTime>("LastUpdated");
 
-                    b.Property<string>("UserName");
+                    b.Property<string>("UserId");
 
                     b.HasKey("AdocaoId");
 
@@ -45,7 +45,7 @@ namespace AlbergueAnimal.Migrations
 
                     b.HasIndex("EstadoAdocaoId");
 
-                    b.HasIndex("UserName");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Adocao");
                 });
@@ -218,6 +218,8 @@ namespace AlbergueAnimal.Migrations
 
                     b.Property<bool>("TwoFactorEnabled");
 
+                    b.Property<string>("UserEmail");
+
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
 
@@ -366,7 +368,7 @@ namespace AlbergueAnimal.Migrations
 
                     b.HasOne("AlbergueAnimal.Models.Utilizador", "Utilizador")
                         .WithMany("Adocao")
-                        .HasForeignKey("UserName");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("AlbergueAnimal.Models.Animal", b =>

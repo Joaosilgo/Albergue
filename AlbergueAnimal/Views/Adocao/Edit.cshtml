@@ -1,11 +1,12 @@
 ﻿@model AlbergueAnimal.Models.Adocao
 
 @{
-    ViewData["Title"] = "Editar Adoção";
+    ViewData["Title"] = "Edit";
 }
 
-<h2>Editar Adoção</h2>
+<h2>Edit</h2>
 
+<h4>Adocao</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,41 +19,45 @@
                 <span asp-validation-for="AnimalId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <select asp-for="UserName" class="form-control" asp-items="ViewBag.UserName"></select>
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EstadoAdocaoId" class="control-label"></label>
                 <select asp-for="EstadoAdocaoId" class="form-control" asp-items="ViewBag.EstadoAdocaoId"></select>
                 <span asp-validation-for="EstadoAdocaoId" class="text-danger"></span>
             </div>
-            <div class="form-group" hidden="hidden">
+            <div class="form-group">
                 <label asp-for="CreationDate" class="control-label"></label>
                 <input asp-for="CreationDate" class="form-control" />
                 <span asp-validation-for="CreationDate" class="text-danger"></span>
             </div>
-            <!--<div class="form-group">
+            <div class="form-group">
                 <label asp-for="LastUpdated" class="control-label"></label>
                 <input asp-for="LastUpdated" class="form-control" />
                 <span asp-validation-for="LastUpdated" class="text-danger"></span>
-            </div>-->
-            @*<div class="form-group">
+            </div>
+            <div class="form-group">
                 <label asp-for="EndDate" class="control-label"></label>
                 <input asp-for="EndDate" class="form-control" />
                 <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Arquivado" /> @Html.DisplayNameFor(model => model.Arquivado)
+                    </label>
+                </div>
             </div>*@
             <div class="form-group">
-                <input type="submit" value="Confirmar" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Voltar à Lista</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

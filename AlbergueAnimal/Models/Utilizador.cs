@@ -33,12 +33,16 @@ namespace AlbergueAnimal.Models
         [PersonalData]
         public string Genero { get; set; }
 
+
+
+        public string UserEmail { get; set; }
+
         /// <summary>Propriedade FicheiroFoto representa a imagem a do utilizador.</summary>
         /// <value>Permite o get e o set desta propriedade.</value>
-  
 
 
-       [ScaffoldColumn(false)]
+
+        [ScaffoldColumn(false)]
         public byte[] imageContent { get; set; }
 
         [StringLength(256)]
@@ -55,5 +59,9 @@ namespace AlbergueAnimal.Models
 
 
         public virtual List<Adocao> Adocao { get; set; }
-    }
+
+
+
+
+  }
 }

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbergueAnimal.Migrations
 {
-    public partial class NovaMigration : Migration
+    public partial class x : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,7 @@ namespace AlbergueAnimal.Migrations
                     DBO = table.Column<DateTime>(nullable: false),
                     Morada = table.Column<string>(nullable: false),
                     Genero = table.Column<string>(nullable: false),
+                    UserEmail = table.Column<string>(nullable: true),
                     imageContent = table.Column<byte[]>(nullable: true),
                     imageMimeType = table.Column<string>(maxLength: 256, nullable: true),
                     imageFileName = table.Column<string>(maxLength: 100, nullable: true),
@@ -263,7 +264,7 @@ namespace AlbergueAnimal.Migrations
                     AdocaoId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AnimalId = table.Column<int>(nullable: false),
-                    UserName = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true),
                     EstadoAdocaoId = table.Column<int>(nullable: false),
                     CreationDate = table.Column<DateTime>(nullable: false),
                     LastUpdated = table.Column<DateTime>(nullable: false),
@@ -286,8 +287,8 @@ namespace AlbergueAnimal.Migrations
                         principalColumn: "EstadoAdocaoId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Adocao_AspNetUsers_UserName",
-                        column: x => x.UserName,
+                        name: "FK_Adocao_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -304,9 +305,9 @@ namespace AlbergueAnimal.Migrations
                 column: "EstadoAdocaoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Adocao_UserName",
+                name: "IX_Adocao_UserId",
                 table: "Adocao",
-                column: "UserName");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Animal_RacaId",

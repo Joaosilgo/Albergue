@@ -184,7 +184,7 @@ namespace AlbergueAnimal
                   Morada="ADMIN",
                   Genero="ADMIN",
                   Nome="AMIN",
-                  
+                    UserEmail = userEmail,
                     Email = userEmail,
                     UserName = userEmail,
 

@@ -1,12 +1,12 @@
 ﻿@model AlbergueAnimal.Models.Adocao
 
 @{
-    ViewData["Title"] = "Arquivar";
+    ViewData["Title"] = "Delete";
 }
 
 <h2>Delete</h2>
 
-<h3>Tem a certeza que pretende arquivar esta adoção?</h3>
+<h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>Adocao</h4>
     <hr />
@@ -30,16 +30,22 @@
             @Html.DisplayFor(model => model.EndDate)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Arquivado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Arquivado)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Animal)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Animal.Nome)
+            @Html.DisplayFor(model => model.Animal.Cor)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Utilizador)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Utilizador.Nome)
+            @Html.DisplayFor(model => model.Utilizador.Id)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.EstadoAdocao)
@@ -51,7 +57,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="AdocaoId" />
-        <input type="submit" value="Confirmar" class="btn btn-default" /> |
-        <a asp-action="Index">Voltar à Lista</a>
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>

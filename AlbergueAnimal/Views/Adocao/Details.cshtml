@@ -1,29 +1,15 @@
 ﻿@model AlbergueAnimal.Models.Adocao
 
 @{
-    ViewData["Title"] = "Detalhes";
+    ViewData["Title"] = "Details";
 }
 
-<h2>Detalhes</h2>
+<h2>Details</h2>
 
 <div>
-    <h4>Adoção</h4>
+    <h4>Adocao</h4>
     <hr />
     <dl class="dl-horizontal">
-
-        <dl>
-            
-                @{
-                    if (Model.Animal.imageContent != null && Model.Animal.imageMimeType.Contains("image"))
-                    {
-                        string imageBase64 = Convert.ToBase64String(Model.Animal.imageContent);
-                        string imageSrc = string.Format("data:" + Model.Animal.imageMimeType + ";base64,{0}", imageBase64);
-                        <img  src="@imageSrc" alt="Profile picture of @Model.Animal.Nome" style="max-height:100px; max-width:120px" class="img-responsive img-rounded" />
-                    }
-                }
-            
-        </dl>
-
         <dt>
             @Html.DisplayNameFor(model => model.CreationDate)
         </dt>
@@ -43,26 +29,32 @@
             @Html.DisplayFor(model => model.EndDate)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Arquivado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Arquivado)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Animal)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Animal.Nome)
+            @Html.DisplayFor(model => model.Animal.Cor)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Utilizador)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Utilizador.Nome)
+            @Html.DisplayFor(model => model.Utilizador.Id)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.EstadoAdocao)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.EstadoAdocao.estado)
+            @Html.DisplayFor(model => model.EstadoAdocao.EstadoAdocaoId)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.AdocaoId">Editar</a> |
-    <a asp-action="Index">Voltar à Lista</a>
+    <a asp-action="Edit" asp-route-id="@Model.AdocaoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

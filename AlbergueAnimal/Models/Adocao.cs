@@ -110,15 +110,15 @@ namespace AlbergueAnimal.Models
 
         ////   public virtual Animal Animal { get; set; }
         ///
-
+        [Key]
         public int AdocaoId { get; set; }
 
         [Display(Name = "Animal")]
         public int AnimalId { get; set; }
 
         [Display(Name = "Utilizador")]
-        [ForeignKey("Utilizador")]
-        public string UserName { get; set; }
+       
+        public string UserId { get; set; }
 
         [Display(Name = "Estado da Adoção")]
         public int EstadoAdocaoId { get; set; }
@@ -144,10 +144,14 @@ namespace AlbergueAnimal.Models
         [Display(Name = "Arquivado")]
         public bool Arquivado { get; set; }
 
+        [ForeignKey("AnimalId")]
         public virtual Animal Animal { get; set; }
+
+        [ForeignKey("UserId")]
         public virtual Utilizador Utilizador { get; set; }
         // public virtual IdentityUser Identity { get; set; }
         [Display(Name = "Estado da Adoção")]
+        [ForeignKey("EstadoAdocaoId")]
         public virtual EstadoAdocao EstadoAdocao { get; set; }
     }
 }

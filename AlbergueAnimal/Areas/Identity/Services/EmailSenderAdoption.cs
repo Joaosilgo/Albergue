@@ -1,4 +1,5 @@
-﻿using MailKit.Net.Smtp;
+﻿using AlbergueAnimal.Data;
+using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 using System;
@@ -10,17 +11,19 @@ namespace AlbergueAnimal.Areas.Identity.Services
 {
     public class EmailSenderAdoption
     {
-        public EmailSenderAdoption()
+        private readonly ApplicationDbContext _context;
+        public EmailSenderAdoption(ApplicationDbContext context)
         {
-
+            _context = context;
         }
 
 
-        public void SendEmailAdoption(string email, string subject, string message)
+        public void SendEmailAdoption(string userId, string subject, string message)
         {
+           var x= _context.Users.Where(a=>a.Id.Equals(userId)).First();
             var msg = new MimeMessage();
             msg.From.Add(new MailboxAddress("Adoção", "m7.gpr.1718@gmail.com"));
-            msg.To.Add(new MailboxAddress("User", email));
+            msg.To.Add(new MailboxAddress("User", x.Email.ToString()));
             msg.Subject = subject + ", Albergue Animais";
             msg.Body = new TextPart("html")
             {

@@ -7,17 +7,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AlbergueAnimal.Data;
 using AlbergueAnimal.Models;
-using Microsoft.AspNetCore.Identity.UI.Services;
-using AlbergueAnimal.Areas.Identity.Services;
 using Microsoft.AspNetCore.Identity;
+using AlbergueAnimal.Areas.Identity.Services;
 using Microsoft.AspNetCore.Authorization;
-using Rotativa.AspNetCore;
 
 namespace AlbergueAnimal.Controllers
 {
     public class AdocaoController : Controller
     {
-        private SignInManager<Utilizador> SignInManager;
+        
         private readonly UserManager<Utilizador> _userManager;
         private readonly ApplicationDbContext _context;
         private readonly EmailSenderAdoption _emailSender;
@@ -26,23 +24,22 @@ namespace AlbergueAnimal.Controllers
         {
             _userManager = userManager;
             _context = context;
-            _emailSender = new EmailSenderAdoption();
+            _emailSender = new EmailSenderAdoption(context);
         }
 
         // GET: Adocao
-        public IActionResult Index(string searchString)
+        public async Task<IActionResult> Index(string searchString)
         {
             var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador).Where(a => a.Arquivado == false) select d;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                AdocoesArquivadas = AdocoesArquivadas.Where(s => s.Animal.Nome.Contains(searchString) || s.UserName.Contains(searchString)
+                AdocoesArquivadas = AdocoesArquivadas.Where(s => s.Animal.Nome.Contains(searchString) || s.UserId.Contains(searchString)
                 || s.EstadoAdocao.estado.Contains(searchString));
             }
 
             return View(AdocoesArquivadas.ToList());
         }
-
         [Authorize(Roles = "Administrator")]
         public IActionResult IndexArquivo()
         {
@@ -77,9 +74,9 @@ namespace AlbergueAnimal.Controllers
         // GET: Adocao/Create
         public IActionResult Create()
         {
-            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>().Where(a=>a.Arquivado==false), "AnimalId", "Nome");
-            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado");
-            ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName");
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Nome");
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado");
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
             return View();
         }
 
@@ -88,50 +85,34 @@ namespace AlbergueAnimal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AdocaoId,AnimalId,UserName,EstadoAdocaoId,CreationDate,LastUpdated,EndDate")] Adocao adocao)
+        public async Task<IActionResult> Create([Bind("AdocaoId,AnimalId,UserId,EstadoAdocaoId,CreationDate,LastUpdated,EndDate,Arquivado")] Adocao adocao)
         {
             if (ModelState.IsValid)
             {
-                //  list.Any(cus => cus.FirstName == "John");
                 var result = _context.Adocao.ToList().Where(z => z.EstadoAdocaoId.Equals(1)).Any(a => a.AnimalId == adocao.AnimalId);
                 if (result == false)
                 {
-
-
-                    //var x = User.Identity.Name;
-                    //User.Identity.Name;
-                    //adocao.UserName = x.ToString();
                     adocao.CreationDate = DateTime.Now;
                     adocao.LastUpdated = DateTime.Now;
                     adocao.EndDate = null;
                     adocao.Arquivado = false;
                     adocao.EstadoAdocaoId = 2;
                     _context.Add(adocao);
-                    //adocao.UserName = UserManager.GetUserId(User);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
-                else
-                {
-                    ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
-                    ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
-                    ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName", adocao.UserName);
-                    //ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Cor", adocao.AnimalId);
-                    //ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "EstadoAdocaoId", adocao.EstadoAdocaoId);
-                    //ViewData["UserName"] = new SelectList(_context.Users, "Id", "Id", adocao.UserName);
-                    return View(adocao);
-                }
-
-
             }
-            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
-            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
-            ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName", adocao.UserName);
-            //ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Cor", adocao.AnimalId);
-            //ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "EstadoAdocaoId", adocao.EstadoAdocaoId);
-            //ViewData["UserName"] = new SelectList(_context.Users, "Id", "Id", adocao.UserName);
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", adocao.UserId);
             return View(adocao);
         }
+
+
+
+
+
+
 
         // GET: Adocao/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -146,12 +127,9 @@ namespace AlbergueAnimal.Controllers
             {
                 return NotFound();
             }
-            //ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Cor", adocao.AnimalId);
-            //ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "EstadoAdocaoId", adocao.EstadoAdocaoId);
-            //ViewData["UserName"] = new SelectList(_context.Users, "Id", "Id", adocao.UserName);
-            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
-            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
-            ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName", adocao.UserName);
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", adocao.UserId);
             return View(adocao);
         }
 
@@ -160,7 +138,7 @@ namespace AlbergueAnimal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AdocaoId,AnimalId,UserName,EstadoAdocaoId,CreationDate,LastUpdated,EndDate")] Adocao adocao)
+        public async Task<IActionResult> Edit(int id, [Bind("AdocaoId,AnimalId,UserId,EstadoAdocaoId,CreationDate,LastUpdated,EndDate,Arquivado")] Adocao adocao)
         {
             if (id != adocao.AdocaoId)
             {
@@ -186,44 +164,25 @@ namespace AlbergueAnimal.Controllers
                         throw;
                     }
                 }
+
                 if (adocao.EstadoAdocaoId.Equals(4))
                 {
                     adocao.EndDate = DateTime.Now;
                     adocao.Arquivado = true;
-                
-
-
-                    //adocao.Animal.Arquivado = true;
                     var d = _context.Animal.Where(a => a.AnimalId == adocao.AnimalId).First();
                     d.Arquivado = true;
+                    _emailSender.SendEmailAdoption(adocao.UserId, "Adoção Aceite", $"Olá, " + adocao.UserId + $"<br/>A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.<br/><br/><i>Quinta do Mião, Albergue Animais</i>");
                     await _context.SaveChangesAsync();
-                    var x = _context.Users.Where(a => a.UserName.Equals(adocao.UserName));
-
-
-                    //var x = from i in _context.Users
-                    //        where i.Id.Equals(adocao.Utilizador.Id)
-                    //        select i;
-                    
-
-                  //  string UserEmail = await _userManager.GetEmailAsync(x.First());
-                 //   _emailSender.SendEmailAdoption(x.First().Email, "Adoção", $"A sua adoção foi aceite com sucesso. Obrigado por contribuir para o bem dos nossos animais! <br/>Poderá vir levantar o seu novo amigo a qualquer altura do nosso horário de atendimento.");
-                 
                 }
-
-                return RedirectToAction(nameof(Index));
-
+                    return RedirectToAction(nameof(Index));
             }
-            ViewData["AnimalId"] = new SelectList(_context.Set<Animal>(), "AnimalId", "Nome", adocao.AnimalId);
-            ViewData["EstadoAdocaoId"] = new SelectList(_context.Set<EstadoAdocao>(), "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
-            ViewData["UserName"] = new SelectList(_context.Users, "Id", "UserName", adocao.UserName);
-            //ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Cor", adocao.AnimalId);
-            //ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "EstadoAdocaoId", adocao.EstadoAdocaoId);
-            //ViewData["UserName"] = new SelectList(_context.Users, "Id", "Id", adocao.UserName);
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", adocao.UserId);
             return View(adocao);
         }
 
         // GET: Adocao/Delete/5
-        //[Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -250,8 +209,7 @@ namespace AlbergueAnimal.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var adocao = await _context.Adocao.FindAsync(id);
-            adocao.Arquivado = true;
-            //_context.Adocao.Remove(adocao);
+            _context.Adocao.Remove(adocao);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -260,55 +218,6 @@ namespace AlbergueAnimal.Controllers
         {
             return _context.Adocao.Any(e => e.AdocaoId == id);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -344,23 +253,6 @@ namespace AlbergueAnimal.Controllers
             var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
             return report;
         }
-
-        //public ActionResult IndexById(int id)
-        //{
-        //    var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
-        //    return View(emp);
-        //}
-        //public ActionResult PrintAdoptionSlip(int id)
-        //{
-        //    //  var emp = _context.Adocao.Where(e => e.AdocaoId == id).First();
-        //    var adocao =  _context.Adocao
-        //          .Include(a => a.Animal)
-        //          .Include(a => a.EstadoAdocao)
-        //          .Include(a => a.Utilizador)
-        //          .Where(m => m.AdocaoId == id).First();
-        //    var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
-        //    return report;
-        //}
 
     }
 }

@@ -121,7 +121,8 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                     DBO = Input.DBO,
                     Morada = Input.Morada,
                     Genero = Input.Genero,
-                    
+                    UserEmail=Input.Email
+
                 };
                 //if (user.DBO > DateTime.Now)
                 //{
