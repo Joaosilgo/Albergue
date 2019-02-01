@@ -46,5 +46,80 @@ namespace AlbergueAnimalTest
                 Assert.Equal(3, model.Count());
             }
         }
+
+        [Fact]
+        public async Task Details_ReturnsNotFoundResult_WhenRacaDoesntExist()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.SaveChanges();
+            }
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new RacaController(context);
+
+                var result = await controller.Details(1);
+
+                Assert.IsType<NotFoundResult>(result);
+            }
+        }
+
+        [Fact]
+        public async Task Details_ReturnsNotFoundResult_WhenIdIsNull()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.SaveChanges();
+            }
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new RacaController(context);
+
+                var result = await controller.Details(null);
+
+                Assert.IsType<NotFoundResult>(result);
+            }
+        }
+
+        [Fact]
+        public async Task Details_RetunrsViewResult_WhenRacaExists()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.Raca.Add(new Raca { Designacao = "Labrador" });
+                context.SaveChanges();
+            }
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new RacaController(context);
+
+                var result = await controller.Details(1);
+
+                var viewResult = Assert.IsType<ViewResult>(result);
+                var model = Assert.IsAssignableFrom<Raca>(viewResult.ViewData.Model);
+                Assert.Equal(1, model.RacaId);
+            }
+        }
     }
 }

@@ -24,10 +24,10 @@ namespace AlbergueAnimal.Controllers
         private readonly ApplicationDbContext _context;
         private readonly IHostingEnvironment he;
 
-        public AnimalsController(ApplicationDbContext context, IHostingEnvironment e)
+        public AnimalsController(ApplicationDbContext context/*, IHostingEnvironment e*/)
         {
             _context = context;
-            he = e;
+            //he = e;
         }
 
         // GET: Animals
