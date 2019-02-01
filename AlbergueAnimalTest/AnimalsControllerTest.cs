@@ -6,5 +6,6 @@ namespace AlbergueAnimalTest
 {
     public class AnimalsControllerTest
     {
+        //
     }
 }
