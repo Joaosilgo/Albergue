@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbergueAnimal", "AlbergueAnimal\AlbergueAnimal.csproj", "{1372002B-7064-4051-A8A4-9F723684FC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbergueAnimal", "AlbergueAnimal\AlbergueAnimal.csproj", "{1372002B-7064-4051-A8A4-9F723684FC5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{CB21608E-8DB6-494F-9EAB-F0A36957B112}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbergueAnimalTest", "AlbergueAnimalTest\AlbergueAnimalTest.csproj", "{EA86DA54-F453-4EA9-A121-C610CA8C8180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{1372002B-7064-4051-A8A4-9F723684FC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1372002B-7064-4051-A8A4-9F723684FC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1372002B-7064-4051-A8A4-9F723684FC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA86DA54-F453-4EA9-A121-C610CA8C8180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA86DA54-F453-4EA9-A121-C610CA8C8180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA86DA54-F453-4EA9-A121-C610CA8C8180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA86DA54-F453-4EA9-A121-C610CA8C8180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA86DA54-F453-4EA9-A121-C610CA8C8180} = {CB21608E-8DB6-494F-9EAB-F0A36957B112}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C98AD3B-FE93-4FB2-8C90-F02860C4616F}
