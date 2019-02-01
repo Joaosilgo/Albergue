@@ -36,7 +36,47 @@ namespace AlbergueAnimalTest
 
             controller.About();
 
-            Assert.NotNull(controller.ViewData["Message"]);
+            Assert.Null(controller.ViewData["Message"]); //IsNull
+        }
+
+        [Fact]
+        public void Contact_ReturnsViewResult()
+        {
+            var controller = new HomeController();
+
+            var result = controller.Contact();
+
+            var viewResult = Assert.IsType<ViewResult>(result);
+        }
+
+        [Fact]
+        public void Contact_SetsMessageInViewData()
+        {
+            var controller = new HomeController();
+
+            controller.Contact();
+
+            Assert.Null(controller.ViewData["Message"]);
+        }
+
+        [Fact]
+        public void Privacy_ReturnsViewResult()
+        {
+            var controller = new HomeController();
+
+            var result = controller.Contact();
+
+            var viewResult = Assert.IsType<ViewResult>(result);
+        }
+
+        [Fact]
+        public void Privacy_SetsMessageInViewData()
+        {
+            var controller = new HomeController();
+
+            controller.Contact();
+
+            Assert.Null(controller.ViewData["Message"]);
         }
     }
 }
