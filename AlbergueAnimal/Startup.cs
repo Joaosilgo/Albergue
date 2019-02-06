@@ -111,7 +111,7 @@ namespace AlbergueAnimal
         private static void CreateRolesAndAdminUser(IServiceProvider serviceProvider)
         {
             const string adminRoleName = "Administrator";
-            string[] roleNames = { adminRoleName, "Utilizador", "Funcionario" };
+            string[] roleNames = { adminRoleName, "Utilizador", "Funcionario", "Gestor Adoções" , "Gestor Animais", "Gestor Stock", "Gestor Recursos Humanos" };
 
             foreach (string roleName in roleNames)
             {
@@ -180,13 +180,14 @@ namespace AlbergueAnimal
             {
                 Utilizador newAppUser = new Utilizador
                 {
-                  DBO=DateTime.Now,
-                  Morada="ADMIN",
-                  Genero="ADMIN",
-                  Nome="AMIN",
+                    DBO = DateTime.Now,
+                    Morada = "ADMIN",
+                    Genero = "ADMIN",
+                    Nome = "AMIN",
                     UserEmail = userEmail,
                     Email = userEmail,
                     UserName = userEmail,
+                    Cargo = "Administrator"
 
                 };
                 newAppUser.EmailConfirmed = true;

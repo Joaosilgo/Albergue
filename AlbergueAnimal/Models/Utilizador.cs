@@ -61,7 +61,56 @@ namespace AlbergueAnimal.Models
         public virtual List<Adocao> Adocao { get; set; }
 
 
+        public void AlterarCargo(Utilizador user, String role)
+        {
+            user.Cargo = role;
+        }
+
+        public int completation()
+        {
+            int count = 0;
+            if(this.Nome==null)
+            {
+                count++;
+            }
+            if(this.imageContent==null)
+            {
+                count++;
+            }
+            if(this.DBO==null)
+            {
+                count++;
+            }
+            if(this.Morada==null)
+            {
+                count++;
+            }
+            if (this.Genero == null)
+            {
+                count++;
+            }
+            if (this.PhoneNumber==null)
+            {
+                count++;
+            }
+            if (this.UserName == null)
+            {
+                count++;
+            }
+            if (this.Email == null)
+            {
+                count++;
+            }
+            //int val = (count*100)/9 ;
+            int val = (count * 10);
+            int i = 100 - val;
+            return i;
+             
+
+        }
 
 
-  }
+
+
+    }
 }

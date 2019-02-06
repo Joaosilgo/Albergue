@@ -187,6 +187,72 @@ namespace AlbergueAnimal.Controllers
 
 
 
+        [HttpGet]
+        public async Task<IActionResult> EditarCargo(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            var model = new CargoViewModel
+            {
+                Nome = user.Nome,
+                Cargo = user.Cargo
+            };
+
+           
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditarCargo(CargoViewModel model, string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await _userManager.FindByIdAsync(id);
+
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            var cargo = user.Cargo;
+
+            var verificar = await _userManager.GetUsersInRoleAsync(cargo);
+            if (verificar.Contains(user))
+            {
+                await _userManager.RemoveFromRoleAsync(user, cargo);
+            }
+
+
+            if (String.Compare(model.Cargo, cargo) != 0) //if (model.Email != email)
+
+            {
+                
+            //    await _userManager.RemoveFromRoleAsync(user, cargo);
+            //    await _context.SaveChangesAsync();
+                user.AlterarCargo(user, model.Cargo);
+                await _userManager.AddToRoleAsync(user, model.Cargo);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
+
+
+
+
+
 
 
 

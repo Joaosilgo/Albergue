@@ -9,16 +9,20 @@ using AlbergueAnimal.Data;
 using AlbergueAnimal.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using AlbergueAnimal.Areas.Identity.Services;
 
 namespace AlbergueAnimal.Controllers
 {
     public class StockController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly EmailSenderStock _emailSender;
+
 
         public StockController(ApplicationDbContext context)
         {
             _context = context;
+            _emailSender = new EmailSenderStock(context);
         }
 
         // GET: Stock
@@ -216,6 +220,41 @@ namespace AlbergueAnimal.Controllers
 
 
 
-       
+        public async Task<IActionResult> Requisitar(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = await _context.Product
+                .Include(p => p.ProductType)
+                .FirstOrDefaultAsync(m => m.ProductID == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            if (product.Quantidade == 0)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            product.Quantidade--;
+            if (product.Quantidade <= product.QuantidadeLimite)
+            {
+               // _emailSender.SendEmailAsync("Teste", "teste de stock");
+                _context.Update(product);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+            }
+            _context.Update(product);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
     }
 }

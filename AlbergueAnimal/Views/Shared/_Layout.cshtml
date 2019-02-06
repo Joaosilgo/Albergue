@@ -8,6 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AlbergueAnimal</title>
 
+    <script src="~/amcharts/amcharts.js"></script>
+    <script src="~/amcharts/serial.js"></script>
+    <script src="~/amcharts/plugins/export/export.js"></script>
+    <link href="~/amcharts/plugins/export/export.css" rel="stylesheet" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/loading-bar.css" />
+    <script type="text/javascript" src="~/js/loading-bar.js"></script>
+
+
+    @*  <script src="~/amcharts4/examples/javascript/semi-circle-donut-chart/index.js"></script>*@
+
+    @*<script src="~/amcharts4/charts.js"></script>
+        <script src="~/amcharts4/core.js"></script>
+        <script src="~/amcharts4/themes/animated.js"></script>*@
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -22,7 +39,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="RedMenu">
+    <nav class="navbar navbar-inverse navbar-fixed-top" @*id="RedMenu"*@>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavBar"
@@ -62,9 +79,15 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        
         <footer>
-            <p>&copy; Albergue de Animais @DateTime.Now</p>
+            @*<p>&copy; Albergue de Animais @DateTime.Now</p>*@
+
+
+
+
         </footer>
+       
     </div>
 
     <environment include="Development">

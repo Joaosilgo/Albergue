@@ -37,43 +37,97 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @{
-                    if (item.imageContent != null && item.imageMimeType.Contains("image"))
-                    {
-                        string imageBase64 = Convert.ToBase64String(item.imageContent);
-                        string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
-                        <img src="@imageSrc" alt="Profile picture of @item.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.imageContent);
+                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                            <img src="@imageSrc" alt="Profile picture of @item.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+                        }
                     }
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Referencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuantidadeLimite)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductType.Nome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductID">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductID">Detailhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductID">Remover</a> |
-                @Html.ActionLink("Requisitar", "Requisitar", "Stock")
-            </td>
-        </tr>
-}
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Referencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantidadeLimite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductType.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductID">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductID">Detailhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductID">Remover</a> |
+                    <a asp-action="Requisitar" asp-route-id="@item.ProductID">Requisitar</a> |
+
+                    @*   @Html.ActionLink("Requisitar", "Requisitar", "Stock")*@
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+
+@section Scripts{
+
+
+
+    <script src="~/amcharts4/core.js"></script>
+    <script src="~/amcharts4/charts.js"></script>
+    <script src="~/amcharts4/themes/animated.js"></script>
+    <link href="~/amcharts4/examples/javascript/simple-pie-chart/index.css" rel="stylesheet" />
+    <script>
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("chartdiv", am4charts.PieChart);
+      
+        chart.data =
+           
+            [
+
+                {
+                    "country": "Alimento",
+                    "litres": @Model.Where(a=>a.ProductType.Nome.Equals("Alimento")).Sum(x=> x.Quantidade)
+                },
+              {
+                    "country": "Educação",
+                    "litres": @Model.Where(a=>a.ProductType.Nome.Equals("Educação")).Sum(x=> x.Quantidade)
+                }];
+        
+
+        
+
+
+        var series = chart.series.push(new am4charts.PieSeries());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
+
+        // this creates initial animation
+        series.hiddenState.properties.opacity = 1;
+        series.hiddenState.properties.endAngle = -90;
+        series.hiddenState.properties.startAngle = -90;
+
+
+        chart.legend = new am4charts.Legend();
+    </script>
+
+
+
+}
+<!-- HTML -->
+<div id="chartdiv"></div>
+

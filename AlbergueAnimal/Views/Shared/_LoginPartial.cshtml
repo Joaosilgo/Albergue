@@ -7,7 +7,7 @@
 {
     <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
-            @*<li>
+            <li>
             @{
                 if (UserManager.GetUserAsync(User).Result.imageContent != null && UserManager.GetUserAsync(User).Result.imageMimeType.Contains("image"))
                 {
@@ -29,7 +29,7 @@
                 }
             </style>
 
-            </li>*@
+            </li>
 
 
             <li>

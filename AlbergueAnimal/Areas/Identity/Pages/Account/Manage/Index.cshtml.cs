@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using AlbergueAnimal.Models;
@@ -36,6 +37,9 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
 
         [TempData]
         public string StatusMessage { get; set; }
+
+       
+       
 
         [BindProperty]
         public InputModel Input { get; set; }
@@ -92,6 +96,8 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Nome do Ficheiro")]
             [ScaffoldColumn(false)]
             public String imageFileName { get; set; }
+
+            public int count { get; set; }
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -118,23 +124,24 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
                 Email = email,
                 PhoneNumber = phoneNumber,
                 Cargo = user.Cargo,
-                imageContent=user.imageContent,
-                imageMimeType=user.imageMimeType,
-                imageFileName=user.imageFileName
+                imageContent = user.imageContent,
+                imageMimeType = user.imageMimeType,
+                imageFileName = user.imageFileName,
+                count = user.completation()
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
 
             return Page();
         }
-
+        
         public async Task<IActionResult> OnPostAsync(IFormFile p)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-
+            
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -184,6 +191,51 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
 
                 }
             }
+            //else
+            //{
+            //////    string mimeType = MimeMapping.GetMimeMapping(FILETIME);
+            ////    var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "wwwroot/images/paw.jpg"));
+            ////   //sr.GetType.mimeType
+            ////    //string mimeType = sr;
+            ////    //long fileLength = p.Length;
+            ////    //if (!(mimeType == "" || fileLength == 0))
+            ////    //{
+            ////        //if (mimeType.Contains("image"))
+            ////        //{
+            ////            using (var memoryStream = new MemoryStream())
+            ////            {
+            ////                await sr.BaseStream.CopyToAsync(memoryStream);
+            ////                user.imageContent = memoryStream.ToArray();
+
+            ////            }
+            ////            //user.imageMimeType = mimeType;
+            ////            //user.imageFileName = p.FileName;
+            ////        //}
+
+            ////    //}
+            //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             var email = await _userManager.GetEmailAsync(user);
             if (Input.Email != email)

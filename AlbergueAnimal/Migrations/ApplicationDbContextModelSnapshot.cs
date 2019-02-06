@@ -84,6 +84,8 @@ namespace AlbergueAnimal.Migrations
                     b.Property<string>("imageMimeType")
                         .HasMaxLength(256);
 
+                    b.Property<int>("visualizacoes");
+
                     b.HasKey("AnimalId");
 
                     b.HasIndex("RacaId");
