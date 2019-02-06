@@ -85,12 +85,12 @@
                 </td>
                 @if (User.IsInRole("Administrator"))
                 {
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.AnimalId">Arquivar</a>
-                    @Html.ActionLink("Adptar", "CreateAnimalAdoption", "Adocao",  item.AnimalId);
-                </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.AnimalId">Arquivar</a>
+                        @*@Html.ActionLink("Adptar", "CreateAnimalAdoption", "Adocao",  item.AnimalId);*@
+                    </td>
                 }
                 else
                 {
@@ -136,3 +136,123 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+@*<style>
+    .inforide {
+        box-shadow: 1px 2px 8px 0px #f1f1f1;
+        background-color: white;
+        border-radius: 8px;
+        height: 125px;
+    }
+
+    .ridetwo {
+        background-color: #9A75FE;
+        padding-top: 30px;
+        border-radius: 8px 0px 0px 8px;
+        text-align: center;
+        height: 125px;
+        margin-left: 15px;
+    }
+
+    .fontsty {
+        margin-right: -15px;
+    }
+
+        .fontsty h2 {
+            color: #6E6E6E;
+            font-size: 35px;
+            margin-top: 15px;
+            text-align: right;
+            margin-right: 30px;
+        }
+
+        .fontsty h4 {
+            color: #6E6E6E;
+            font-size: 25px;
+            margin-top: 20px;
+            text-align: right;
+            margin-right: 30px;
+        }
+
+    .ridetwo img {
+        width: 60%;
+    }
+</style>
+
+
+<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+    <div class="inforide">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                <img src="~/images/1093px-Black_Paw.svg.png">
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                <h4>Animais</h4>
+                <h2>120</h2>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+
+
+
+
+
+@section Scripts{
+
+
+
+    <script src="~/amcharts4/core.js"></script>
+    <script src="~/amcharts4/charts.js"></script>
+    <script src="~/amcharts4/themes/animated.js"></script>
+    <link href="~/amcharts4/examples/javascript/simple-pie-chart/index.css" rel="stylesheet" />
+    <script>
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+        chart.data =
+
+            [
+
+                {
+                    "country": "Labrador",
+                    "litres": @Model.Where(a => a.Raca.Designacao.Equals("Labrador")).Where(z => z.Arquivado == false).ToList().LongCount()
+                },
+              {
+                  "country": "Beagle",
+                    "litres":@Model.Where(a => a.Raca.Designacao.Equals("Beagle")).Where(z => z.Arquivado == false).ToList().LongCount()
+                }];
+
+
+
+
+
+        var series = chart.series.push(new am4charts.PieSeries());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
+
+        // this creates initial animation
+        series.hiddenState.properties.opacity = 1;
+        series.hiddenState.properties.endAngle = -90;
+        series.hiddenState.properties.startAngle = -90;
+
+
+        chart.legend = new am4charts.Legend();
+    </script>
+
+
+
+}
+<!-- HTML -->
+<div id="chartdiv"></div>

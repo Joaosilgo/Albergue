@@ -87,5 +87,9 @@ namespace AlbergueAnimal.Models
         public virtual List<Adocao> Adocao { get; set; }
 
 
+        [Display(Name = "Vizualizações")]
+        public int visualizacoes { get; set; }
+
+
     }
 }

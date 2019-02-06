@@ -1,5 +1,6 @@
 ﻿@page
 @model IndexModel
+@inject UserManager<Utilizador> UserManager
 
 @{
     ViewData["Title"] = "Perfil";
@@ -51,12 +52,17 @@
                     <label asp-for="Input.Cargo"></label>
                     <input asp-for="Input.Cargo" class="form-control" />
                 </div>
+                @*<div class="form-group">
+            <label asp-for="Input.Genero"></label>
+            <input asp-for="Input.Genero" class="form-control" />
+        </div>*@
                 <div class="form-group">
-                    <label asp-for="Input.Genero"></label>
-                    <input asp-for="Input.Genero" class="form-control" />
+                    <label asp-for="Input.Genero"></label><br />
+                    <input type="radio" asp-for="Input.Genero" value="Masculino" checked>  Masculino<br>
+                    <input type="radio" asp-for="Input.Genero" value="Feminino"> Feminino<br>
                 </div>
 
-               
+
                 <div class="form-group">
                     <label class="control-label">Fotografia</label>
                     <input type="file" class="form-control" name="p" />
@@ -67,11 +73,34 @@
 
             </div>
 
+            @*<input asp-for="Input.count" class="form-control" />*@
+           
+            <div class="ldBar label-center"
+                 style="width:50%;height:50%;margin:auto"
+                 data-value= @Model.Input.count
+                     data-preset ="circle">
+
+            </div>
+
+
+            <style type="text/css">
+
+
+                .ldBar-label:after {
+                    content: "PERFIL";
+                    margin-left: 5px;
+                    font-family: courier new;
+                    font-size: 0.7em;
+                    font-weight: 200;
+                }
+            </style>
+
 
             <button type="submit" class="btn btn-default">Save</button>
         </form>
     </div>
 </div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

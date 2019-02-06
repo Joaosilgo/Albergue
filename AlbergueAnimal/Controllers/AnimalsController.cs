@@ -89,14 +89,19 @@ namespace AlbergueAnimal.Controllers
             {
                 return NotFound();
             }
-
+           
             var animal = await _context.Animal
                 .Include(a => a.Raca)
                 .FirstOrDefaultAsync(m => m.AnimalId == id);
+            
+
             if (animal == null)
             {
                 return NotFound();
             }
+
+            animal.visualizacoes++;
+            await _context.SaveChangesAsync();
 
             return View(animal);
         }
