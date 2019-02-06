@@ -101,11 +101,11 @@
 
                 {
                     "country": "Alimento",
-                    "litres": @Model.Where(a=>a.ProductType.Nome.Equals("Alimento")).Sum(x=> x.Quantidade)
+                    "litres": @Model.Where(a => a.ProductType.Nome.Equals("Alimento")).Sum(x => x.Quantidade)
                 },
               {
                     "country": "Educação",
-                    "litres": @Model.Where(a=>a.ProductType.Nome.Equals("Educação")).Sum(x=> x.Quantidade)
+                    "litres": @Model.Where(a => a.ProductType.Nome.Equals("Educação")).Sum(x => x.Quantidade)
                 }];
         
 
