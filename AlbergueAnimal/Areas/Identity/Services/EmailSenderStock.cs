@@ -28,11 +28,11 @@ namespace AlbergueAnimal.Areas.Identity.Services
 
         public void SendEmailAsync(string subject, string message)
         {
-            var stockadmsis = _context.Roles.Where(a => a.Name.Equals("administrator"));
+            var stockadmsis = _context.Roles.Where(a => a.Name.Equals("administrator")  ||  a.Name.Equals("Gestor Stock") );
             foreach (IdentityRole element in stockadmsis)
             {
                 var x = _context.UserRoles.Where(b => b.RoleId.Equals(element.Id));
-
+                 
                 foreach (IdentityUserRole<string> i in x)
                 {
                     var users = _context.Users.Where(s => s.Id.Equals(i.UserId));
@@ -42,7 +42,7 @@ namespace AlbergueAnimal.Areas.Identity.Services
                     {
                         string body;
                         //Read template file from the App_Data folder
-                        var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "Templates/Email1.html"));
+                        var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "Templates/emailStock.html"));
 
                         body = sr.ReadToEnd();
 

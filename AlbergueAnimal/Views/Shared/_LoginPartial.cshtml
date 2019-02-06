@@ -13,7 +13,7 @@
                 {
                     string imageBase64 = Convert.ToBase64String(UserManager.GetUserAsync(User).Result.imageContent);
                     string imageSrc = string.Format("data:" + UserManager.GetUserAsync(User).Result.imageMimeType + ";base64,{0}", imageBase64);
-                    <img src="@imageSrc" alt="Profile picture of @UserManager.GetUserAsync(User).Result.Nome" class="avatar" />
+                    <img as src="@imageSrc" alt="Profile picture of @UserManager.GetUserAsync(User).Result.Nome" class="avatar" />
                 }
             }
 

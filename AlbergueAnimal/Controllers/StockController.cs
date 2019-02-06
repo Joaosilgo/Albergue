@@ -254,7 +254,7 @@ namespace AlbergueAnimal.Controllers
             product.Quantidade--;
             if (product.Quantidade <= product.QuantidadeLimite)
             {
-               // _emailSender.SendEmailAsync("Teste", "teste de stock");
+                _emailSender.SendEmailAsync("Stock", "");
                 _context.Update(product);
                 await _context.SaveChangesAsync();
 
