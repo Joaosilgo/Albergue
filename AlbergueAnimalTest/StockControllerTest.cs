@@ -113,13 +113,13 @@ namespace AlbergueAnimalTest
             using (var context = new ApplicationDbContext(options))
             {
                 context.Database.EnsureCreated();
-                context.ProductType.Add(new ProductType { ProductTypeID = 5, Nome = "Alimento" });
-                context.Product.Add(new Product { ProductTypeID = 1, Nome = "Osso", Referencia = "PR54321", Preco = 5.0, Quantidade = 15, QuantidadeLimite = 5 });
+                context.ProductType.Add(new ProductType { ProductTypeID = 1, Nome = "Alimento" });
+                context.Product.Add(new Product { ProductTypeID = 1, Nome = "Osso", Referencia = "PR54321", Preco = 5, Quantidade = 15, QuantidadeLimite = 5 });
                 context.SaveChanges();
             }
             using (var context = new ApplicationDbContext(options))
             {
-                var controller = new AnimalsController(context);
+                var controller = new StockController(context);
 
                 var result = await controller.Details(1);
 

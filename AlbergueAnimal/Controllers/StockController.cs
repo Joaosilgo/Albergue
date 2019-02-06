@@ -87,6 +87,18 @@ namespace AlbergueAnimal.Controllers
 
                     }
                 }
+                if (product.Quantidade < 1)
+                {
+                    ModelState.AddModelError("", "Por Favor Insira Uma Quantidade Válida");
+                    ViewData["ProductTypeID"] = new SelectList(_context.ProductType, "ProductTypeID", "Nome", product.ProductTypeID);
+                    return View(product);
+                }
+                if (product.Quantidade < product.QuantidadeLimite)
+                {
+                    ModelState.AddModelError("", "Quantidade não pode ser superior á Quantidade Limite" );
+                    ViewData["ProductTypeID"] = new SelectList(_context.ProductType, "ProductTypeID", "Nome", product.ProductTypeID);
+                    return View(product);
+                }
 
                 _context.Add(product);
                 await _context.SaveChangesAsync();

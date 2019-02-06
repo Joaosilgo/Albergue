@@ -144,13 +144,27 @@ namespace AlbergueAnimal.Controllers
                 }
                 if (animal.DataVacina < animal.DataNascimento)
                 {
-                    ViewBag.Message = string.Format("Verifique campo relativo a datas!");
+                    // ViewBag.Message = string.Format("Verifique campo relativo a datas!");
+                    ModelState.AddModelError("", "Data da Vacina não pode ser superior á Data de Nacimento");
                     ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
                     return View(animal);
                 }
-                if (animal.DataEntrada > DateTime.Now || animal.DataNascimento > DateTime.Now || animal.DataVacina > DateTime.Now)
+                if (animal.DataEntrada > DateTime.Now ) 
                 {
-                    ViewBag.Message = string.Format("As datas nao podem ser superiores ao dia de hoje");
+                    //ViewBag.Message = string.Format("As datas nao podem ser superiores ao dia de hoje");
+                    ModelState.AddModelError("", "A Data de entrada não pode ser superior á data de Hoje");
+                    ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
+                    return View(animal);
+                }
+                if(animal.DataNascimento > DateTime.Now )
+                {
+                    ModelState.AddModelError("", "A Data de Nascimento não pode ser superior á data de Hoje");
+                    ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
+                    return View(animal);
+                }
+                if(animal.DataVacina > DateTime.Now)
+                {
+                    ModelState.AddModelError("", "A Data de Vacina não pode ser superior á data de Hoje");
                     ViewData["RacaId"] = new SelectList(_context.Set<Raca>(), "RacaId", "Designacao", animal.RacaId);
                     return View(animal);
                 }
