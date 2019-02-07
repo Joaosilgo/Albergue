@@ -133,9 +133,17 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
                
                 if (result.Succeeded)
                 {
-                    if (User.IsInRole("Administrator")) await _userManager.AddToRoleAsync(user, "Funcionario");
-                    else await _userManager.AddToRoleAsync(user, "Utilizador");
+                    if (User.IsInRole("Administrator"))
+                    {
+                        user.Cargo = "Funcionario";
+                        await _userManager.AddToRoleAsync(user, "Funcionario");
 
+                    }
+                    else
+                    {
+                        user.Cargo = "Utilizador";
+                        await _userManager.AddToRoleAsync(user, "Utilizador");
+                    }
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

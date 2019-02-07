@@ -1,6 +1,6 @@
-﻿
+﻿@model AlbergueAnimal.Data.ApplicationDbContext
 @{
-   ViewData["Title"] = "Index";
+    ViewData["Title"] = "Index";
 }
 
 <h2>Dashboard</h2>
@@ -8,6 +8,10 @@
 
 
 <style>
+    .info{
+        margin-right:-20px;
+    }
+    
     .inforide {
         box-shadow: 1px 2px 8px 0px #f1f1f1;
         background-color: white;
@@ -20,20 +24,20 @@
         padding-top: 30px;
         border-radius: 8px 0px 0px 8px;
         text-align: center;
-        height: 125px;
-        margin-left: 15px;
+        height: 90px;
+        margin-left: 20px;
     }
 
     .fontsty {
-        margin-right: -15px;
+        margin-right: -40px;
     }
 
         .fontsty h2 {
             color: #6E6E6E;
             font-size: 35px;
-            margin-top: 15px;
+            margin-top: 10px;
             text-align: right;
-            margin-right: 30px;
+            margin-right: 70px;
         }
 
         .fontsty h4 {
@@ -41,7 +45,7 @@
             font-size: 25px;
             margin-top: 20px;
             text-align: right;
-            margin-right: 30px;
+            margin-right: 70px;
         }
 
     .ridetwo img {
@@ -50,65 +54,71 @@
 </style>
 
 
-<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4 info">
     <div class="inforide">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
-                <img src="~/images/dog.png">
-            </div>
-            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
-                <h4>Utilizadores</h4>
-                <h2>120</h2>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
-    <div class="inforide">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
-                <img src="~/images/dog.png">
-            </div>
-            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
-                <h4>Animais</h4>
-                <h2>120</h2>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
-        <div class="inforide">
-            <a asp-area="" asp-controller="Home" asp-action="Index">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
-                        <img src="~/images/1093px-Black_Paw.svg.png">
-                    </div>
-
-                    <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
-                        <h4>Adoções</h4>
-                        <h2>120</h2>
-                    </div>
+        <a asp-area="" asp-controller="Adocao" asp-action="Index">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                    <img src="~/images/user.png">
                 </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Utilizadores</h4>
+                    <h2>@Model.Users.Where(a => a.Cargo.Equals("Utilizador")).Count()</h2>
+                </div>
+            </div>
             </a>
-        </div>
     </div>
+</div>
 
 
-<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4 info">
     <div class="inforide">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
-                <img src="~/images/1093px-Black_Paw.svg.png">
+        <a asp-area="" asp-controller="Animals" asp-action="Index">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                    <img src="~/images/dog.png">
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Animais</h4>
+                    <h2>@Model.Animal.Where(a => a.Arquivado == false).Count()</h2>
+                </div>
             </div>
-            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
-                <h4>Stock</h4>
-                <h2>120</h2>
+        </a>
+    </div>
+</div>
+
+
+<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4 info">
+    <div class="inforide">
+        <a asp-area="" asp-controller="Adocao" asp-action="Index">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                    <img src="~/images/doghouse.png">
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Adoções</h4>
+                    <h2>@Model.Adocao.Where(a => a.Arquivado == false).Count()</h2>
+                </div>
             </div>
-        </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4 info">
+    <div class="inforide">
+        <a asp-area="" asp-controller="Adocao" asp-action="Index">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                    <img src="~/images/bone.png">
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Stock</h4>
+                    <h2>@Model.Product.Where(a => a.Quantidade > 0).Count()</h2>
+                </div>
+            </div>
+            </a>
     </div>
 </div>
 

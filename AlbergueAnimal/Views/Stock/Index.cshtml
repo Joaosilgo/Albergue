@@ -1,8 +1,24 @@
 ﻿@model IEnumerable<AlbergueAnimal.Models.Product>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Stock";
 }
+
+
+
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+       
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
+
+
+
+
+
 
 <h2>Stock de Produtos</h2>
 
@@ -79,8 +95,13 @@
             </tr>
         }
     </tbody>
-</table>
 
+
+
+
+</table>
+<!-- HTML -->
+<div id="chartdiv"></div>
 
 @section Scripts{
 
@@ -94,9 +115,9 @@
         am4core.useTheme(am4themes_animated);
 
         var chart = am4core.create("chartdiv", am4charts.PieChart);
-      
+
         chart.data =
-           
+
             [
 
                 {
@@ -107,9 +128,9 @@
                     "country": "Educação",
                     "litres": @Model.Where(a => a.ProductType.Nome.Equals("Educação")).Sum(x => x.Quantidade)
                 }];
-        
 
-        
+
+
 
 
         var series = chart.series.push(new am4charts.PieSeries());
@@ -128,6 +149,3 @@
 
 
 }
-<!-- HTML -->
-<div id="chartdiv"></div>
-

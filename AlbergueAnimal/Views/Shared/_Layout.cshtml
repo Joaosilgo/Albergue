@@ -26,7 +26,8 @@
     <script src="~/amcharts4/themes/animated.js"></script>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-flatly.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-flatly.min.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/estilos.css" />
     </environment>
@@ -39,7 +40,8 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" @*id="RedMenu" *@>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!--id="RedMenu"-->
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavBar"
@@ -53,7 +55,12 @@
             </div>
             <div class=navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Início</a></li>
+                    <li>
+                        @*<a asp-area="" asp-controller="Home" asp-action="Index">Quinta do Mião</a>*@
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/images/brand.svg" style="max-width:100px; margin-top: -7px;" />
+                        </a>
+                    </li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contactos</a></li>
                     <li><a asp-area="" asp-controller="Animals" asp-action="Index">Animais</a></li>
@@ -62,20 +69,27 @@
                     {
                         <li><a asp-area="" asp-controller="Adocao" asp-action="Index">Adotar</a></li>
                     }
-                    @if (User.IsInRole("Administrator"))
+                    @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos"))
                     {
 
-                       
+
                         <li>
-                            <a  asp-area="" class="dropdown-toggle" data-toggle="dropdown">Gestão Utilizadores </a>
+                            <a asp-area="" class="dropdown-toggle" data-toggle="dropdown">Gestão Utilizadores </a>
                             <ul class="nav navbar-nav dropdown-menu" role="menu">
                                 <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
                                 <li><a asp-area="" asp-controller="Utilizador" asp-action="Index">Gestão Utilizadores</a></li>
                             </ul>
                         </li>
+                    }
+                    @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Stock"))
+                    {
                         <li><a asp-area="" asp-controller="Stock" asp-action="Index">Gestão Stock</a></li>
+                    }
+                    @if (User.IsInRole("Administrator"))
+                    {
                         <li> <a asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a> </li>
                     }
+
                 </ul>
 
                 <partial name="_LoginPartial" />
@@ -95,11 +109,7 @@
         <hr />
 
         <footer>
-            @*<p>&copy; Albergue de Animais @DateTime.Now</p>*@
-
-
-
-
+           @* <p>&copy; Albergue de Animais-Quinta do Mião</p>*@
         </footer>
 
     </div>

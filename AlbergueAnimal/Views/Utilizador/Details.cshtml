@@ -27,9 +27,15 @@
     <dd>
         @Html.DisplayFor(model => model.Genero)
     </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Cargo)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Cargo)
+    </dd>
 </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="EditarCargo" asp-route-id="@Model.Id">Editar</a> |
     <a asp-action="Index">Voltar á Lista</a>
 </div>

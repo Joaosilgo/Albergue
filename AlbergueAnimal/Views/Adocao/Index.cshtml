@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<AlbergueAnimal.Models.Adocao>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Adoção";
 }
 
 <h2>Index</h2>
@@ -23,6 +23,9 @@ else
     <thead>
         <tr>
             <th>
+               Foto
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CreationDate)
             </th>
             <th>
@@ -32,8 +35,8 @@ else
                 @Html.DisplayNameFor(model => model.EndDate)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.Arquivado)
-            </th>*@
+            @Html.DisplayNameFor(model => model.Arquivado)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Animal)
             </th>
@@ -50,6 +53,16 @@ else
         @foreach (var item in Model)
         {
         <tr>
+            <td>
+                @{
+                    if (item.Animal.imageContent != null && item.Animal.imageMimeType.Contains("image"))
+                    {
+                        string imageBase64 = Convert.ToBase64String(item.Animal.imageContent);
+                        string imageSrc = string.Format("data:" + item.Animal.imageMimeType + ";base64,{0}", imageBase64);
+                        <img src="@imageSrc" alt="Profile picture of @item.Animal.Nome" style=" width: 50px;height: 50px; border-radius: 50%; padding: 0;width: 50px;height: 50px; line-height: 50px;" class="img-responsive img-rounded" />
+                    }
+                }
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreationDate)
             </td>

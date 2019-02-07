@@ -222,25 +222,27 @@ namespace AlbergueAnimal.Controllers
             {
                 throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
-
+            
             var cargo = user.Cargo;
-
-            var verificar = await _userManager.GetUsersInRoleAsync(cargo);
-            if (verificar.Contains(user))
+            if (cargo != null)
             {
-                await _userManager.RemoveFromRoleAsync(user, cargo);
-            }
+                var verificar = await _userManager.GetUsersInRoleAsync(cargo);
+                if (verificar.Contains(user))
+                {
+                    await _userManager.RemoveFromRoleAsync(user, cargo);
+                }
 
 
-            if (String.Compare(model.Cargo, cargo) != 0) //if (model.Email != email)
+                if (String.Compare(model.Cargo, cargo) != 0) //if (model.Email != email)
 
-            {
-                
-            //    await _userManager.RemoveFromRoleAsync(user, cargo);
-            //    await _context.SaveChangesAsync();
-                user.AlterarCargo(user, model.Cargo);
-                await _userManager.AddToRoleAsync(user, model.Cargo);
-                await _context.SaveChangesAsync();
+                {
+
+                    //    await _userManager.RemoveFromRoleAsync(user, cargo);
+                    //    await _context.SaveChangesAsync();
+                    user.AlterarCargo(user, model.Cargo);
+                    await _userManager.AddToRoleAsync(user, model.Cargo);
+                    await _context.SaveChangesAsync();
+                }
             }
 
             return RedirectToAction(nameof(Index));

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml" class="ie"><![endif]-->
 <!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
   <head>
@@ -50,14 +50,14 @@ table {
 .layout,
 div.header {
   max-width: 400px !important;
-  -fallback-width: 95% !important;
+  /*-fallback-width: 95% ;*/
   width: calc(100% - 20px) !important;
 }
-div.preheader {
-  max-width: 360px !important;
-  -fallback-width: 90% !important;
-  width: calc(100% - 60px) !important;
-}
+        div.preheader {
+            max-width: 360px !important;
+            /*-fallback-width: 90% !important;*/
+            width: calc(100% - 60px) !important;
+        }
 .snippet,
 .webversion {
   Float: none !important;
@@ -554,8 +554,8 @@ table {
   Margin-top: 20px;
 }
 .text--inline {
-  mso-line-height-rule: exactly;
-  mso-text-raise: 4px;
+  /*mso-line-height-rule: exactly;
+  mso-text-raise: 4px;*/
 }
 .column__padding--inline:nth-last-child(n+2) h1:last-child {
   Margin-bottom: 20px;
@@ -639,7 +639,7 @@ div.preheader {
   Margin: 0 auto;
   max-width: 560px;
   min-width: 280px;
-  -fallback-width: 280px;
+  /*-fallback-width: 280px;*/
   width: calc(28000% - 167440px);
 }
 .header,
@@ -647,7 +647,7 @@ div.preheader {
   Margin: 0 auto;
   max-width: 600px;
   min-width: 320px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(28000% - 167400px);
 }
 .logo {
@@ -675,7 +675,7 @@ div.preheader {
   line-height: 19px;
   max-width: 280px;
   min-width: 140px;
-  -fallback-width: 140px;
+  /*-fallback-width: 140px;*/
   width: calc(14000% - 78120px);
   padding: 10px 0 5px 0;
 }
@@ -686,7 +686,7 @@ div.preheader {
   line-height: 19px;
   max-width: 280px;
   min-width: 139px;
-  -fallback-width: 139px;
+  /*-fallback-width: 139px;*/
   width: calc(14100% - 78680px);
   padding: 10px 0 5px 0;
 }
@@ -697,7 +697,7 @@ div.preheader {
   Margin: 0 auto;
   max-width: 600px;
   min-width: 320px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(28000% - 167400px);
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -718,7 +718,7 @@ div.preheader {
 .has-gutter.has-border {
   max-width: 602px;
   min-width: 322px;
-  -fallback-width: 322px;
+  /*-fallback-width: 322px;*/
   width: calc(28000% - 167398px);
 }
 .column__padding--inline {
@@ -728,14 +728,14 @@ div.preheader {
 .one-col .column {
   max-width: 600px;
   min-width: 320px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(28000% - 167400px);
 }
 .two-col .column {
   Float: left;
   max-width: 320px;
   min-width: 300px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(12300px - 2000%);
 }
 .three-col .column,
@@ -743,52 +743,52 @@ div.preheader {
   Float: left;
   max-width: 320px;
   min-width: 200px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(72200px - 12000%);
 }
 .sidebar--inline .column.wide {
   Float: left;
   max-width: 400px;
   min-width: 320px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(8000% - 47600px);
 }
 .two-col.has-gutter .column {
   max-width: 320px;
   min-width: 290px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(18290px - 3000%);
 }
 .two-col.has-gutter.has-border .column {
   max-width: 322px;
   min-width: 292px;
-  -fallback-width: 322px;
+  /*-fallback-width: 322px;*/
   width: calc(18292px - 3000%);
 }
 .three-col.has-gutter .column,
 .sidebar--inline.has-gutter .column.narrow {
   max-width: 320px;
   min-width: 188px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(79388px - 13200%);
 }
 .three-col.has-gutter.has-border .column,
 .sidebar--inline.has-gutter.has-border .column.narrow {
   max-width: 322px;
   min-width: 190px;
-  -fallback-width: 322px;
+  /*-fallback-width: 322px;*/
   width: calc(79390px - 13200%);
 }
 .sidebar--inline.has-gutter .column.wide {
   max-width: 394px;
   min-width: 320px;
-  -fallback-width: 320px;
+  /*-fallback-width: 320px;*/
   width: calc(7400% - 44006px);
 }
 .sidebar--inline.has-gutter.has-border .column.wide {
   max-width: 396px;
   min-width: 322px;
-  -fallback-width: 322px;
+  /*-fallback-width: 322px;*/
   width: calc(7400% - 44004px);
 }
 .gutter {
@@ -839,7 +839,7 @@ div.preheader {
 }
 .footer__share-button__container--inline {
   Margin-bottom: 6px;
-  mso-line-height-rule: exactly;
+  /*mso-line-height-rule: exactly;*/
 }
 .footer__share-button__container--inline span {
   font-size: 11px;
@@ -860,7 +860,7 @@ div.preheader {
   text-decoration: none;
   border-style: solid;
   border-width: 4px 7px 3px 4px;
-  mso-border-width-alt: 4px 8px 8px 8px;
+  /*mso-border-width-alt: 4px 8px 8px 8px;*/
 }
 .email-footer .column {
   font-size: 12px;
@@ -890,13 +890,13 @@ div.preheader {
 }
 [role=section] > div:not(.layout):not(.full-width--inline),
 .column > div > div[style*="font-size:1px"] {
-  mso-line-height-rule: exactly;
+  /*mso-line-height-rule: exactly;*/
 }
 </style>
   <!--[if !mso]><!--><style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic);
 </style><link href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css"><!--<![endif]--><style type="text/css" emb-inline>
-.wrapper{background-color:#f0f0f0}.wrapper h1{color:#9f1b32}.wrapper h1{font-size:22px;line-height:31px}.wrapper h2{color:#9f1b32}.wrapper h2{font-size:17px;line-height:26px}.wrapper h3{color:#a3a3a3}.wrapper h3{font-size:16px;line-height:24px}.wrapper a{color:#9f1b32}.fixed-width .column,.full-width--inline .column,.column__background__inner--inline{color:#5d5d5d}.fixed-width .column,.full-width--inline .column,.column__background__inner--inline{font-size:14px;line-height:21px}.fixed-width .column,.full-width--inline .column,.column__background__inner--inline{font-family:Roboto,Tahoma,sans-serif}.fixed-width.has-border .layout__inner{border-top:1px solid #bdbdbd;border-right:1px solid #bdbdbd;border-bottom:1px solid #bdbdbd;border-left:1px solid #bdbdbd}.full-width--inline.has-border,.has-gutter.has-border .column__background{border-top:1px solid #bdbdbd;border-bottom:1px solid #bdbdbd}.border{background-color:#bdbdbd}.wrapper blockquote{border-left:4px solid #bdbdbd}.divider{background-color:#bdbdbd}.wrapper .btn a{color:#fff}.wrapper .btn a{font-family:Roboto,Tahoma,sans-serif}.btn--flat a,.btn--shadow a,.btn--depth a{background-color:#9f1b32}.btn--ghost a{border:1px solid #9f1b32}.snippet,.webversion,.email-footer .column{color:#969da3}.snippet,.webversion,.email-footer .column{font-family:Avenir,sans-serif}.wrapper .preheader a,.wrapper .footer__left a{color:#969da3}.logo{color:#c3ced9}.logo{font-family:Roboto,Tahoma,sans-serif}.wrapper .logo a{color:#c3ced9}.email-footer a{color:#969da3}.email-footer a:hover{color:#969da3 !important}.email-footer .footer__share-button__link--inline{background-color:#787878;border-color:#787878;mso-border-color-alt:#787878}
+.wrapper{background-color:#f0f0f0}.wrapper h1{color:#9f1b32}.wrapper h1{font-size:22px;line-height:31px}.wrapper h2{color:#9f1b32}.wrapper h2{font-size:17px;line-height:26px}.wrapper h3{color:#a3a3a3}.wrapper h3{font-size:16px;line-height:24px}.wrapper a{color:#9f1b32}.fixed-width .column,.full-width--inline .column,.column__background__inner--inline{color:#5d5d5d}.fixed-width .column,.full-width--inline .column,.column__background__inner--inline{font-size:14px;line-height:21px}.fixed-width .column,.full-width--inline .column,.column__background__inner--inline{font-family:Roboto,Tahoma,sans-serif}.fixed-width.has-border .layout__inner{border-top:1px solid #bdbdbd;border-right:1px solid #bdbdbd;border-bottom:1px solid #bdbdbd;border-left:1px solid #bdbdbd}.full-width--inline.has-border,.has-gutter.has-border .column__background{border-top:1px solid #bdbdbd;border-bottom:1px solid #bdbdbd}.border{background-color:#bdbdbd}.wrapper blockquote{border-left:4px solid #bdbdbd}.divider{background-color:#bdbdbd}.wrapper .btn a{color:#fff}.wrapper .btn a{font-family:Roboto,Tahoma,sans-serif}.btn--flat a,.btn--shadow a,.btn--depth a{background-color:#9f1b32}.btn--ghost a{border:1px solid #9f1b32}.snippet,.webversion,.email-footer .column{color:#969da3}.snippet,.webversion,.email-footer .column{font-family:Avenir,sans-serif}.wrapper .preheader a,.wrapper .footer__left a{color:#969da3}.logo{color:#c3ced9}.logo{font-family:Roboto,Tahoma,sans-serif}.wrapper .logo a{color:#c3ced9}.email-footer a{color:#969da3}.email-footer a:hover{color:#969da3 !important}.email-footer .footer__share-button__link--inline{background-color:#787878;border-color:#787878/*;mso-border-color-alt:#787878*/}
 </style><style type="text/css" emb-not-inline>
 body{background-color:#f0f0f0}.logo a:hover,.logo a:focus{color:#859bb1 !important}.mso .layout-has-border{border-top:1px solid #bdbdbd;border-bottom:1px solid #bdbdbd}.mso .layout-has-bottom-border{border-bottom:1px solid #bdbdbd}.mso .border,.ie .border{background-color:#bdbdbd}.mso h1,.ie h1{}.mso h1,.ie h1{font-size:26px !important;line-height:34px !important}.mso h2,.ie h2{}.mso h2,.ie h2{font-size:20px !important;line-height:28px !important}.mso h3,.ie h3{}.mso .layout__inner,.ie .layout__inner{}.mso .footer__share-button p{}.mso .footer__share-button p{font-family:Avenir,sans-serif}
 </style></head>
@@ -929,112 +929,113 @@ body{background-color:#f0f0f0}.logo a:hover,.logo a:focus{color:#859bb1 !importa
         <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
         </div>
       </div>
-      <div role="section">
+      <div>
+         <!-- role="<!--section-->"-->
 
-      <div class="layout one-col fixed-width layout--inherit-padding--inline">
-        <div class="layout__inner" style="background-color: #ffffff;">
-        <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-fixed-width" style="background-color: #ffffff;"><td style="width: 600px" class="w560"><![endif]-->
-          <div class="column">
-        
-            <div class="column__padding--inline">
-      <div style="line-height:5px;font-size:1px">&nbsp;</div>
-    </div>
-        
-        <div class="image--inline" align="center">
-          <a href="https://albergueanimalfinal.azurewebsites.net"><img alt="" width="600" style="max-width:900px" src="https://i1.createsend1.com/resize/ti/j/F7/436/4EE/eblogo/slogan.PNG"></a>
-        </div>
-      
-            <div class="column__padding--inline">
-      <div class="text--inline">
-        <h3 style="text-align: left;">ADO&#199;&#195;O ACEITE</h3><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16">A sua ado&#231;&#227;o foi aceite com sucesso.</p><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16">Obrigado por contribuir para o bem dos nossos animais!</p><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16">Poder&#225; vir levantar o seu novo amigo a qualquer altura do nosso hor&#225;rio de atendimento.</p><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16"><em>Quinta do Mi&#227;o, Albergue Animais</em></p>
-      </div>
-    </div>
-        
-            <div class="column__padding--inline">
-      <div class="btn btn--flat btn--large" style="text-align:left;">
-        <a cs-button href="https://albergueanimalfinal.azurewebsites.net" fix-pos data-vml-width="154" height="48" style="background-color: #1b969f; color: #ffffff !important; font-family: Roboto, Tahoma, sans-serif; border-radius: 4px;">Ir para o Website</a>
-      </div>
-    </div>
-        
-          </div>
-        <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-        </div>
-      </div>
-  
-      <div class="layout two-col fixed-width layout--inherit-padding--inline">
-        <div class="layout__inner" style="background-color: #ffffff;">
-        <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-fixed-width" style="background-color: #ffffff;"><td style="width: 300px" valign="top" class="w260"><![endif]-->
-          <div class="column">
-          
-            <div class="column__padding--inline">
-      <div style="line-height:18px;font-size:1px">&nbsp;</div>
-    </div>
-          
-            <div class="column__padding--inline">
-      <div class="text--inline">
-        <h3>Informa&#231;&#245;es</h3><p><strong>Site online: </strong>restaurant.com<br><strong>Telefone: </strong>&nbsp;21 206 8625<br><strong>Email: </strong>esw05g03@gmail.com<br><strong>Morada: </strong>Quinta das Rebelas Barreiro&nbsp;2830-222</p>
-      </div>
-    </div>
-          
-          </div>
-        <!--[if (mso)|(IE)]></td><td style="width: 300px" valign="top" class="w260"><![endif]-->
-          <div class="column">
-          
-            <div class="column__padding--inline">
-        <div class="image--inline" align="center">
-          <img alt="" width="260" style="max-width:480px" src="https://i2.createsend1.com/resize/ti/j/F7/436/4EE/eblogo/quinta.PNG">
-        </div>
-      </div>
-          
-          </div>
-        <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-        </div>
-      </div>
-  
-      <div class="layout__separator--inline" style="line-height:40px;font-size:40px;">&nbsp;</div>
-  
-      
-      <div role="contentinfo">
-        <div class="layout sidebar--inline email-footer">
-          <div class="layout__inner">
-          <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 400px;" valign="top" class="w360"><![endif]-->
-            <div class="column wide">
-              <div class="column__padding--inline">
-                
-                <div class="email-footer__address--inline">
-                  <div>ESW05-G03 IPS EST</div>
-                </div>
-                <div class="email-footer__permission--inline">
-                  
-                </div>
-                <!--[if mso]>&nbsp;<![endif]-->
+          <div class="layout one-col fixed-width layout--inherit-padding--inline">
+              <div class="layout__inner" style="background-color: #ffffff;">
+                  <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-fixed-width" style="background-color: #ffffff;"><td style="width: 600px" class="w560"><![endif]-->
+                  <div class="column">
+
+                      <div class="column__padding--inline">
+                          <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                      </div>
+
+                      <div class="image--inline" align="center">
+                          <a href="https://albergueanimalfinal.azurewebsites.net"><img alt="" width="600" style="max-width:900px" src="https://i1.createsend1.com/resize/ti/j/F7/436/4EE/eblogo/slogan.PNG"></a>
+                      </div>
+
+                      <div class="column__padding--inline">
+                          <div class="text--inline">
+                              <h3 style="text-align: left;">ADO&#199;&#195;O ACEITE</h3><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16">A sua ado&#231;&#227;o foi aceite com sucesso.</p><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16">Obrigado por contribuir para o bem dos nossos animais!</p><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16">Poder&#225; vir levantar o seu novo amigo a qualquer altura do nosso hor&#225;rio de atendimento.</p><p class="size-16" style="font-size: 16px; line-height: 24px;" lang="x-size-16"><em>Quinta do Mi&#227;o, Albergue Animais</em></p>
+                          </div>
+                      </div>
+
+                      <div class="column__padding--inline">
+                          <div class="btn btn--flat btn--large" style="text-align:left;">
+                              <a cs-button href="https://albergueanimalfinal.azurewebsites.net" fix-pos data-vml-width="154" height="48" style="background-color: #1b969f; color: #ffffff !important; font-family: Roboto, Tahoma, sans-serif; border-radius: 4px;">Ir para o Website</a>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
               </div>
-            </div>
-          <!--[if (mso)|(IE)]></td><td style="width: 200px;" valign="top" class="w160"><![endif]-->
-            <div class="column narrow">
-              <div class="column__padding--inline">
-                
-              </div>
-            </div>
-          <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
           </div>
-        </div>
-        <div class="layout one-col email-footer">
-          <div class="layout__inner">
-          <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 600px;" class="w560"><![endif]-->
-            <div class="column">
-              <div class="column__padding--inline">
-                <div class="email-footer__subscription--inline">
-                  <unsubscribe style="text-decoration: underline;">Unsubscribe</unsubscribe>
-                </div>
+
+          <div class="layout two-col fixed-width layout--inherit-padding--inline">
+              <div class="layout__inner" style="background-color: #ffffff;">
+                  <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-fixed-width" style="background-color: #ffffff;"><td style="width: 300px" valign="top" class="w260"><![endif]-->
+                  <div class="column">
+
+                      <div class="column__padding--inline">
+                          <div style="line-height:18px;font-size:1px">&nbsp;</div>
+                      </div>
+
+                      <div class="column__padding--inline">
+                          <div class="text--inline">
+                              <h3>Informa&#231;&#245;es</h3><p><strong>Site online: </strong>restaurant.com<br><strong>Telefone: </strong>&nbsp;21 206 8625<br><strong>Email: </strong>esw05g03@gmail.com<br><strong>Morada: </strong>Quinta das Rebelas Barreiro&nbsp;2830-222</p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td style="width: 300px" valign="top" class="w260"><![endif]-->
+                  <div class="column">
+
+                      <div class="column__padding--inline">
+                          <div class="image--inline" align="center">
+                              <img alt="" width="260" style="max-width:480px" src="https://i2.createsend1.com/resize/ti/j/F7/436/4EE/eblogo/quinta.PNG">
+                          </div>
+                      </div>
+
+                  </div>
+                  <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
               </div>
-            </div>
-          <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
           </div>
-        </div>
-      </div>
-      <div style="line-height:40px;font-size:40px;">&nbsp;</div>
-    </div></td></tr></table>
+
+          <div class="layout__separator--inline" style="line-height:40px;font-size:40px;">&nbsp;</div>
+
+
+          <div role="contentinfo">
+              <div class="layout sidebar--inline email-footer">
+                  <div class="layout__inner">
+                      <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 400px;" valign="top" class="w360"><![endif]-->
+                      <div class="column wide">
+                          <div class="column__padding--inline">
+
+                              <div class="email-footer__address--inline">
+                                  <div>ESW05-G03 IPS EST</div>
+                              </div>
+                              <div class="email-footer__permission--inline">
+
+                              </div>
+                              <!--[if mso]>&nbsp;<![endif]-->
+                          </div>
+                      </div>
+                      <!--[if (mso)|(IE)]></td><td style="width: 200px;" valign="top" class="w160"><![endif]-->
+                      <div class="column narrow">
+                          <div class="column__padding--inline">
+
+                          </div>
+                      </div>
+                      <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                  </div>
+              </div>
+              <div class="layout one-col email-footer">
+                  <div class="layout__inner">
+                      <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 600px;" class="w560"><![endif]-->
+                      <div class="column">
+                          <div class="column__padding--inline">
+                              <div class="email-footer__subscription--inline">
+                                  <unsubscribe style="text-decoration: underline;">Unsubscribe</unsubscribe>
+                              </div>
+                          </div>
+                      </div>
+                      <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                  </div>
+              </div>
+          </div>
+          <div style="line-height:40px;font-size:40px;">&nbsp;</div>
+      </div></td></tr></table>
   <script type="text/javascript" src="https://js.createsend1.com/js/compiled/app/global/polyfill/polyfill.min.js?h=3B4C328A201902050344"></script>
 <script type="text/javascript" src="https://js.createsend1.com/js/compiled/app/content/emailPreview-iframe.min.js?h=D454A4CD201902050344" data-model='{"Scrollbars":false}'></script>
 </body>

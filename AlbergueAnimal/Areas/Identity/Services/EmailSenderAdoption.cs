@@ -26,9 +26,9 @@ namespace AlbergueAnimal.Areas.Identity.Services
            var x= _context.Users.Where(a=>a.Id.Equals(userId)).First();
             string body;
             //Read template file from the App_Data folder
-             var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "Templates/emailAdoption.html"));
+            var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "Templates/emailAdoption.html"));
 
-              body = sr.ReadToEnd();
+            body = sr.ReadToEnd();
 
             //var msg = new MimeMessage();
             //msg.From.Add(new MailboxAddress("Adoção", "m7.gpr.1718@gmail.com"));
@@ -51,14 +51,14 @@ namespace AlbergueAnimal.Areas.Identity.Services
 
 
 
-         //   var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+            //   var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
             var apiKey = "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";
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
                 From = new EmailAddress("noreply@albergue.com", "Quinta do Mião"),
                 Subject = "Adoções!",
-              //  PlainTextContent = "Hello, Email!",
+                //  PlainTextContent = "Hello, Email!",
                 HtmlContent = body
             };
             msg.AddTo(new EmailAddress(x.Email.ToString(), "Test User"));

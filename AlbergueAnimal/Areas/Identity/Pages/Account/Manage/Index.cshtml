@@ -48,10 +48,13 @@
                     <label asp-for="Input.Morada"></label>
                     <input asp-for="Input.Morada" class="form-control" />
                 </div>
+                @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos") || User.IsInRole("Gestor Stock") || User.IsInRole("Gestor Animais") || User.IsInRole("Gestor Adoções") ||  User.IsInRole("Funcionario"))
+                {
                 <div class="form-group">
                     <label asp-for="Input.Cargo"></label>
                     <input asp-for="Input.Cargo" class="form-control" />
                 </div>
+                }
                 @*<div class="form-group">
             <label asp-for="Input.Genero"></label>
             <input asp-for="Input.Genero" class="form-control" />
