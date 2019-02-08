@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using MimeKit;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,45 +28,60 @@ namespace AlbergueAnimal.Areas.Identity.Services
             _context = context;
         }
 
-        public void SendEmailAsync(string subject, string message)
+        public async Task SendEmailAsync(string subject, string message)
         {
-            var stockadmsis = _context.Roles.Where(a => a.Name.Equals("administrator")  ||  a.Name.Equals("Gestor Stock") );
-            foreach (IdentityRole element in stockadmsis)
-            {
-                var x = _context.UserRoles.Where(b => b.RoleId.Equals(element.Id));
-                 
-                foreach (IdentityUserRole<string> i in x)
-                {
-                    var users = _context.Users.Where(s => s.Id.Equals(i.UserId));
+            //var stockadmsis = _context.Roles.Where(a => a.Name.Equals("administrator")  /*&&  a.Name.Equals("Gestor Stock")*/ ).ToList();
 
+            //foreach (IdentityRole element in stockadmsis)
+            //{
+            //    var x = _context.UserRoles.Where(b => b.RoleId.Equals(element.Id));
 
-                    foreach (Utilizador item in users)
+            //    foreach (IdentityUserRole<string> i in x)
+            //    {
+            //        var users = _context.Users.Where(s => s.Id.Equals(i.UserId));
+            var stockManager = _context.Users.Where(a => a.Cargo.Equals("Administrator")).ToList();
+
+                    foreach (Utilizador item in stockManager)
                     {
-                        string body;
-                        //Read template file from the App_Data folder
-                        var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "Templates/emailStock.html"));
+                        //string body;
+                        ////Read template file from the App_Data folder
+                        //var sr = new StreamReader(Path.Combine(Environment.CurrentDirectory, "Templates/emailStock.html"));
 
-                        body = sr.ReadToEnd();
+                        //body = sr.ReadToEnd();
 
 
-                        var msg = new MimeMessage();
-                        msg.From.Add(new MailboxAddress("Gestão de Stock", "m7.gpr.1718@gmail.com"));
-                        msg.To.Add(new MailboxAddress("User", item.Email));
-                        msg.Subject = subject + ", Albergue Animais";
-                        msg.Body = new TextPart("html")
+                        //var msg = new MimeMessage();
+                        //msg.From.Add(new MailboxAddress("Gestão de Stock", "m7.gpr.1718@gmail.com"));
+                        //msg.To.Add(new MailboxAddress("User", item.Email));
+                        //msg.Subject = subject + ", Albergue Animais";
+                        //msg.Body = new TextPart("html")
+                        //{
+
+                        //    Text = body
+                        //};
+
+                        //using (var client = new SmtpClient())
+                        //{
+                        //    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                        //    client.Connect("smtp.gmail.com", 465, SecureSocketOptions.Auto);
+                        //    client.Authenticate("m7.gpr.1718@gmail.com", "gpr_m7_1718");
+                        //    client.Send(msg);
+                        //    client.Disconnect(true);
+                        //}
+                        var apiKey = "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";
+                        var client = new SendGridClient(apiKey);
+                        var msg = new SendGridMessage()
                         {
-
-                            Text = body
+                            From = new EmailAddress("noreply@albergue.com", "Quinta do Mião"),
+                            Subject = "Stock!",
+                            // PlainTextContent = body
+                            HtmlContent = "ola"
                         };
-
-                        using (var client = new SmtpClient())
-                        {
-                            client.ServerCertificateValidationCallback = (s, c, h, e) => true;
-                            client.Connect("smtp.gmail.com", 465, SecureSocketOptions.Auto);
-                            client.Authenticate("m7.gpr.1718@gmail.com", "gpr_m7_1718");
-                            client.Send(msg);
-                            client.Disconnect(true);
-                        }
+                        //  
+                        msg.AddTo(new EmailAddress(item.Email, "Test User"));
+                        if (!string.IsNullOrEmpty("d-ff6b5493344e4de6ba409efbaac37377"))
+                            msg.TemplateId = "d-ff6b5493344e4de6ba409efbaac37377";
+                        var response = await client.SendEmailAsync(msg);
                     }
                     //  return Task.CompletedTask;
 
@@ -74,8 +91,11 @@ namespace AlbergueAnimal.Areas.Identity.Services
 
 
         }
-    }
-}
+
+
+
+//////    }
+//////}
 
 //for ()
 

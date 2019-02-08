@@ -29,6 +29,31 @@ namespace AlbergueAnimal.Controllers
             return View(_context.Users.ToList());//lista users
         }
 
+
+        public IActionResult IndexUtilizadores()
+        {
+
+            return View(_context.Users.Where(a=> a.Cargo.Equals("Utilizador")).ToList());//lista users
+        }
+
+
+
+        public IActionResult IndexFuncionarios()
+        {
+            //"Utilizador", "Funcionario", "Gestor Adoções" , "Gestor Animais", "Gestor Stock", "Gestor Recursos Humanos"
+            var funcionarios = from d in _context.Users.Where(a=> a.Cargo.Equals("Administrator") ||
+                               a.Cargo.Equals("Gestor Adoções") ||
+                              a.Cargo.Equals("Gestor Animais") ||
+                               a.Cargo.Equals("Gestor Stock") ||
+                                a.Cargo.Equals("Gestor Recursos Humanos"))
+                               select d;
+
+            
+
+            return View(funcionarios.ToList());
+        }
+
+
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -289,6 +314,64 @@ namespace AlbergueAnimal.Controllers
 
             return View(users);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // GET: EstadoAdocaos/Delete/5
+        public async Task<IActionResult> DeleteUtilizador(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var u= await _context.Users
+                  .FirstOrDefaultAsync(m => m.Id.Equals(id));
+            if (u == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        // POST: EstadoAdocaos/Delete/5
+        [HttpPost, ActionName("DeleteUtilizador")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmedUtilizador(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(IndexUtilizadores));
+        }
+
+        //private bool EstadoAdocaoExists(int id)
+        //{
+        //    return _context.EstadoAdocao.Any(e => e.EstadoAdocaoId == id);
+        //}
 
 
 

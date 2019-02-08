@@ -9,6 +9,8 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using AlbergueAnimal.Data;
 
+using Microsoft.Extensions.Caching.Memory;
+
 namespace AlbergueAnimal.Controllers
 {
     public class HomeController : Controller
@@ -22,8 +24,18 @@ namespace AlbergueAnimal.Controllers
             //he = e;
         }
 
+
+        //public int UsersOnlineCount
+        //{
+        //    get
+        //    {
+        //        return MemoryCache.Default.Where(kv => kv.Value.ToString() == "User").Count();
+        //    }
+        //}
+
         public IActionResult Index()
         {
+          //  HttpContext.
             return View();
         }
 
@@ -44,6 +56,14 @@ namespace AlbergueAnimal.Controllers
                 if (vm.Subject.Equals("Geral"))
                 {
                     list = _context.Users.Where(a => a.Cargo.Equals("Administrator")).ToList();
+                }
+                if (vm.Subject.Equals("Adoções"))
+                {
+                    list = _context.Users.Where(a => a.Cargo.Equals("Gestor Adoções")).ToList();
+                }
+                if (vm.Subject.Equals("Animais"))
+                {
+                    list = _context.Users.Where(a => a.Cargo.Equals("Gestor Animais")).ToList();
                 }
                 foreach (Utilizador item in list)
                 {

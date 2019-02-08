@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using AlbergueAnimal.Data;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace AlbergueAnimal.Areas.Identity.Pages.Account
 {
@@ -88,6 +90,33 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    //services.AddCaching();
+                    ////if the list exists, add this user to it
+                    //if (HttpRuntime.Cache["LoggedInUsers"] != null)
+                    //{
+                    //    //get the list of logged in users from the cache
+                    //    var loggedInUsers = (Dictionary<string, DateTime>)HttpRuntime.Cache["LoggedInUsers"];
+
+                    //    if (!loggedInUsers.ContainsKey(model.Email))
+                    //    {
+                    //        //add this user to the list
+                    //        loggedInUsers.Add(Model.Email, DateTime.Now);
+                    //        //add the list back into the cache
+                    //        HttpRuntime.Cache["LoggedInUsers"] = loggedInUsers;
+                    //    }
+                    //}
+
+                    ////the list does not exist so create it
+                    //else
+                    //{
+                    //    //create a new list
+                    //    var loggedInUsers = new Dictionary<string, DateTime>();
+                    //    //add this user to the list
+                    //    loggedInUsers.Add(model.Email, DateTime.Now);
+                    //    //add the list into the cache
+                    //    HttpRuntime.Cache["LoggedInUsers"] = loggedInUsers;
+                    //}
+
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

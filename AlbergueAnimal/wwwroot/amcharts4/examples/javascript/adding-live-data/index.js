@@ -13,7 +13,7 @@ var visits = 50;
 var i = 0;
 
 for (i = 0; i <= 30; i++) {
-    visits -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5);
+    visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5);
     data.push({ date: new Date().setSeconds(i - 30), value: visits });
 }
 

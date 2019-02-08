@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<AlbergueAnimal.Models.Utilizador>
-
-
-
 @{
-    ViewData["Title"] = "Utilizadores";
+    ViewData["Title"] = "Lista Funcionarios";
 }
+
 
 <br />
 <p>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Utilizador" asp-action="Index">Gestão Utilizadores</a></li>
 
         <li class="breadcrumb-item active">@ViewData["Title"]</li>
     </ol>
@@ -17,37 +17,31 @@
 
 <br />
 
-<h2>Utilizadores</h2>
 
-@*<p>
-        <a asp-action="Create">Criar Utilizador</a>
-    </p>*@
+
+<h2>Lista Funcionarios</h2>
 
 
 
-<p>
-    <a asp-action="IndexFuncionarios">Lista Funcionários</a>   <a asp-action="IndexUtilizadores">Lista Utilizadores</a>
-</p>
 
-
-
-@*
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    Fotografia
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nome)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Fotografia
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
                 <td>
                     @{
@@ -62,12 +56,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cargo)
+                </td>
                 @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos"))
                 {
                     <td>
                         <a asp-action="EditarCargo" asp-route-id="@item.Id">Editar Cargo</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |*@
-@*<a asp-action="Delete" asp-route-id="@item.Id">Remover</a>
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                        @*<a asp-action="Delete" asp-route-id="@item.Id">Remover</a>*@
                     </td>
                 }
                 else
@@ -77,14 +74,9 @@
                     </td>
                 }
             </tr>
-            }
-        </tbody>
-    </table>
-
-
-
-*@
-
+        }
+    </tbody>
+</table>
 
 
 
