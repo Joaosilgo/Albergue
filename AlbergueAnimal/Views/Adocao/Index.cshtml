@@ -4,7 +4,16 @@
     ViewData["Title"] = "Adoção";
 }
 
-<h2>Index</h2>
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
+
+<h2>Adoção</h2>
 
 @if (User.IsInRole("Administrator"))
 {
@@ -111,11 +120,6 @@ else
 }
 
 
-@if (User.IsInRole("Administrator") || User.IsInRole("Gestor Adoções"))
-{
-    <!-- HTML -->
-    <div id="chartdiv"></div>
-}
 
 @section Scripts{
 
@@ -155,9 +159,12 @@ else
 
         chart.legend = new am4charts.Legend();
     </script>
-
-
-
 }
 
+@if (User.IsInRole("Administrator") || User.IsInRole("Gestor Adoções"))
+{
+    <!-- HTML -->
+    <div id="chartdiv"></div>
+}
 
+<br />

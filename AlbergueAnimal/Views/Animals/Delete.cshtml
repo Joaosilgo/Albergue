@@ -4,6 +4,16 @@
 @{
     ViewData["Title"] = "Arquivar";
 }
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Animals" asp-action="Index">Lista Animais</a></li>
+
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
+
 
 <h2>Remover</h2>
 
@@ -55,7 +65,7 @@
             @Html.DisplayFor(model => model.Raca.Designacao)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="AnimalId" />
         <input type="submit" value="Confirmar" class="btn btn-default" /> |

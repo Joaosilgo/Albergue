@@ -1,17 +1,27 @@
 ﻿@model AlbergueAnimal.Data.ApplicationDbContext
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Dashboard";
 }
+
+
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
 
 <h2>Dashboard</h2>
 
 
 
 <style>
-    .info{
-        margin-right:-20px;
+    .info {
+        margin-right: -20px;
     }
-    
+
     .inforide {
         box-shadow: 1px 2px 8px 0px #f1f1f1;
         background-color: white;
@@ -66,14 +76,14 @@
                     <h2>@Model.Users.Where(a => a.Cargo.Equals("Utilizador")).Count()</h2>
                 </div>
             </div>
-            </a>
+        </a>
     </div>
 </div>
 
 
 <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4 info">
     <div class="inforide">
-        <a asp-area="" asp-controller="Animals" asp-action="Index">
+        <a asp-area="" asp-controller="Dashboard" asp-action="TopVisualizacoesAnimal">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
                     <img src="~/images/dog.png">
@@ -118,7 +128,7 @@
                     <h2>@Model.Product.Where(a => a.Quantidade > 0).Count()</h2>
                 </div>
             </div>
-            </a>
+        </a>
     </div>
 </div>
 

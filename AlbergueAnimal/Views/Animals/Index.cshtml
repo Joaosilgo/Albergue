@@ -5,7 +5,18 @@
     ViewData["Title"] = "Animais";
 }
 
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
+
 <h2>Animais</h2>
+
+
 
 @if (User.IsInRole("Administrator"))
 {
@@ -258,6 +269,6 @@
 
 @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Animais"))
 {
-<!-- HTML -->
-<div id="chartdiv"></div>
+    <!-- HTML -->
+    <div id="chartdiv"></div>
 }

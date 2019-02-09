@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AlbergueAnimal</title>
 
-    <script src="~/amcharts/amcharts.js"></script>
+    @*<script src="~/amcharts/amcharts.js"></script>
     <script src="~/amcharts/serial.js"></script>
     <script src="~/amcharts/plugins/export/export.js"></script>
-    <link href="~/amcharts/plugins/export/export.css" rel="stylesheet" />
+    <link href="~/amcharts/plugins/export/export.css" rel="stylesheet" />*@
 
 
 
@@ -75,8 +75,9 @@
 
                         <li>
                             <a asp-area="" class="dropdown-toggle" data-toggle="dropdown">Gestão Utilizadores </a>
-                            <ul class="nav navbar-nav dropdown-menu" role="menu">
-                                <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
+                            <ul class="dropdown-menu" >
+                               
+                             <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
                                 <li><a asp-area="" asp-controller="Utilizador" asp-action="Index">Gestão Utilizadores</a></li>
                             </ul>
                         </li>
@@ -109,7 +110,7 @@
         <hr />
 
         <footer>
-           @* <p>&copy; Albergue de Animais-Quinta do Mião</p>*@
+            @*<p>&copy; Albergue de Animais-Quinta do Mião</p>*@
         </footer>
 
     </div>

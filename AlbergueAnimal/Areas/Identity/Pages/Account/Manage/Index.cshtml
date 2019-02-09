@@ -48,12 +48,12 @@
                     <label asp-for="Input.Morada"></label>
                     <input asp-for="Input.Morada" class="form-control" />
                 </div>
-                @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos") || User.IsInRole("Gestor Stock") || User.IsInRole("Gestor Animais") || User.IsInRole("Gestor Adoções") ||  User.IsInRole("Funcionario"))
+                @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos") || User.IsInRole("Gestor Stock") || User.IsInRole("Gestor Animais") || User.IsInRole("Gestor Adoções") || User.IsInRole("Funcionario"))
                 {
-                <div class="form-group">
-                    <label asp-for="Input.Cargo"></label>
-                    <input asp-for="Input.Cargo" class="form-control" />
-                </div>
+                    <div class="form-group">
+                        <label asp-for="Input.Cargo"></label>
+                        <input asp-for="Input.Cargo" class="form-control" />
+                    </div>
                 }
                 @*<div class="form-group">
             <label asp-for="Input.Genero"></label>
@@ -66,10 +66,19 @@
                 </div>
 
 
-                <div class="form-group">
+                @*<div class="form-group">
                     <label class="control-label">Fotografia</label>
                     <input type="file" class="form-control" name="p" />
+                </div>*@
+
+
+                <div class="file form-control-file input-file-container">
+                    <input type="file" name="p" id="file" />
+                    <label for="file">Fotografia</label>
+
+
                 </div>
+
                 <label asp-for="Input.PhoneNumber"></label>
                 <input asp-for="Input.PhoneNumber" class="form-control" />
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
@@ -77,25 +86,59 @@
             </div>
 
             @*<input asp-for="Input.count" class="form-control" />*@
-           
+
             <div class="ldBar label-center"
                  style="width:50%;height:50%;margin:auto"
-                 data-value= @Model.Input.count
-                     data-preset ="circle">
+                 data-value=@Model.Input.count
+                 data-preset="circle">
 
             </div>
 
 
             <style type="text/css">
 
+              
 
-                .ldBar-label:after {
-                    content: "PERFIL";
-                    margin-left: 5px;
-                    font-family: courier new;
-                    font-size: 0.7em;
-                    font-weight: 200;
+
+
+                .file {
+                    position: relative;
                 }
+
+                .file label {
+                    background: #39D2B4;
+                    padding: 5px 20px;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: .9em;
+                    transition: all .4s;
+                }
+
+                .file input {
+                    position: absolute;
+                    display: inline-block;
+                    left: 0;
+                    top: 0;
+                    opacity: 0.01;
+                    cursor: pointer;
+                }
+
+                    .file input:hover + label,
+                    .file input:focus + label {
+                        background: #34495E;
+                        color: #39D2B4;
+                    }
+        
+
+
+
+            .ldBar-label:after {
+            content: "% Completo ";
+            margin-left: 5px;
+            /*font-family: 'Agency FB';
+            font-size: 0.7em;
+            font-weight: 200;*/
+            }
             </style>
 
 

@@ -268,9 +268,11 @@ namespace AlbergueAnimal.Controllers
                         }
 
                     }
-
+                    
                     _context.Update(animal);
+
                     await _context.SaveChangesAsync();
+                  
                 }
                 catch (DbUpdateConcurrencyException)
                 {

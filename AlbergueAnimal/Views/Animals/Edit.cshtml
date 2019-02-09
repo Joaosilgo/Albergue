@@ -3,6 +3,16 @@
     ViewData["Title"] = "Editar";
 }
 
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Animals" asp-action="Index">Home</a></li>
+
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
+
 <h2>Editar</h2>
 
 <h4>Animal</h4>
@@ -18,11 +28,12 @@
                         string imageBase64 = Convert.ToBase64String(Model.imageContent);
                         string imageSrc = string.Format("data:" + Model.imageMimeType + ";base64,{0}", imageBase64);
                         <img src="@imageSrc" alt="Profile picture of @Model.Nome" style="max-height:500px; max-width:600px" class="img-responsive img-rounded" />
-                       // <input type="checkbox" id="chkRemoveImage" name="chkRemoveImage" />
+                        // <input type="checkbox" id="chkRemoveImage" name="chkRemoveImage" />
                     }
                 }
             </div>
             <input type="hidden" asp-for="AnimalId" />
+            <input type="hidden" value=@Model.visualizacoes  asp-for="visualizacoes" />
             <div class="form-group">
                 <label asp-for="RacaId" class="control-label"></label>
                 <select asp-for="RacaId" class="form-control" asp-items="ViewBag.RacaId"></select>
@@ -62,12 +73,28 @@
                 <span asp-validation-for="DataVacina" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label class="control-label">Fotografia</label>
-                <input type="file" class="form-control" name="ThePicture" />
+
+            @*<div class="form-group">
+            <label class="control-label">Fotografia</label>
+            <input type="file" class="form-control" name="ThePicture" />
+        </div>*@
+
+
+
+            <div class="file form-control-file input-file-container">
+                <input type="file" name="ThePicture" id="file" />
+                <label for="file">Fotografia</label>
+
+
             </div>
 
-            
+            @*<div class="input-file-container">
+            <input class="input-file" id="my-file" type="file" name="ThePicture">
+            <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+        </div>*@
+
+
+
             <div class="form-group">
                 <input type="submit" value="Confirmar" class="btn btn-default" />
             </div>
@@ -82,3 +109,39 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+
+<style>
+
+
+
+    .file {
+        position: relative;
+    }
+
+        .file label {
+            background: #39D2B4;
+            padding: 5px 20px;
+            color: #fff;
+            font-weight: bold;
+            font-size: .9em;
+            transition: all .4s;
+        }
+
+        .file input {
+            position: absolute;
+            display: inline-block;
+            left: 0;
+            top: 0;
+            opacity: 0.01;
+            cursor: pointer;
+        }
+
+            .file input:hover + label,
+            .file input:focus + label {
+                background: #34495E;
+                color: #39D2B4;
+            }
+</style>
+
+

@@ -88,7 +88,7 @@ namespace AlbergueAnimal.Models
 
 
         [Display(Name = "Vizualizações")]
-        public int visualizacoes { get; set; }
+        public  int  visualizacoes { get; set; }
 
 
     }

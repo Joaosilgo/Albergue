@@ -3,8 +3,18 @@
 @{
     ViewData["Title"] = "Detalhes";
 }
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Animals" asp-action="Index">Lista Animais</a></li>
 
-<br/>
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
+
+
+<br />
 <h2>@Html.DisplayFor(model => model.Nome)</h2>
 
 <div>
@@ -64,11 +74,11 @@
             @Html.DisplayFor(model => model.Raca.Designacao)
         </dd>
         @*<dt>
-            @Html.DisplayNameFor(model => model.visualizacoes)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.visualizacoes)
-        </dd>*@
+                @Html.DisplayNameFor(model => model.visualizacoes)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.visualizacoes)
+            </dd>*@
     </dl>
 
     <div id="visualizacoes" style="background-color:transparent;text-decoration-color:darkgray; align-content:flex-end; font-family: Impact, Charcoal, sans-serif;
@@ -88,7 +98,7 @@ text-transform: lowercase;">
     </div>
 
 
-    </div>
+</div>
 <div>
     @if (User.IsInRole("Administrator"))
     {
