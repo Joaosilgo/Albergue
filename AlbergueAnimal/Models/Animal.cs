@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace AlbergueAnimal.Models
 {
+    /// <summary>
+    /// Classe que representa um animal para ser adotado.
+    /// </summary>
+    /// <remarks>
+    /// Representada através dos atributos AnimalId, RacaId, Nome, Genero, Cor, DataNascimento, DataEntrada e DataVacina.
+    /// </remarks>
     public class Animal
     {
         // vai ser chave primária
@@ -56,24 +62,26 @@ namespace AlbergueAnimal.Models
         [DataType(DataType.Date)]
         public DateTime DataVacina { get; set; }
 
-        /// <summary>Propriedade FicheiroFoto representa a imagem a do animal para adoção.</summary>
+        /// <summary>Propriedade imageContent representa o conteudo da imagem do animal para adoção.</summary>
         /// <value>Permite o get e o set desta propriedade.</value>
-        /*[StringLength(255)]
-        [Display(Name = "Fotografia")]
-        public string FicheiroFoto { get; set; }*/
-
         [ScaffoldColumn(false)]
         public byte[] imageContent { get; set; }
 
+        /// <summary>Propriedade imageMimeType representa o tipo da imagem do animal para adoção.</summary>
+        /// <value>Permite o get e o set desta propriedade.</value>
         [StringLength(256)]
         [ScaffoldColumn(false)]
         public String imageMimeType { get; set; }
 
+        /// <summary>Propriedade imageFileName representa o nome da imagem do animal para adoção.</summary>
+        /// <value>Permite o get e o set desta propriedade.</value>
         [StringLength(100, ErrorMessage = "O nome do ficheiro não pode ser mostrado")]
         [Display(Name = "Nome do Ficheiro")]
         [ScaffoldColumn(false)]
         public String imageFileName { get; set; }
 
+        /// <summary>Propriedade Arquivado representa se a ficha de um animal está ou não arquivada.</summary>
+        /// <value>Permite o get e o set desta propriedade.</value>
         [Display(Name = "Arquivado")]
         public bool Arquivado { get; set; }
 
@@ -86,7 +94,8 @@ namespace AlbergueAnimal.Models
 
         public virtual List<Adocao> Adocao { get; set; }
 
-
+        /// <summary>Propriedade visualizacoes representa o numero de visualizacoes do animal para adoção.</summary>
+        /// <value>Permite o get e o set desta propriedade.</value>
         [Display(Name = "Vizualizações")]
         public  int  visualizacoes { get; set; }
 

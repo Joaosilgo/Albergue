@@ -5,8 +5,14 @@ using System.Threading.Tasks;
 
 namespace AlbergueAnimal.Models
 {
+    /// <summary>
+    /// Classe que representa o processo de uma adoção.
+    /// </summary>
     public static class ProcessStatusExtension
     {
+        /// <summary>
+        /// Retorna o estado do processo de adoção.
+        /// </summary>
         public static string GetProcessStatusName(this ProcessStatus processStatus)
         {
             switch (processStatus)
@@ -19,12 +25,18 @@ namespace AlbergueAnimal.Models
         }
 
     }
+
+    /// <summary>
+    /// Enumerado que representa o estado do processo de adoção.
+    /// </summary>
     public enum ProcessStatus
     {
-       
-            Finished,
-            Cancelled,
-            Pending
-        
+        ///<summary>Terminado</summary>
+        Finished,
+        ///<summary>Cancelado</summary>
+        Cancelled,
+        ///<summary>Pendente</summary>
+        Pending
+
     }
 }
