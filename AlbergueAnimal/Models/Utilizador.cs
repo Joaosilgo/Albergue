@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace AlbergueAnimal.Models
 {
+    /// <summary>
+    /// Classe que representa um utilizador registado.
+    /// </summary>
+    /// <remarks>
+    /// Representada através dos atributos Nome, DBO, Morada e Genero.
+    /// </remarks>
     public class Utilizador : IdentityUser
     {
         /// <summary>Propriedade Nome representa o nome do utilizador.</summary>

@@ -13,6 +13,9 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace AlbergueAnimal.Controllers
 {
+    /// <summary>
+    /// Classe responsável pela definição das ações associadas à página de Home.
+    /// </summary>
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
