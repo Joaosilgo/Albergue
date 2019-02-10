@@ -117,7 +117,6 @@ namespace AlbergueAnimal.Models
         public int AnimalId { get; set; }
 
         [Display(Name = "Utilizador")]
-       
         public string UserId { get; set; }
 
         [Display(Name = "Estado da Adoção")]
@@ -125,19 +124,19 @@ namespace AlbergueAnimal.Models
 
         /// <summary>Propriedade CreationDate representa a data de inicio do processo de adoção.</summary>
         /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
-        [Display(Name = "Data Inicio")]
+        [Display(Name = "Data De Início")]
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
 
         /// <summary>Propriedade LastUpdated representa a data da ultima atualização do processo de adoção.</summary>
         /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
-        [Display(Name = "Ultima Atualização")]
+        [Display(Name = "Última Atualização")]
         [DataType(DataType.Date)]
         public DateTime LastUpdated { get; set; }
 
         /// <summary>Propriedade LastUpdated representa a data da ultima atualização do processo de adoção.</summary>
         /// <value>Permite o get e o set desta propriedade.</value>
-        [Display(Name = "Data Fim")]
+        [Display(Name = "Data de Fim")]
         [DataType(DataType.Date)]
         public DateTime? EndDate { get; set; }
 
@@ -150,7 +149,7 @@ namespace AlbergueAnimal.Models
         [ForeignKey("UserId")]
         public virtual Utilizador Utilizador { get; set; }
         // public virtual IdentityUser Identity { get; set; }
-        [Display(Name = "Estado da Adoção")]
+        [Display(Name = "Estado Da Adoção")]
         [ForeignKey("EstadoAdocaoId")]
         public virtual EstadoAdocao EstadoAdocao { get; set; }
     }

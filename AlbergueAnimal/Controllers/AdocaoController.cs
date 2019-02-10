@@ -30,7 +30,7 @@ namespace AlbergueAnimal.Controllers
         // GET: Adocao
         public async Task<IActionResult> Index(string searchString)
         {
-            var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador).Where(a => a.Arquivado == false) select d;
+            var AdocoesArquivadas = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador).Where(a => a.Arquivado == false && a.EstadoAdocao.estado.Equals("Pendente")) select d;
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -48,6 +48,16 @@ namespace AlbergueAnimal.Controllers
             AdocoesArquivadas = AdocoesArquivadas.Where(d => d.Arquivado == true);
 
             return View(AdocoesArquivadas.ToList());
+        }
+
+
+        public IActionResult IndexEmProcessamento()
+        {
+            var AdocoesEmProcessamento = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
+
+            AdocoesEmProcessamento = AdocoesEmProcessamento.Where(d => d.Arquivado == false && d.EstadoAdocao.estado.Equals("EmProcessamento"));
+
+            return View(AdocoesEmProcessamento.ToList());
         }
 
         // GET: Adocao/Details/5
@@ -253,6 +263,39 @@ namespace AlbergueAnimal.Controllers
 
             var report = new Rotativa.AspNetCore.ViewAsPdf("IndexById", adocao);
             return report;
+        }
+
+
+        public async Task<IActionResult>Arquivar(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var adocao = await _context.Adocao
+                .Include(a => a.Animal)
+                .Include(a => a.EstadoAdocao)
+                .Include(a => a.Utilizador)
+                .FirstOrDefaultAsync(m => m.AdocaoId == id);
+            if (adocao == null)
+            {
+                return NotFound();
+            }
+
+            return View(adocao);
+        }
+
+        // POST: Adocao/Delete/5
+        [HttpPost, ActionName("Arquivar")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ArquivarConfirmed(int id)
+        {
+            var adocao = await _context.Adocao.FindAsync(id);
+            // _context.Adocao.Remove(adocao);
+            adocao.Arquivado = true;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
     }

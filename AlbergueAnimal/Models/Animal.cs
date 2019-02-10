@@ -52,7 +52,7 @@ namespace AlbergueAnimal.Models
         /// <summary>Propriedade DataVacina representa a data da ultima vacina do animal para adoção.</summary>
         /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
         [Required(ErrorMessage = "A data da última vacina é obrigatória")]
-        [Display(Name = "Data Última Vacina")]
+        [Display(Name = "Data Da Última Vacina")]
         [DataType(DataType.Date)]
         public DateTime DataVacina { get; set; }
 

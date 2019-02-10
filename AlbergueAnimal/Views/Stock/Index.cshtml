@@ -43,9 +43,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Quantidade)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.QuantidadeLimite)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ProductType)
             </th>
@@ -78,15 +78,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Quantidade)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelItem => item.QuantidadeLimite)
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.ProductType.Nome)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.ProductID">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.ProductID">Detailhes</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductID">Visualizar</a> |
                     <a asp-action="Delete" asp-route-id="@item.ProductID">Remover</a> |
                     <a asp-action="Requisitar" asp-route-id="@item.ProductID">Requisitar</a> |
 

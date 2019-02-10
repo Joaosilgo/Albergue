@@ -1,12 +1,20 @@
 ﻿@model AlbergueAnimal.Models.Product
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Inserir Produto";
 }
+<br />
+<p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Stock" asp-action="Index">Lista de Stock</a></li>
+
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+    </ol>
+</p>
 
 <h2>Inserir Produto</h2>
 
-<h4>Produto</h4>
+@*<h4>Produto</h4>*@
 <hr />
 <div class="row">
     <div class="col-md-4">

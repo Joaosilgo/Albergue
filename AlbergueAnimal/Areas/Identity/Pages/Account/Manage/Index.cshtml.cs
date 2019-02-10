@@ -53,7 +53,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
             public string Nome { get; set; }
 
             [Required]
-            [Display(Name = "Data Nascimento")]
+            [Display(Name = "Data Dee Nascimento")]
             [DataType(DataType.Date)]
             public DateTime DBO { get; set; }
 
@@ -65,7 +65,7 @@ namespace AlbergueAnimal.Areas.Identity.Pages.Account.Manage
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Genero")]
+            [Display(Name = "Género")]
             [PersonalData]
             public string Genero { get; set; }
 

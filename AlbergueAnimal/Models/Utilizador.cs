@@ -31,6 +31,7 @@ namespace AlbergueAnimal.Models
         /// <value>Permite o get e o set desta propriedade. Não poderá ser null na base de dados.</value>
         [Required]
         [PersonalData]
+        [Display(Name = "Género")]
         public string Genero { get; set; }
 
 
