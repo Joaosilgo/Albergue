@@ -34,8 +34,9 @@ namespace AlbergueAnimais.Areas.Identity.Services
             //    client.Disconnect(true);
             //}
             //return Task.CompletedTask;
-
-            var apiKey = "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";
+            var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+            // var apiKey = "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";
+           // var apiKey = "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";
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {

@@ -77,7 +77,7 @@
                 @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos"))
                 {
                     <td>
-                        @*<a asp-action="EditarCargo" asp-route-id="@item.Id">Editar Cargo</a> |*@
+                        <a asp-action="EditarCargo" asp-route-id="@item.Id">Editar Cargo</a> |
                         <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
                         @*<a asp-action="DeleteUtilizador" asp-route-id="@item.Id">Banir</a>*@
                     </td>

@@ -33,7 +33,7 @@ namespace AlbergueAnimal.Controllers
         public IActionResult IndexUtilizadores()
         {
 
-            return View(_context.Users.Where(a=> a.Cargo.Equals("Utilizador")).ToList());//lista users
+            return View(_context.Users.Where(a=> a.Cargo.Equals("Utilizador") || a.Cargo.Equals("")).ToList());//lista users
         }
 
 
@@ -45,7 +45,8 @@ namespace AlbergueAnimal.Controllers
                                a.Cargo.Equals("Gestor Adoções") ||
                               a.Cargo.Equals("Gestor Animais") ||
                                a.Cargo.Equals("Gestor Stock") ||
-                                a.Cargo.Equals("Gestor Recursos Humanos"))
+                                a.Cargo.Equals("Gestor Recursos Humanos")||
+                                  a.Cargo.Equals(""))
                                select d;
 
             

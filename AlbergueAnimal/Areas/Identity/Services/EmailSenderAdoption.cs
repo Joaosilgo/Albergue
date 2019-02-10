@@ -66,8 +66,8 @@ namespace AlbergueAnimal.Areas.Identity.Services
 
 
 
-                //   var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
-                var apiKey = "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";
+                   var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+            //  var apiKey = "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";
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
@@ -78,8 +78,8 @@ namespace AlbergueAnimal.Areas.Identity.Services
             };
          //  
             msg.AddTo(new EmailAddress(x.Email.ToString(), "Test User"));
-            if (!string.IsNullOrEmpty("d-3745b581563d465ba8b4931bb105f408"))
-                msg.TemplateId = "d-3745b581563d465ba8b4931bb105f408";
+            if (!string.IsNullOrEmpty("d-051ffeaef1d644b2a10aae58bc0ed95a"))
+                msg.TemplateId = "d-051ffeaef1d644b2a10aae58bc0ed95a";
             var response = await client.SendEmailAsync(msg);
 
 

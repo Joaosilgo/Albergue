@@ -66,8 +66,9 @@ namespace AlbergueAnimal.Controllers
             var varAdocao = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
 
             varAdocao = varAdocao.Where(d => d.Arquivado == false && d.Utilizador.Id.Equals(_userManager.GetUserId(User)));
-
+            
             return View(varAdocao.ToList());
+            
         }
 
         // GET: Adocao/Details/5

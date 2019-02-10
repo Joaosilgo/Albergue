@@ -52,8 +52,15 @@
                 {
                     <div class="form-group">
                         <label asp-for="Input.Cargo"></label>
-                        <input asp-for="Input.Cargo" class="form-control" disabled />
+                        <input asp-for="Input.Cargo" class="form-control" />
+
                     </div>
+                }
+                else
+                {
+                    // @Model.Input.Cargo.("Utilizador");
+                    <input asp-for="Input.Cargo" class="form-control" value="Utilizador" disabled />
+                    <input asp-for="Input.Cargo" class="form-control" value="Utilizador" type="hidden">
                 }
                 @*<div class="form-group">
             <label asp-for="Input.Genero"></label>
@@ -67,9 +74,9 @@
 
 
                 @*<div class="form-group">
-                    <label class="control-label">Fotografia</label>
-                    <input type="file" class="form-control" name="p" />
-                </div>*@
+            <label class="control-label">Fotografia</label>
+            <input type="file" class="form-control" name="p" />
+        </div>*@
 
 
                 <div class="file form-control-file input-file-container">
@@ -142,7 +149,7 @@
             </style>
 
 
-            <button type="submit" class="btn btn-default">Save</button>
+            <button type="submit" class="btn btn-default">Guardar</button>
         </form>
     </div>
 </div>
@@ -151,3 +158,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+

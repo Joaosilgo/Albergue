@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.Sqlite;
+using AlbergueAnimal.Data;
+using AlbergueAnimal.Models;
 
 namespace AlbergueAnimalTest
 {
@@ -12,71 +16,143 @@ namespace AlbergueAnimalTest
         [Fact]
         public void Index_ReturnsViewResult()
         {
-            var controller = new HomeController();
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
 
-            var result = controller.Index();
+                var result = controller.Index();
 
-            var viewResult = Assert.IsType<ViewResult>(result);
+                var viewResult = Assert.IsType<ViewResult>(result);
+            }
         }
 
         [Fact]
         public void About_ReturnsViewResult()
         {
-            var controller = new HomeController();
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
 
-            var result = controller.About();
+                var result = controller.About();
 
-            var viewResult = Assert.IsType<ViewResult>(result);
+                var viewResult = Assert.IsType<ViewResult>(result);
+            }
         }
 
         [Fact]
         public void About_SetsMessageInViewData()
         {
-            var controller = new HomeController();
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
 
-            controller.About();
+                controller.About();
 
-            Assert.Null(controller.ViewData["Message"]); //IsNull
+                Assert.Null(controller.ViewData["Message"]); //IsNull
+            }
         }
 
         [Fact]
         public void Contact_ReturnsViewResult()
         {
-            var controller = new HomeController();
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
+                var model = new ContactViewModel();
+               
+                model.Message = "oi";
+                model.Name = "Joao";
+                model.Email = "joaosilgo96@gmail.com";
+                model.Subject = "Geral";
+                
+                var result = controller.Contact(model);
 
-            var result = controller.Contact();
-
-            var viewResult = Assert.IsType<ViewResult>(result);
+                Assert.Null(controller.Contact(model)); //IsNull
+                //var viewResult = Assert.IsType<ContactViewModel>(result);
+            }
+            
         }
 
         [Fact]
         public void Contact_SetsMessageInViewData()
         {
-            var controller = new HomeController();
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
+                var model = new ContactViewModel();
+                model.Name = "Joao";
+                model.Email = "joaosilgo96@gmail.com";
+                model.Subject = "Geral";
+                var result = controller.Contact(model);
 
-            controller.Contact();
-
-            Assert.Null(controller.ViewData["Message"]);
+                Assert.Null(controller.ViewData["Message"]);
+            }
         }
 
         [Fact]
         public void Privacy_ReturnsViewResult()
         {
-            var controller = new HomeController();
-
-            var result = controller.Contact();
-
-            var viewResult = Assert.IsType<ViewResult>(result);
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
+                var model = new ContactViewModel();
+                model.Name = "Joao";
+                model.Email = "joaosilgo96@gmail.com";
+                model.Subject = "Geral";
+                var result = controller.Contact(model);
+                var viewResult = Assert.IsType<ViewResult>(result);
+            }
         }
 
         [Fact]
         public void Privacy_SetsMessageInViewData()
         {
-            var controller = new HomeController();
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+            using (var context = new ApplicationDbContext(options))
+            {
+                var controller = new HomeController(context);
+                var model = new ContactViewModel();
+                model.Name = "Joao";
+                model.Email = "joaosilgo96@gmail.com";
+                model.Subject = "Geral";
+                var result = controller.Contact(model);
 
-            controller.Contact();
-
-            Assert.Null(controller.ViewData["Message"]);
+                Assert.Null(controller.ViewData["Message"]);
+            }
         }
     }
 }
