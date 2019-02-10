@@ -15,7 +15,7 @@ namespace AlbergueAnimal.Controllers
 {
     public class AdocaoController : Controller
     {
-        
+
         private readonly UserManager<Utilizador> _userManager;
         private readonly ApplicationDbContext _context;
         private readonly EmailSenderAdoption _emailSender;
@@ -60,6 +60,16 @@ namespace AlbergueAnimal.Controllers
             return View(AdocoesEmProcessamento.ToList());
         }
 
+
+        public IActionResult IndexAnimalPerUser()
+        {
+            var varAdocao = from d in _context.Adocao.Include(a => a.Animal).Include(a => a.EstadoAdocao).Include(a => a.Utilizador) select d;
+
+            varAdocao = varAdocao.Where(d => d.Arquivado == false && d.Utilizador.Id.Equals(_userManager.GetUserId(User)));
+
+            return View(varAdocao.ToList());
+        }
+
         // GET: Adocao/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -84,7 +94,7 @@ namespace AlbergueAnimal.Controllers
         // GET: Adocao/Create
         public IActionResult Create()
         {
-            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a=> a.Arquivado==false), "AnimalId", "Nome");
+            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a => a.Arquivado == false), "AnimalId", "Nome");
             ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado");
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
             return View();
@@ -137,7 +147,7 @@ namespace AlbergueAnimal.Controllers
             {
                 return NotFound();
             }
-            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a=>a.Arquivado==false), "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a => a.Arquivado == false), "AnimalId", "Nome", adocao.AnimalId);
             ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", adocao.UserId);
             return View(adocao);
@@ -182,12 +192,12 @@ namespace AlbergueAnimal.Controllers
                     await _context.SaveChangesAsync();
                     var d = _context.Animal.Where(a => a.AnimalId == adocao.AnimalId).First();
                     d.Arquivado = true;
-                   await _emailSender.SendEmailAdoptionAsync(adocao.UserId, "","");
+                    await _emailSender.SendEmailAdoptionAsync(adocao.UserId, "", "");
                     await _context.SaveChangesAsync();
                 }
-                    return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
             }
-            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a=> a.Arquivado==false), "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a => a.Arquivado == false), "AnimalId", "Nome", adocao.AnimalId);
             ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", adocao.UserId);
             return View(adocao);
@@ -266,7 +276,7 @@ namespace AlbergueAnimal.Controllers
         }
 
 
-        public async Task<IActionResult>Arquivar(int? id)
+        public async Task<IActionResult> Arquivar(int? id)
         {
             if (id == null)
             {
@@ -297,6 +307,74 @@ namespace AlbergueAnimal.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // GET: Adocao/Create
+        public IActionResult CreatePerUser()
+        {
+            ViewData["AnimalId"] = new SelectList(_context.Animal.Where(a => a.Arquivado == false), "AnimalId", "Nome");
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado");
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
+            return View();
+        }
+
+        // POST: Adocao/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreatePerUser([Bind("AdocaoId,AnimalId,UserId,EstadoAdocaoId,CreationDate,LastUpdated,EndDate,Arquivado")] Adocao adocao)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _context.Adocao.ToList().Where(z => z.EstadoAdocaoId.Equals(1)).Any(a => a.AnimalId == adocao.AnimalId);
+                if (result == false)
+                {
+                    adocao.CreationDate = DateTime.Now;
+                    adocao.LastUpdated = DateTime.Now;
+                    adocao.EndDate = null;
+                    adocao.Arquivado = false;
+                    adocao.EstadoAdocaoId = 2;
+                    _context.Add(adocao);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(IndexAnimalPerUser));
+                }
+            }
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "AnimalId", "Nome", adocao.AnimalId);
+            ViewData["EstadoAdocaoId"] = new SelectList(_context.EstadoAdocao, "EstadoAdocaoId", "estado", adocao.EstadoAdocaoId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", adocao.UserId);
+            return View(adocao);
+        }
+
+
 
     }
 }

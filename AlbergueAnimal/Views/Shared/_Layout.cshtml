@@ -67,7 +67,17 @@
                     <!--  <li><a asp-area="" asp-controller="Adocaos" asp-action="Index">Adocao</a></li>-->
                     @if (SignInManager.IsSignedIn(User))
                     {
-                        <li><a asp-area="" asp-controller="Adocao" asp-action="Index">Adotar</a></li>
+                        if (User.IsInRole("Utilizador"))
+                        {
+                            @*<li><a asp-area="" asp-controller="Adocao" asp-action="Index">Adotar</a></li>*@
+                            <li><a asp-area="" asp-controller="Adocao" asp-action="IndexAnimalPerUser">Adoções</a></li>
+                        }
+                        else
+                        {
+                            <li><a asp-area="" asp-controller="Adocao" asp-action="Index">Adoções</a></li>
+                        }
+
+
                     }
                     @if (User.IsInRole("Administrator") || User.IsInRole("Gestor Recursos Humanos"))
                     {
@@ -75,9 +85,9 @@
 
                         <li>
                             <a asp-area="" class="dropdown-toggle" data-toggle="dropdown">Gestão Utilizadores </a>
-                            <ul class="dropdown-menu" >
-                               
-                             <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
+                            <ul class="dropdown-menu">
+
+                                <li><a id="criarFuncionario" href="/Identity/Account/Register">Registar Funcionário</a></li>
                                 <li><a asp-area="" asp-controller="Utilizador" asp-action="Index">Gestão Utilizadores</a></li>
                             </ul>
                         </li>

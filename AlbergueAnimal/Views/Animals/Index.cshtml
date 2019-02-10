@@ -243,7 +243,17 @@
               {
                   "country": "Beagle",
                     "litres":@Model.Where(a => a.Raca.Designacao.Equals("Beagle")).Where(z => z.Arquivado == false).ToList().LongCount()
-                }];
+                },
+                {
+                  "country": "Pastor Alemão",
+                    "litres":@Model.Where(a => a.Raca.Designacao.Equals("Pastor-Alemão")).Where(z => z.Arquivado == false).ToList().LongCount()
+                }
+                ,
+                {
+                  "country": "Dálmata",
+                    "litres":@Model.Where(a => a.Raca.Designacao.Equals("Dálmata")).Where(z => z.Arquivado == false).ToList().LongCount()
+                }
+            ];
 
 
 

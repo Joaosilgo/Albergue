@@ -127,7 +127,18 @@
               {
                     "country": "Educação",
                     "litres": @Model.Where(a => a.ProductType.Nome.Equals("Educação")).Sum(x => x.Quantidade)
-                }];
+                }
+            ,
+              {
+                    "country": "Bem-Estar",
+                    "litres": @Model.Where(a => a.ProductType.Nome.Equals("Bem-Estar")).Sum(x => x.Quantidade)
+                }
+              ,
+              {
+                    "country": "Saúde",
+                    "litres": @Model.Where(a => a.ProductType.Nome.Equals("Saúde")).Sum(x => x.Quantidade)
+                }
+            ];
 
 
 
