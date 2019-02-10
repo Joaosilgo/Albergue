@@ -1,0 +1,4289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="AlbergueAnimal" Title="AlbergueAnimal Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController.About" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000010F.html" LinkGroup="AlbergueAnimal">About Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.AccessDeniedModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000077.html" LinkGroup="AlbergueAnimal">AccessDeniedModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000014D.html" LinkGroup="AlbergueAnimal">Adocao Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.Adocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000145.html" LinkGroup="AlbergueAnimal">Adocao Property {AlbergueAnimal.Data.ApplicationDbContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.Adocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000167.html" LinkGroup="AlbergueAnimal">Adocao Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.EstadoAdocao.Adocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000179.html" LinkGroup="AlbergueAnimal">Adocao Property {AlbergueAnimal.Models.EstadoAdocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.Adocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000019E.html" LinkGroup="AlbergueAnimal">Adocao Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E1.html" LinkGroup="AlbergueAnimal">AdocaoController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.AdocaoController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E2.html" LinkGroup="AlbergueAnimal">AdocaoController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.AdocaoId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000014E.html" LinkGroup="AlbergueAnimal">AdocaoId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimais.Areas.Identity.Services" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D3.html" LinkGroup="AlbergueAnimal">AlbergueAnimais.Areas.Identity.Services Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A8.html" LinkGroup="AlbergueAnimal">AlbergueAnimal Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001B1.html" LinkGroup="AlbergueAnimal">AlbergueAnimal Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000DD.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Areas.Identity Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000CE.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Areas.Identity.Pages Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000076.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Areas.Identity.Pages.Account Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000000.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Areas.Identity.Pages.Account.Manage Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D6.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Areas.Identity.Services Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E0.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Controllers Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000013F.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Data Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Migrations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000148.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Migrations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000014C.html" LinkGroup="AlbergueAnimal">AlbergueAnimal.Models Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.AlterarCargo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000019F.html" LinkGroup="AlbergueAnimal">AlterarCargo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Raca.Animais" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000193.html" LinkGroup="AlbergueAnimal">Animais Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.AnimaisPDF" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000FC.html" LinkGroup="AlbergueAnimal">AnimaisPDF Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000159.html" LinkGroup="AlbergueAnimal">Animal Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.Animal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000142.html" LinkGroup="AlbergueAnimal">Animal Property {AlbergueAnimal.Data.ApplicationDbContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.Animal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000156.html" LinkGroup="AlbergueAnimal">Animal Property {AlbergueAnimal.Models.Adocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.AnimalId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000014F.html" LinkGroup="AlbergueAnimal">AnimalId Property {AlbergueAnimal.Models.Adocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.AnimalId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000015A.html" LinkGroup="AlbergueAnimal">AnimalId Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F1.html" LinkGroup="AlbergueAnimal">AnimalsController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.AnimalsController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F2.html" LinkGroup="AlbergueAnimal">AnimalsController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000140.html" LinkGroup="AlbergueAnimal">ApplicationDbContext Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.ApplicationDbContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000141.html" LinkGroup="AlbergueAnimal">ApplicationDbContext Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.Arquivado" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000155.html" LinkGroup="AlbergueAnimal">Arquivado Property {AlbergueAnimal.Models.Adocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.Arquivado" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000165.html" LinkGroup="AlbergueAnimal">Arquivado Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Arquivar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000EF.html" LinkGroup="AlbergueAnimal">Arquivar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.ArquivarConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F0.html" LinkGroup="AlbergueAnimal">ArquivarConfirmed Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000001E.html" LinkGroup="AlbergueAnimal">AuthenticatorUri Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Program.BuildWebHost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001AB.html" LinkGroup="AlbergueAnimal">BuildWebHost Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.Cargo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000043.html" LinkGroup="AlbergueAnimal">Cargo Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.CargoViewModel.Cargo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000016B.html" LinkGroup="AlbergueAnimal">Cargo Property {AlbergueAnimal.Models.CargoViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.Cargo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000019D.html" LinkGroup="AlbergueAnimal">Cargo Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.CargoViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000169.html" LinkGroup="AlbergueAnimal">CargoViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000004E.html" LinkGroup="AlbergueAnimal">ChangePassword Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000001.html" LinkGroup="AlbergueAnimal">ChangePasswordModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.ChangePasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000002.html" LinkGroup="AlbergueAnimal">ChangePasswordModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000055.html" LinkGroup="AlbergueAnimal">ChangePasswordNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.ClearUserRolesAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000139.html" LinkGroup="AlbergueAnimal">ClearUserRolesAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel.Code" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000023.html" LinkGroup="AlbergueAnimal">Code Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.Code" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C9.html" LinkGroup="AlbergueAnimal">Code Property {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Startup.Configuration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001AE.html" LinkGroup="AlbergueAnimal">Configuration Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.IdentityHostingStartup.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000DF.html" LinkGroup="AlbergueAnimal">Configure Method {AlbergueAnimal.Areas.Identity.IdentityHostingStartup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Startup.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001B0.html" LinkGroup="AlbergueAnimal">Configure Method {AlbergueAnimal.Startup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Startup.ConfigureServices" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001AF.html" LinkGroup="AlbergueAnimal">ConfigureServices Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ConfirmEmailModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000079.html" LinkGroup="AlbergueAnimal">ConfirmEmailModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ConfirmEmailModel.ConfirmEmailModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000007A.html" LinkGroup="AlbergueAnimal">ConfirmEmailModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel.ConfirmPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000008.html" LinkGroup="AlbergueAnimal">ConfirmPassword Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel.ConfirmPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000006A.html" LinkGroup="AlbergueAnimal">ConfirmPassword Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.ConfirmPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000BF.html" LinkGroup="AlbergueAnimal">ConfirmPassword Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.ConfirmPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C8.html" LinkGroup="AlbergueAnimal">ConfirmPassword Property {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController.Contact" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000110.html" LinkGroup="AlbergueAnimal">Contact Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ContactViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000016C.html" LinkGroup="AlbergueAnimal">ContactViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.Cor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000015E.html" LinkGroup="AlbergueAnimal">Cor Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E7_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F6_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000106_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000117_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000121_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000012B_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E8_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F7_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000107_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000012C_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000118_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000122_overloads--.html" LinkGroup="AlbergueAnimal">Create Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.CreationDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000152.html" LinkGroup="AlbergueAnimal">CreationDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.CurrentLogins" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000028.html" LinkGroup="AlbergueAnimal">CurrentLogins Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.DBO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000003E.html" LinkGroup="AlbergueAnimal">DBO Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.DBO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000BA.html" LinkGroup="AlbergueAnimal">DBO Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.DBO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000196.html" LinkGroup="AlbergueAnimal">DBO Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.DashboardController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000FE.html" LinkGroup="AlbergueAnimal">DashboardController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.DashboardController.DashboardController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000FF.html" LinkGroup="AlbergueAnimal">DashboardController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.DataEntrada" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000160.html" LinkGroup="AlbergueAnimal">DataEntrada Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.DataNascimento" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000015F.html" LinkGroup="AlbergueAnimal">DataNascimento Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.DataVacina" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000161.html" LinkGroup="AlbergueAnimal">DataVacina Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.DbInitializer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000171.html" LinkGroup="AlbergueAnimal">DbInitializer Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Delete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000EB.html" LinkGroup="AlbergueAnimal">Delete Method {AlbergueAnimal.Controllers.AdocaoController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Delete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000FA.html" LinkGroup="AlbergueAnimal">Delete Method {AlbergueAnimal.Controllers.AnimalsController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Delete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000010A.html" LinkGroup="AlbergueAnimal">Delete Method {AlbergueAnimal.Controllers.EstadoAdocaosController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Delete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000011B.html" LinkGroup="AlbergueAnimal">Delete Method {AlbergueAnimal.Controllers.ProductTypeController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Delete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000125.html" LinkGroup="AlbergueAnimal">Delete Method {AlbergueAnimal.Controllers.RacaController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Delete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000012F.html" LinkGroup="AlbergueAnimal">Delete Method {AlbergueAnimal.Controllers.StockController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.DeleteConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000EC.html" LinkGroup="AlbergueAnimal">DeleteConfirmed Method {AlbergueAnimal.Controllers.AdocaoController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.DeleteConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000FB.html" LinkGroup="AlbergueAnimal">DeleteConfirmed Method {AlbergueAnimal.Controllers.AnimalsController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.DeleteConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000010B.html" LinkGroup="AlbergueAnimal">DeleteConfirmed Method {AlbergueAnimal.Controllers.EstadoAdocaosController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.DeleteConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000011C.html" LinkGroup="AlbergueAnimal">DeleteConfirmed Method {AlbergueAnimal.Controllers.ProductTypeController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.DeleteConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000126.html" LinkGroup="AlbergueAnimal">DeleteConfirmed Method {AlbergueAnimal.Controllers.RacaController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.DeleteConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000130.html" LinkGroup="AlbergueAnimal">DeleteConfirmed Method {AlbergueAnimal.Controllers.StockController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.DeleteConfirmedUtilizador" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000013E.html" LinkGroup="AlbergueAnimal">DeleteConfirmedUtilizador Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000050.html" LinkGroup="AlbergueAnimal">DeletePersonalData Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000000B.html" LinkGroup="AlbergueAnimal">DeletePersonalDataModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.DeletePersonalDataModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000000C.html" LinkGroup="AlbergueAnimal">DeletePersonalDataModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000057.html" LinkGroup="AlbergueAnimal">DeletePersonalDataNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.DeleteUtilizador" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000013D.html" LinkGroup="AlbergueAnimal">DeleteUtilizador Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Raca.Designacao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000192.html" LinkGroup="AlbergueAnimal">Designacao Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E6.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.AdocaoController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F5.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.AnimalsController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000105.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.EstadoAdocaosController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000116.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.ProductTypeController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000120.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.RacaController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000012A.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.StockController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.Details" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000013C.html" LinkGroup="AlbergueAnimal">Details Method {AlbergueAnimal.Controllers.UtilizadorController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000013.html" LinkGroup="AlbergueAnimal">Disable2faModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel.Disable2faModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000014.html" LinkGroup="AlbergueAnimal">Disable2faModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Migrations.y.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000014B.html" LinkGroup="AlbergueAnimal">Down Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000004F.html" LinkGroup="AlbergueAnimal">DownloadPersonalData Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DownloadPersonalDataModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000018.html" LinkGroup="AlbergueAnimal">DownloadPersonalDataModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DownloadPersonalDataModel.DownloadPersonalDataModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000019.html" LinkGroup="AlbergueAnimal">DownloadPersonalDataModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000056.html" LinkGroup="AlbergueAnimal">DownloadPersonalDataNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000EA_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F9_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000109_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000012E_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000011A_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000124_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E9_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F8_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000108_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000119_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000123_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000012D_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000137_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.Edit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000138_overloads--.html" LinkGroup="AlbergueAnimal">Edit Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.EditarCargo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000013B_overloads--.html" LinkGroup="AlbergueAnimal">EditarCargo Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.EditarCargo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000013A_overloads--.html" LinkGroup="AlbergueAnimal">EditarCargo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000083.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000008C.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000099.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000042.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000BD.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C6.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ContactViewModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000016E.html" LinkGroup="AlbergueAnimal">Email Property {AlbergueAnimal.Models.ContactViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimais.Areas.Identity.Services.EmailSender" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D4.html" LinkGroup="AlbergueAnimal">EmailSender Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services.EmailSenderAdoption" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D7.html" LinkGroup="AlbergueAnimal">EmailSenderAdoption Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services.EmailSenderAdoption.EmailSenderAdoption" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D8.html" LinkGroup="AlbergueAnimal">EmailSenderAdoption Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services.EmailSenderStock" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000DA.html" LinkGroup="AlbergueAnimal">EmailSenderStock Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services.EmailSenderStock.EmailSenderStock" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000DB.html" LinkGroup="AlbergueAnimal">EmailSenderStock Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000001B.html" LinkGroup="AlbergueAnimal">EnableAuthenticatorModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.EnableAuthenticatorModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000001C.html" LinkGroup="AlbergueAnimal">EnableAuthenticatorModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.EndDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000154.html" LinkGroup="AlbergueAnimal">EndDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController.Error" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000112.html" LinkGroup="AlbergueAnimal">Error Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.ErrorMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000081.html" LinkGroup="AlbergueAnimal">ErrorMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.ErrorMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000097.html" LinkGroup="AlbergueAnimal">ErrorMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.ErrorModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000CF.html" LinkGroup="AlbergueAnimal">ErrorModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ErrorViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000173.html" LinkGroup="AlbergueAnimal">ErrorViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.EstadoAdocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000176.html" LinkGroup="AlbergueAnimal">EstadoAdocao Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.EstadoAdocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000144.html" LinkGroup="AlbergueAnimal">EstadoAdocao Property {AlbergueAnimal.Data.ApplicationDbContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.EstadoAdocao" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000158.html" LinkGroup="AlbergueAnimal">EstadoAdocao Property {AlbergueAnimal.Models.Adocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.EstadoAdocaoId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000151.html" LinkGroup="AlbergueAnimal">EstadoAdocaoId Property {AlbergueAnimal.Models.Adocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.EstadoAdocao.EstadoAdocaoId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000177.html" LinkGroup="AlbergueAnimal">EstadoAdocaoId Property {AlbergueAnimal.Models.EstadoAdocao}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000102.html" LinkGroup="AlbergueAnimal">EstadoAdocaosController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.EstadoAdocaosController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000103.html" LinkGroup="AlbergueAnimal">EstadoAdocaosController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000007C.html" LinkGroup="AlbergueAnimal">ExternalLoginModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.ExternalLoginModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000007D.html" LinkGroup="AlbergueAnimal">ExternalLoginModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.ExternalLogins" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000095.html" LinkGroup="AlbergueAnimal">ExternalLogins Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000051.html" LinkGroup="AlbergueAnimal">ExternalLogins Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000026.html" LinkGroup="AlbergueAnimal">ExternalLoginsModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.ExternalLoginsModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000027.html" LinkGroup="AlbergueAnimal">ExternalLoginsModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000058.html" LinkGroup="AlbergueAnimal">ExternalLoginsNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.FicheiroFoto" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000041.html" LinkGroup="AlbergueAnimal">FicheiroFoto Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordConfirmation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000008E.html" LinkGroup="AlbergueAnimal">ForgotPasswordConfirmation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000088.html" LinkGroup="AlbergueAnimal">ForgotPasswordModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel.ForgotPasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000089.html" LinkGroup="AlbergueAnimal">ForgotPasswordModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000030.html" LinkGroup="AlbergueAnimal">GenerateRecoveryCodesModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.GenerateRecoveryCodesModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000031.html" LinkGroup="AlbergueAnimal">GenerateRecoveryCodesModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.Genero" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000040.html" LinkGroup="AlbergueAnimal">Genero Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.Genero" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000BC.html" LinkGroup="AlbergueAnimal">Genero Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.Genero" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000015D.html" LinkGroup="AlbergueAnimal">Genero Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.Genero" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000198.html" LinkGroup="AlbergueAnimal">Genero Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProcessStatusExtension.GetProcessStatusName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000017B.html" LinkGroup="AlbergueAnimal">GetProcessStatusName Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.HasAuthenticator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000006F.html" LinkGroup="AlbergueAnimal">HasAuthenticator Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000010C.html" LinkGroup="AlbergueAnimal">HomeController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController.HomeController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000010D.html" LinkGroup="AlbergueAnimal">HomeController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.IdentityHostingStartup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000DE.html" LinkGroup="AlbergueAnimal">IdentityHostingStartup Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E3.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.AdocaoController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F3.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.AnimalsController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.DashboardController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000100.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.DashboardController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.EstadoAdocaosController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000104.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.EstadoAdocaosController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000010E.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.HomeController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000115.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.ProductTypeController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000011F.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.RacaController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000129.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.StockController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000134.html" LinkGroup="AlbergueAnimal">Index Method {AlbergueAnimal.Controllers.UtilizadorController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000004D.html" LinkGroup="AlbergueAnimal">Index Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.IndexArquivo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E4.html" LinkGroup="AlbergueAnimal">IndexArquivo Method {AlbergueAnimal.Controllers.AdocaoController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.IndexArquivo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000F4.html" LinkGroup="AlbergueAnimal">IndexArquivo Method {AlbergueAnimal.Controllers.AnimalsController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.IndexById" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000ED.html" LinkGroup="AlbergueAnimal">IndexById Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.IndexEmProcessamento" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000E5.html" LinkGroup="AlbergueAnimal">IndexEmProcessamento Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.IndexFuncionarios" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000136.html" LinkGroup="AlbergueAnimal">IndexFuncionarios Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000036.html" LinkGroup="AlbergueAnimal">IndexModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.IndexModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000037.html" LinkGroup="AlbergueAnimal">IndexModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000054.html" LinkGroup="AlbergueAnimal">IndexNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.IndexUtilizadores" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000135.html" LinkGroup="AlbergueAnimal">IndexUtilizadores Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.DbInitializer.Initialize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000172.html" LinkGroup="AlbergueAnimal">Initialize Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000007E.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000008A.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000094.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A0.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000AA.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000003.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000000D.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000021.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000003B.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000066.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B6.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C4.html" LinkGroup="AlbergueAnimal">Input Property {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000082.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000008B.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000098.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A3.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000AC.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000005.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000000E.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000022.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000003C.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000068.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B8.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C5.html" LinkGroup="AlbergueAnimal">InputModel Class {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.Is2faEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000071.html" LinkGroup="AlbergueAnimal">Is2faEnabled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.IsEmailConfirmed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000039.html" LinkGroup="AlbergueAnimal">IsEmailConfirmed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.IsMachineRemembered" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000072.html" LinkGroup="AlbergueAnimal">IsMachineRemembered Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes.ValidacoesData.IsValid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A3_overloads--.html" LinkGroup="AlbergueAnimal">IsValid Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes.ValidacoesIdade.IsValid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A7_overloads--.html" LinkGroup="AlbergueAnimal">IsValid Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.LastUpdated" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000153.html" LinkGroup="AlbergueAnimal">LastUpdated Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LockoutModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000090.html" LinkGroup="AlbergueAnimal">LockoutModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000092.html" LinkGroup="AlbergueAnimal">LoginModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.LoginModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000093.html" LinkGroup="AlbergueAnimal">LoginModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.LoginProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000007F.html" LinkGroup="AlbergueAnimal">LoginProvider Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000009E.html" LinkGroup="AlbergueAnimal">LoginWith2faModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.LoginWith2faModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000009F.html" LinkGroup="AlbergueAnimal">LoginWith2faModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A8.html" LinkGroup="AlbergueAnimal">LoginWithRecoveryCodeModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A9.html" LinkGroup="AlbergueAnimal">LoginWithRecoveryCodeModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LogoutModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B0.html" LinkGroup="AlbergueAnimal">LogoutModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LogoutModel.LogoutModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B1.html" LinkGroup="AlbergueAnimal">LogoutModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Program.Main" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001AA.html" LinkGroup="AlbergueAnimal">Main Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000004C.html" LinkGroup="AlbergueAnimal">ManageNavPages Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes.ValidacoesIdade.MaxYear" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A6.html" LinkGroup="AlbergueAnimal">MaxYear Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ContactViewModel.Message" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000170.html" LinkGroup="AlbergueAnimal">Message Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes.ValidacoesIdade.MinYear" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A5.html" LinkGroup="AlbergueAnimal">MinYear Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.Morada" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000003F.html" LinkGroup="AlbergueAnimal">Morada Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.Morada" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000BB.html" LinkGroup="AlbergueAnimal">Morada Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.Morada" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000197.html" LinkGroup="AlbergueAnimal">Morada Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ContactViewModel.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000016D.html" LinkGroup="AlbergueAnimal">Name Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel.NewPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000007.html" LinkGroup="AlbergueAnimal">NewPassword Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel.NewPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000069.html" LinkGroup="AlbergueAnimal">NewPassword Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000003D.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B9.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000015C.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.CargoViewModel.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000016A.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Models.CargoViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProductType.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000018E.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Models.ProductType}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000183.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Models.Product}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.Nome" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000195.html" LinkGroup="AlbergueAnimal">Nome Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel.OldPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000006.html" LinkGroup="AlbergueAnimal">OldPassword Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.AccessDeniedModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000078.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.AccessDeniedModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000008F.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordConfirmation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LockoutModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000091.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.LockoutModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LogoutModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B2.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.LogoutModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000011.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000016.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.PersonalDataModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000005E.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.PersonalDataModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000062.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000074.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C0.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000CD.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000CA.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.ErrorModel.OnGet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D2.html" LinkGroup="AlbergueAnimal">OnGet Method {AlbergueAnimal.Areas.Identity.Pages.ErrorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ConfirmEmailModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000007B.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.ConfirmEmailModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000084.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000009C.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A6.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000AE.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000009.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000024.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000002C.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000034.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000049.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.OnGetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000006B.html" LinkGroup="AlbergueAnimal">OnGetAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.OnGetCallbackAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000086.html" LinkGroup="AlbergueAnimal">OnGetCallbackAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.OnGetLinkLoginCallbackAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000002F.html" LinkGroup="AlbergueAnimal">OnGetLinkLoginCallbackAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.OnPost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000085.html" LinkGroup="AlbergueAnimal">OnPost Method {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LogoutModel.OnPost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B3.html" LinkGroup="AlbergueAnimal">OnPost Method {AlbergueAnimal.Areas.Identity.Pages.Account.LogoutModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.OnPost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000075.html" LinkGroup="AlbergueAnimal">OnPost Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000008D.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.ForgotPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000009D.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A7.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000AF.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000000A.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000012.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000017.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DownloadPersonalDataModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000001A.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DownloadPersonalDataModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000025.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000035.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000004A.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000063.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000006C.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C1.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.OnPostAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000CB.html" LinkGroup="AlbergueAnimal">OnPostAsync Method {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.OnPostConfirmationAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000087.html" LinkGroup="AlbergueAnimal">OnPostConfirmationAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.OnPostLinkLoginAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000002E.html" LinkGroup="AlbergueAnimal">OnPostLinkLoginAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.OnPostRemoveLoginAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000002D.html" LinkGroup="AlbergueAnimal">OnPostRemoveLoginAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.OnPostSendVerificationEmailAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000004B.html" LinkGroup="AlbergueAnimal">OnPostSendVerificationEmailAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.OtherLogins" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000029.html" LinkGroup="AlbergueAnimal">OtherLogins Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000005B.html" LinkGroup="AlbergueAnimal">PageNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000009A.html" LinkGroup="AlbergueAnimal">Password Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000000F.html" LinkGroup="AlbergueAnimal">Password Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000BE.html" LinkGroup="AlbergueAnimal">Password Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C7.html" LinkGroup="AlbergueAnimal">Password Property {AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000052.html" LinkGroup="AlbergueAnimal">PersonalData Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.PersonalDataModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000005C.html" LinkGroup="AlbergueAnimal">PersonalDataModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.PersonalDataModel.PersonalDataModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000005D.html" LinkGroup="AlbergueAnimal">PersonalDataModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000059.html" LinkGroup="AlbergueAnimal">PersonalDataNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000044.html" LinkGroup="AlbergueAnimal">PhoneNumber Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.Preco" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000185.html" LinkGroup="AlbergueAnimal">Preco Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AdocaoController.PrintAdoptionSlip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000EE.html" LinkGroup="AlbergueAnimal">PrintAdoptionSlip Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.HomeController.Privacy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000111.html" LinkGroup="AlbergueAnimal">Privacy Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProcessStatus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000017C.html" LinkGroup="AlbergueAnimal">ProcessStatus Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProcessStatusExtension" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000017A.html" LinkGroup="AlbergueAnimal">ProcessStatusExtension Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000180.html" LinkGroup="AlbergueAnimal">Product Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.Product" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000147.html" LinkGroup="AlbergueAnimal">Product Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.ProductID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000181.html" LinkGroup="AlbergueAnimal">ProductID Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProductType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000018C.html" LinkGroup="AlbergueAnimal">ProductType Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.ProductType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000146.html" LinkGroup="AlbergueAnimal">ProductType Property {AlbergueAnimal.Data.ApplicationDbContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.ProductType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000018B.html" LinkGroup="AlbergueAnimal">ProductType Property {AlbergueAnimal.Models.Product}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000113.html" LinkGroup="AlbergueAnimal">ProductTypeController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.ProductTypeController.ProductTypeController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000114.html" LinkGroup="AlbergueAnimal">ProductTypeController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProductType.ProductTypeID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000018D.html" LinkGroup="AlbergueAnimal">ProductTypeID Property {AlbergueAnimal.Models.ProductType}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.ProductTypeID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000182.html" LinkGroup="AlbergueAnimal">ProductTypeID Property {AlbergueAnimal.Models.Product}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ProductType.Produtos" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000018F.html" LinkGroup="AlbergueAnimal">Produtos Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Program" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A9.html" LinkGroup="AlbergueAnimal">Program Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.Quantidade" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000186.html" LinkGroup="AlbergueAnimal">Quantidade Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.QuantidadeLimite" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000187.html" LinkGroup="AlbergueAnimal">QuantidadeLimite Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Raca" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000190.html" LinkGroup="AlbergueAnimal">Raca Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Data.ApplicationDbContext.Raca" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000143.html" LinkGroup="AlbergueAnimal">Raca Property {AlbergueAnimal.Data.ApplicationDbContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.Raca" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000166.html" LinkGroup="AlbergueAnimal">Raca Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000011D.html" LinkGroup="AlbergueAnimal">RacaController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.RacaController.RacaController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000011E.html" LinkGroup="AlbergueAnimal">RacaController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.RacaId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000015B.html" LinkGroup="AlbergueAnimal">RacaId Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Raca.RacaId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000191.html" LinkGroup="AlbergueAnimal">RacaId Property {AlbergueAnimal.Models.Raca}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000AD.html" LinkGroup="AlbergueAnimal">RecoveryCode Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.RecoveryCodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000001F.html" LinkGroup="AlbergueAnimal">RecoveryCodes Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.RecoveryCodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000032.html" LinkGroup="AlbergueAnimal">RecoveryCodes Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.RecoveryCodesLeft" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000070.html" LinkGroup="AlbergueAnimal">RecoveryCodesLeft Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.Referencia" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000184.html" LinkGroup="AlbergueAnimal">Referencia Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B4.html" LinkGroup="AlbergueAnimal">RegisterModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.RegisterModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B5.html" LinkGroup="AlbergueAnimal">RegisterModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel.RememberMachine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A5.html" LinkGroup="AlbergueAnimal">RememberMachine Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel.RememberMe" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000009B.html" LinkGroup="AlbergueAnimal">RememberMe Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.RememberMe" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A1.html" LinkGroup="AlbergueAnimal">RememberMe Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.ErrorModel.RequestId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D0.html" LinkGroup="AlbergueAnimal">RequestId Property {AlbergueAnimal.Areas.Identity.Pages.ErrorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ErrorViewModel.RequestId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000174.html" LinkGroup="AlbergueAnimal">RequestId Property {AlbergueAnimal.Models.ErrorViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.RequirePassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000010.html" LinkGroup="AlbergueAnimal">RequirePassword Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.Requisitar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000131.html" LinkGroup="AlbergueAnimal">Requisitar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000005F.html" LinkGroup="AlbergueAnimal">ResetAuthenticatorModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.ResetAuthenticatorModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000060.html" LinkGroup="AlbergueAnimal">ResetAuthenticatorModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000CC.html" LinkGroup="AlbergueAnimal">ResetPasswordConfirmationModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C2.html" LinkGroup="AlbergueAnimal">ResetPasswordModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ResetPasswordModel.ResetPasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000C3.html" LinkGroup="AlbergueAnimal">ResetPasswordModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel.ReturnUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000080.html" LinkGroup="AlbergueAnimal">ReturnUrl Property {AlbergueAnimal.Areas.Identity.Pages.Account.ExternalLoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel.ReturnUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000096.html" LinkGroup="AlbergueAnimal">ReturnUrl Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.ReturnUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A2.html" LinkGroup="AlbergueAnimal">ReturnUrl Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000AB.html" LinkGroup="AlbergueAnimal">ReturnUrl Property {AlbergueAnimal.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel.ReturnUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000B7.html" LinkGroup="AlbergueAnimal">ReturnUrl Property {AlbergueAnimal.Areas.Identity.Pages.Account.RegisterModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services.EmailSenderAdoption.SendEmailAdoptionAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D9.html" LinkGroup="AlbergueAnimal">SendEmailAdoptionAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimais.Areas.Identity.Services.EmailSender.SendEmailAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D5.html" LinkGroup="AlbergueAnimal">SendEmailAsync Method {AlbergueAnimais.Areas.Identity.Services.EmailSender}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Services.EmailSenderStock.SendEmailAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000DC.html" LinkGroup="AlbergueAnimal">SendEmailAsync Method {AlbergueAnimal.Areas.Identity.Services.EmailSenderStock}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000064.html" LinkGroup="AlbergueAnimal">SetPasswordModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.SetPasswordModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000065.html" LinkGroup="AlbergueAnimal">SetPasswordModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000001D.html" LinkGroup="AlbergueAnimal">SharedKey Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.ShowRemoveButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000002A.html" LinkGroup="AlbergueAnimal">ShowRemoveButton Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.ErrorModel.ShowRequestId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000D1.html" LinkGroup="AlbergueAnimal">ShowRequestId Property {AlbergueAnimal.Areas.Identity.Pages.ErrorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ErrorViewModel.ShowRequestId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000175.html" LinkGroup="AlbergueAnimal">ShowRequestId Property {AlbergueAnimal.Models.ErrorViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Startup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001AC.html" LinkGroup="AlbergueAnimal">Startup Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Startup.Startup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001AD.html" LinkGroup="AlbergueAnimal">Startup Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000004.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ChangePasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000015.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.Disable2faModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000020.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000002B.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000033.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000003A.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000061.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000067.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.SetPasswordModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.StatusMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000073.html" LinkGroup="AlbergueAnimal">StatusMessage Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000127.html" LinkGroup="AlbergueAnimal">StockController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.StockController.StockController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000128.html" LinkGroup="AlbergueAnimal">StockController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.ContactViewModel.Subject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000016F.html" LinkGroup="AlbergueAnimal">Subject Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.DashboardController.TopVisualizacoesAnimal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000101.html" LinkGroup="AlbergueAnimal">TopVisualizacoesAnimal Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000053.html" LinkGroup="AlbergueAnimal">TwoFactorAuthentication Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000006D.html" LinkGroup="AlbergueAnimal">TwoFactorAuthenticationModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.TwoFactorAuthenticationModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000006E.html" LinkGroup="AlbergueAnimal">TwoFactorAuthenticationModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000005A.html" LinkGroup="AlbergueAnimal">TwoFactorAuthenticationNavClass Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel.TwoFactorCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000A4.html" LinkGroup="AlbergueAnimal">TwoFactorCode Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Migrations.y.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000014A.html" LinkGroup="AlbergueAnimal">Up Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.UserEmail" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000199.html" LinkGroup="AlbergueAnimal">UserEmail Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.UserId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000150.html" LinkGroup="AlbergueAnimal">UserId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.Username" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000038.html" LinkGroup="AlbergueAnimal">Username Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000194.html" LinkGroup="AlbergueAnimal">Utilizador Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Adocao.Utilizador" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000157.html" LinkGroup="AlbergueAnimal">Utilizador Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000132.html" LinkGroup="AlbergueAnimal">UtilizadorController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.UtilizadorController.UtilizadorController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000133.html" LinkGroup="AlbergueAnimal">UtilizadorController Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A1.html" LinkGroup="AlbergueAnimal">Validacoes Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes.ValidacoesData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A2.html" LinkGroup="AlbergueAnimal">ValidacoesData Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Validacoes.ValidacoesIdade" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A4.html" LinkGroup="AlbergueAnimal">ValidacoesIdade Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.completation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000001A0.html" LinkGroup="AlbergueAnimal">completation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.count" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000048.html" LinkGroup="AlbergueAnimal">count Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.EstadoAdocao.estado" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000178.html" LinkGroup="AlbergueAnimal">estado Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.imageContent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000045.html" LinkGroup="AlbergueAnimal">imageContent Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.imageContent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000162.html" LinkGroup="AlbergueAnimal">imageContent Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.imageContent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000188.html" LinkGroup="AlbergueAnimal">imageContent Property {AlbergueAnimal.Models.Product}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.imageContent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000019A.html" LinkGroup="AlbergueAnimal">imageContent Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.imageFileName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000047.html" LinkGroup="AlbergueAnimal">imageFileName Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.imageFileName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000164.html" LinkGroup="AlbergueAnimal">imageFileName Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.imageFileName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000018A.html" LinkGroup="AlbergueAnimal">imageFileName Property {AlbergueAnimal.Models.Product}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.imageFileName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000019C.html" LinkGroup="AlbergueAnimal">imageFileName Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.imageMimeType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000046.html" LinkGroup="AlbergueAnimal">imageMimeType Property {AlbergueAnimal.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.imageMimeType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000163.html" LinkGroup="AlbergueAnimal">imageMimeType Property {AlbergueAnimal.Models.Animal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Product.imageMimeType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000189.html" LinkGroup="AlbergueAnimal">imageMimeType Property {AlbergueAnimal.Models.Product}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Utilizador.imageMimeType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_000000000000019B.html" LinkGroup="AlbergueAnimal">imageMimeType Property {AlbergueAnimal.Models.Utilizador}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Controllers.AnimalsController.viewAnimaisPdf" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_00000000000000FD.html" LinkGroup="AlbergueAnimal">viewAnimaisPdf Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Models.Animal.visualizacoes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000168.html" LinkGroup="AlbergueAnimal">visualizacoes Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AlbergueAnimal.Migrations.y" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AlbergueAnimal.chm::/topic_0000000000000149.html" LinkGroup="AlbergueAnimal">y Class</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

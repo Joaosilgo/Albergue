@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.2.1" />
+    <PackageReference Include="jQuery-vsdoc" Version="2.1.0" />
     <PackageReference Include="MailKit" Version="2.1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
