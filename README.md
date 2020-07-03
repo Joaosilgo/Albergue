@@ -11,19 +11,20 @@ Métodos de entrega:
 
 * Modelação 
 
-* Análise dos requisitos 
+    * Análise dos requisitos 
 
-* Design 
+    * Design 
 
 * Construção 
 
-* Código 
+    * Código 
 
-* Testes 
+    * Testes 
 
 * Deployment 
 
-     * Objetivo da aplicação:  
+ 
+# Objetivo da aplicação:  
 
 ## Fases do projeto: 
 
