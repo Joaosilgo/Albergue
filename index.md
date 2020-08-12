@@ -10,13 +10,13 @@ Guião para a apresentação de ESW
 
 -   João Gomes nº 150221001
 
-**Capa: **
+## Capa: 
 
 	- Damos a conhecer a equipa e o projeto.** **
 
-**Métodos de entrega: **
+## Métodos de entrega:
 
->   \- Atividades metodológicas (Atividades de Framework):
+### Atividades metodológicas (Atividades de Framework):
 
 -   Comunicação
 
@@ -38,16 +38,17 @@ Guião para a apresentação de ESW
 
 **     Objetivo da aplicação: **
 
--   **Fases do projeto:**
+
+### Fases do projeto:
 
 1 - Fase da análise e especificação de requisitos - Analisámos o documento de
 MSI
 
-	    2 - Fase do desenho de alto nível - detalhar o documento da fase anterior
+2 - Fase do desenho de alto nível - detalhar o documento da fase anterior
 
 3 - Fases do desenho detalhado:
 
->   **-  Sprint 1 - Utilizadores:**
+>   Sprint 1 - Utilizadores:
 
 -   Requisitos Funcionais:
 
