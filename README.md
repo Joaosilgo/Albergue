@@ -106,7 +106,7 @@ MSI
 
 -   Tecnologias utilizadas:
 
-    ![Resultado de imagem para GOOGLE LOGO](media/19e33d3f851badb808ebace78233e9d9.png)
+    ![Resultado de imagem para GOOGLE LOGO](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/19e33d3f851badb808ebace78233e9d9.png)
 
     \- Google API OAuth 2.0: o protocolo OAuth 2.0 para autenticação e
     autorização.
@@ -114,7 +114,7 @@ MSI
 -   \- SendGrid API: Utilizamos SendGrid como uma plataforma de comunicação
     com o cliente, para email transacional.
 
-![](media/171b06401203d8eb9cde14b31be1f3be.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/171b06401203d8eb9cde14b31be1f3be.png)
 
 **Métodos **- Roles Authorizations( backbone da aplicação)
 
@@ -124,7 +124,7 @@ MSI
 
 -   Manipulação do perfil de Utilizador.
 
-![](media/2311d434e2311341e754a59113d793f9.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/2311d434e2311341e754a59113d793f9.png)
 
 Figura 1 -
 
@@ -133,19 +133,19 @@ Figura 1 -
 
 Bom para o backup da base de dados.
 
-![](media/c699c206ad108120015f79b8f492dc0f.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/c699c206ad108120015f79b8f492dc0f.png)
 
 Figura 2 -
 
-![](media/36bf42f3e3017217bfa7805706ceacfd.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/36bf42f3e3017217bfa7805706ceacfd.png)
 
 Figura 3 - Gestão de utilizadores
 
-![](media/5286a8b27bb24a080fb519e2e3019c01.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/5286a8b27bb24a080fb519e2e3019c01.png)
 
 Figura 4 - Lista de utilizadores
 
-![](media/46be0c20ed3a5070acf0e4c354dda0b7.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/46be0c20ed3a5070acf0e4c354dda0b7.png)
 
 Figura 5 - Lista de funcionários
 
@@ -168,7 +168,7 @@ Figura 5 - Lista de funcionários
 
 -   Burndown:
 
-    ![](media/95cc2d35f1596ac4fffa6d6956adf7f3.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/95cc2d35f1596ac4fffa6d6956adf7f3.png)
 
 -   Tecnologias utilizadas:
 
@@ -186,15 +186,15 @@ Figura 5 - Lista de funcionários
 
 **Features:**
 
-![](media/8405d8a13e29ec110e765c99de47a245.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/8405d8a13e29ec110e765c99de47a245.png)
 
 Figura 6 – Visualização a partir do Administrador ou Gestor de animais
 
-![](media/3056edc39e1a4122328a46d79214398b.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/3056edc39e1a4122328a46d79214398b.png)
 
 Figura 7 – Visualização a partir do Utilizador
 
-![](media/726ea759d2d88ca5884a2a6bf1db1199.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/726ea759d2d88ca5884a2a6bf1db1199.png)
 
 Figura 8 – Visualização do Animal
 
@@ -211,13 +211,13 @@ Figura 8 – Visualização do Animal
 
 -   Burndown:
 
-    ![](media/3554426851aaaecf77619923ba09a970.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/3554426851aaaecf77619923ba09a970.png)
 
     z
 
 -   Tecnologias utilizadas:
 
-    ![https://www.smartspate.com/wp-content/uploads/2018/10/ASPDOTNET-640x400.png](media/5f1a79f98adf267c38c1e99ba10da14f.png)
+    ![https://www.smartspate.com/wp-content/uploads/2018/10/ASPDOTNET-640x400.png](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/5f1a79f98adf267c38c1e99ba10da14f.png)
 
     \- Rotativa.AspNetCore: Package para converter HTML para PDF por WkHtmlToPdf
     para ASP.NET Core em aplicativos da Web do Azure (Imprimir Fichas de Adoção)
@@ -236,23 +236,23 @@ da aplicação)
 
 **Features:**
 
-![](media/d9784034d5a33ac3b2c978a987c87c69.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/d9784034d5a33ac3b2c978a987c87c69.png)
 
 Figura 9 – Adoções – Visualização por Administrador
 
-![](media/e25eb51290287ff80adee885fb21d141.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/e25eb51290287ff80adee885fb21d141.png)
 
 Figura 10– Adoções – Visão por Utilizador (Membro)
 
-![](media/b2c7eb3d5c5d0d3a6e4cb4f1aab82e8a.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/b2c7eb3d5c5d0d3a6e4cb4f1aab82e8a.png)
 
 Figura 11 – Ficha de Adoção
 
-![](media/dc85152891c645b20123173bbd377a21.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/dc85152891c645b20123173bbd377a21.png)
 
 Figura 12 – Email template
 
-![](media/fb3b15901c4fa4114c8cc93b59b1b209.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/fb3b15901c4fa4114c8cc93b59b1b209.png)
 
 Figura 13 – Adoções – Template SendGrid
 
@@ -269,7 +269,7 @@ Figura 13 – Adoções – Template SendGrid
 
 -   Burndown:
 
-    ![](media/1ecd62a4b1bc97a3841703c303470541.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/1ecd62a4b1bc97a3841703c303470541.png)
 
 -   Tecnologias utilizadas:
 
@@ -290,11 +290,11 @@ destaca neste modulo)
 
 **Features:**
 
-![](media/cbf7b3d5672d021a7288939a8a506666.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/cbf7b3d5672d021a7288939a8a506666.png)
 
 Figura 14 – Stock de produtos (Gestor de Stock e Administrador)
 
-![](media/878086885ed036caa18bd26f327452df.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/878086885ed036caa18bd26f327452df.png)
 
 Figura 15 - Email de notificação de Stock mínimo
 
@@ -317,7 +317,7 @@ deste (Listas De Utilizadores/Lista de Funcionários) e manipulação do mesmo.
 
 -   Burndown:
 
-    ![](media/431123422d6ebeef7e042187dfa50ec8.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/431123422d6ebeef7e042187dfa50ec8.png)
 
 -   Tecnologias utilizadas:
 
@@ -328,7 +328,7 @@ deste (Listas De Utilizadores/Lista de Funcionários) e manipulação do mesmo.
 -   Adoções- estatística para saber o estado de todas as adoções não arquivadas
     (Authorization: Administrador e Gestor de Adoções)
 
-    ![](media/424fc1342d314f8d418de82554d582ac.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/424fc1342d314f8d418de82554d582ac.png)
 
 Figura 16 -
 
@@ -337,24 +337,24 @@ Figura 16 -
 
 -   Indiação do numero de vizualizações de Animal
 
-    ![](media/00525744e8cb1d46f2aebcae3d223269.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/00525744e8cb1d46f2aebcae3d223269.png)
 
 Figura 17 -
 
-![](media/4aa2298fbe2a5633f6683e64c5ea6230.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/4aa2298fbe2a5633f6683e64c5ea6230.png)
 
 Figura 18 -
 
 -   Stock-estatística para conhecimento de quantidades de todos os Tipos de
     Produto -(Authorization: Administrador e Gestor de Stock)
 
-![](media/0ee5f95e36665cb94e161b84b4bb6c63.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/0ee5f95e36665cb94e161b84b4bb6c63.png)
 
 Figura 19 -
 
 -   Utizadores - Dashboard para indicação do (Profile Completation)
 
-    ![](media/f67f1e0155264af3317635748b92f0c1.png)
+    ![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/f67f1e0155264af3317635748b92f0c1.png)
 
 Figura 20 -
 
@@ -369,7 +369,7 @@ Figura 20 -
 
     - Stock- Mostra Todos os tipos de Stock
 
-![](media/d5f52134ad763ce970a954af6f62ae27.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/d5f52134ad763ce970a954af6f62ae27.png)
 
 Figura 21 -
 
@@ -407,7 +407,7 @@ anteriores.
 
 -   Testes de carga - o limite de dados processados pelo software
 
-![](media/bb20cce05689466d463ca547aca4b029.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/bb20cce05689466d463ca547aca4b029.png)
 
 (Teste Inconclusivo)
 
@@ -419,7 +419,7 @@ Core:
 
 **Mostrar a hierarquia de autorização dos Roles:**
 
-![](media/4b84af9ffcc6c1224ee6cf5584a5812e.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/4b84af9ffcc6c1224ee6cf5584a5812e.png)
 
 **Nível 1:**
 
@@ -471,7 +471,7 @@ Core:
 
     Nivel de Acesso Restrito a diversos seore(Roles) da empresa
 
-![](media/7aeac750c9b88a0698c37eec2918c427.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/7aeac750c9b88a0698c37eec2918c427.png)
 
 **Diagrama de classes total:**
 
@@ -481,89 +481,89 @@ Core:
 
 **Pergunta 1:**
 
-![](media/7d111a61050b0ed1806d4e6b46b6585d.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/7d111a61050b0ed1806d4e6b46b6585d.png)
 
 **Respostas:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\7483C1BA.tmp](media/89abcf275bad5b09b6c5f273bc7caaf4.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\7483C1BA.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/89abcf275bad5b09b6c5f273bc7caaf4.png)
 
 **Secção:1**
 
 **Pergunta 2:**
 
-![](media/65b255f8efe970a0830b5f393237ea48.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/65b255f8efe970a0830b5f393237ea48.png)
 
 **Respostas:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\5B6321D8.tmp](media/242fa762734c444f31f1b52e3fb54330.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\5B6321D8.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/242fa762734c444f31f1b52e3fb54330.png)
 
 **Secção:1**
 
 **Pergunta 3:**
 
-![](media/ed36f09ef9b735b908359f754ece80ed.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/ed36f09ef9b735b908359f754ece80ed.png)
 
 **Resposta:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\C3F45DA6.tmp](media/de8a51473daf168acfb4b53a57267fd8.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\C3F45DA6.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/de8a51473daf168acfb4b53a57267fd8.png)
 
 **Secção 2**
 
 **Pergunta1:**
 
-![](media/fc6356d5bca12b9c56a277b9061b8874.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/fc6356d5bca12b9c56a277b9061b8874.png)
 
 **Respostas:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\9462E0A4.tmp](media/7011f6af25da0374d9c3676330949c67.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\9462E0A4.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/7011f6af25da0374d9c3676330949c67.png)
 
 **Secção 2**
 
 **Pergunta 2:**
 
-![](media/7f175575e0f4e8cf8344d228c72c6305.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/7f175575e0f4e8cf8344d228c72c6305.png)
 
 **Respostas:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\5DFAA252.tmp](media/11eb8f3655f42b7f222b2c999f7e3927.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\5DFAA252.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/11eb8f3655f42b7f222b2c999f7e3927.png)
 
 **Secção 3**
 
 **Pergunta 1:**
 
-![](media/481f4de51f857d24134c1d7c850b85e7.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/481f4de51f857d24134c1d7c850b85e7.png)
 
 **Respostas:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\FCD40630.tmp](media/66968aae54136a2b26cb4885684762c4.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\FCD40630.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/66968aae54136a2b26cb4885684762c4.png)
 
 **Secção 3**
 
 **Pergunta 2:**
 
-![](media/70c2bbd2b9b0ea4706078dc75924d156.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/70c2bbd2b9b0ea4706078dc75924d156.png)
 
 **Respostas:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\C4CABBBE.tmp](media/86e7c187262456d661182d08bfff4158.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\C4CABBBE.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/86e7c187262456d661182d08bfff4158.png)
 
 **Secção 4**
 
 **Pergunta 1:**
 
-![](media/c733691d07954183dcf84b9d107d9ada.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/c733691d07954183dcf84b9d107d9ada.png)
 
 **Resposta:**
 
-![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\E8F79E7C.tmp](media/bfdbf6f62eeba8b9f6eafa0f186c08f7.png)
+![C:\\Users\\joaos\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\E8F79E7C.tmp](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/bfdbf6f62eeba8b9f6eafa0f186c08f7.png)
 
 **Secção 5**
 
 **Pergunta 1:**
 
-![](media/b8f3f27be162e41a51d3f73ee96f5d9f.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/b8f3f27be162e41a51d3f73ee96f5d9f.png)
 
-![](media/c54062c770cd39c97f3258200b67c2d6.png)
+![](https://raw.githubusercontent.com/Joaosilgo/Albergue/gh-pages/media/c54062c770cd39c97f3258200b67c2d6.png)
 
 
  
